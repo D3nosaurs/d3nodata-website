@@ -2,6 +2,7 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import Header from "../islands/Header.tsx";
+// import ChartRedirect from "../islands/ChartRedirect.tsx"
 // import { Launch } from "../components/Launch.tsx";
 
 // import Counter from "../islands/Counter.tsx";
@@ -13,6 +14,7 @@ export default function Home() {
 
       {/* <ChartContainer /> */}
       {/* <Counter start={6}/> */}
+      {/* <ChartRedirect /> */}
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { h } from "preact";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { tw } from "@twind";
 import { Button } from "../components/Button.tsx"
+
 // import { serve } from "https://deno.land/std/http/mod.ts";
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
       {/* redirects you to github */}
       <Button 
         class='header-button' 
-        onClick = {() => window.location.href = 'https://github.com/oslabs-beta/d3no-data'}
+        onClick = {() => {window.open('https://github.com/oslabs-beta/d3no-data', '_blank')}}
       >Github</Button>
 
       {/* redirects you to the charts page */}
