@@ -5,16 +5,22 @@
 import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/api/joke.ts";
 import * as $2 from "./routes/index.tsx";
-import * as $$0 from "./islands/Counter.tsx";
+import * as $3 from "./routes/oldIndex.tsx";
+import * as $$0 from "./islands/Counter%20copy.tsx";
+import * as $$1 from "./islands/Counter.tsx";
+import * as $$2 from "./islands/TestContainer.tsx";
 
 const manifest = {
   routes: {
     "./routes/[name].tsx": $0,
     "./routes/api/joke.ts": $1,
     "./routes/index.tsx": $2,
+    "./routes/oldIndex.tsx": $3,
   },
   islands: {
-    "./islands/Counter.tsx": $$0,
+    "./islands/Counter%20copy.tsx": $$0,
+    "./islands/Counter.tsx": $$1,
+    "./islands/TestContainer.tsx": $$2,
   },
   baseUrl: import.meta.url,
 };
