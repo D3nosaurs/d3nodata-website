@@ -2,25 +2,33 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $0 from "./routes/[name].tsx";
+import * as $0 from "./routes/(ex)%20name.tsx";
 import * as $1 from "./routes/api/joke.ts";
-import * as $2 from "./routes/index.tsx";
-import * as $3 from "./routes/oldIndex.tsx";
-import * as $$0 from "./islands/Counter%20copy.tsx";
-import * as $$1 from "./islands/Counter.tsx";
-import * as $$2 from "./islands/TestContainer.tsx";
+import * as $2 from "./routes/charts.tsx";
+import * as $3 from "./routes/index.tsx";
+import * as $$0 from "./islands/BarChart.tsx";
+import * as $$1 from "./islands/ChartContainer.tsx";
+import * as $$2 from "./islands/Counter%20copy.tsx";
+import * as $$3 from "./islands/Counter.tsx";
+import * as $$4 from "./islands/Header.tsx";
+import * as $$5 from "./islands/LineChart.tsx";
+import * as $$6 from "./islands/PieChart.tsx";
 
 const manifest = {
   routes: {
-    "./routes/[name].tsx": $0,
+    "./routes/(ex)%20name.tsx": $0,
     "./routes/api/joke.ts": $1,
-    "./routes/index.tsx": $2,
-    "./routes/oldIndex.tsx": $3,
+    "./routes/charts.tsx": $2,
+    "./routes/index.tsx": $3,
   },
   islands: {
-    "./islands/Counter%20copy.tsx": $$0,
-    "./islands/Counter.tsx": $$1,
-    "./islands/TestContainer.tsx": $$2,
+    "./islands/BarChart.tsx": $$0,
+    "./islands/ChartContainer.tsx": $$1,
+    "./islands/Counter%20copy.tsx": $$2,
+    "./islands/Counter.tsx": $$3,
+    "./islands/Header.tsx": $$4,
+    "./islands/LineChart.tsx": $$5,
+    "./islands/PieChart.tsx": $$6,
   },
   baseUrl: import.meta.url,
 };
