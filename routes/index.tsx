@@ -4,6 +4,14 @@ import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
 
 export default function Home() {
+  const data: number[] = [];
+  const label: string[] = [];
+  const numData = 25;
+
+  for (let i = 0; i < numData; i++) {
+    data.push(Math.floor(Math.random() * 10000));
+    label.push(i + "");
+  }
   return (
     <Fragment>
       <div
@@ -21,8 +29,10 @@ export default function Home() {
           >
             OUT OF THE BOX DATA CHART COMPONENTS FOR DENO
           </h1>
-          <div className={tw`w-5/12 shadow-md rounded-lg`}>
-            <p className={tw`text-center font-mono`}>
+          <div
+            className={tw`w-5/12 shadow-md rounded-lg `}
+          >
+            <p className={tw`text-center font-mono p-1`}>
               import * from "deno.land/x/chartcomps@v1.0.0"
             </p>
           </div>
@@ -36,7 +46,7 @@ export default function Home() {
           </a>
         </div>
         <svg
-          className={tw`animate-pulse`}
+          className={tw`animate-bounce`}
           width="100"
           zoomAndPan="magnify"
           viewBox="0 0 375 374.999991"
@@ -62,8 +72,16 @@ export default function Home() {
           </g>
         </svg>
       </div>
-      <div>
-        <p>Test</p>
+      <div className={tw`w-full flex flex-col items-center`}>
+        <h1
+          className={tw
+            `w-9/12 font-bold text-center font-sans tracking-widest text-5xl leading-normal text-green-500`}
+        >
+          CHARTS
+        </h1>
+        {/* chart display containers */}
+        <div>
+        </div>
       </div>
     </Fragment>
   );

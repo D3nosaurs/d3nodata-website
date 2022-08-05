@@ -65,6 +65,8 @@ export default function NavBar() {
                 <a
                   className={tw
                     `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                  href="https://github.com/oslabs-beta/d3no-data"
+                  target="_blank"
                 >
                   <img
                     src="github-logo.svg"
