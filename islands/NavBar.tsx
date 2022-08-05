@@ -7,7 +7,7 @@ export default function NavBar() {
     <Fragment>
       <nav
         className={tw
-          `flex flex-wrap items-center justify-center bg-green-200 mb-3 w-full shadow-md`}
+          `flex flex-wrap pt-3 items-start justify-center bg-transparent w-full`}
       >
         <div
           className={tw
@@ -46,7 +46,8 @@ export default function NavBar() {
               <li className={tw`nav-item`}>
                 <a
                   className={tw
-                    `px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                    `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                  href="/"
                 >
                   HOME
                 </a>
@@ -54,7 +55,8 @@ export default function NavBar() {
               <li className={tw`nav-item`}>
                 <a
                   className={tw
-                    `px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                    `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                  href="/greet/documentation"
                 >
                   DOCUMENTATION
                 </a>
@@ -62,9 +64,12 @@ export default function NavBar() {
               <li className={tw`nav-item`}>
                 <a
                   className={tw
-                    `px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                    `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
                 >
-                  GITHUB
+                  <img
+                    src="github-logo.svg"
+                    className={tw`w-7`}
+                  />
                 </a>
               </li>
             </ul>
