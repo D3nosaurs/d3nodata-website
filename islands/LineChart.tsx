@@ -22,7 +22,6 @@ interface barChartData {
 }
 
 // need to move all the variable up here
-
 export default function LineChart() {
   const myData: number[] = [];
   const label: string[] = [];

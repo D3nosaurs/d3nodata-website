@@ -2,7 +2,7 @@
 import { h, Fragment } from "preact";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { tw } from "@twind";
-import { useEffect } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import * as d3 from "d3";
 // import suchandsuch from our library 
 // import data from user data location
@@ -293,9 +293,16 @@ function CodeWindow(){
 }
 
 function UserInput(){
+  function changeChartHeight (number: number){
+    UserInputProps.height = number;
+  }
 
   return (
-    <p>user input window here</p>
+    <div>
+      <p>user input window here</p>
+      <input type="text"/>
+    </div>
+    
   )
 }
 
@@ -304,6 +311,7 @@ export default function BarChart(){
   return (
     <div>
       <Chart props={ UserInputProps }/>
+      {/* {console.log(UserInputProps)} */}
       <CodeWindow />
       <UserInput />
     </div>

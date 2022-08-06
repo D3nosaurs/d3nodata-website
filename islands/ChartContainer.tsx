@@ -18,25 +18,40 @@ interface ChartProps {
 
 // const chart = props.chart
 
-// props: ChartProps
+// 
 
-export default function ChartContainer(){
+export default function ChartContainer(props: ChartProps){
  
-  // const { chart } = props;
+  const chart  = props.chart;
   // console.log('chart props in chartContainer: ', chart); //this is logging infinitely 
-  const [page, setPage] = useState(<p>Select a chart to get started!</p>)
+  const [page, setPage] = useState(null);
 
-  // if (chart === 'pie') setPage(<PieChart />);
-  // else if (chart === 'bar') setPage(<BarChart />);
-  // else if (chart === 'line') setPage(<LineChart />);
-  
+  let content = null;
+
+  if (chart === 'pie') content = <PieChart />;
+  else if (chart === 'bar') content = <BarChart />;
+  else if (chart === 'line') content = <LineChart />;
+
+  let chartDisplay;
+  if (page === null) chartDisplay = content;
+  else chartDisplay = page;
+
 
   function buttonBar() {
     return(
       <div>
-        <Button onClick={() => setPage(<BarChart />) }>Bar Chart</Button>
-        <Button onClick={() => setPage(<PieChart />)}>Pie Chart</Button>
-        <Button onClick={() => setPage(<LineChart />)}>Line Chart</Button>
+        <Button onClick={() => {
+            setPage(<BarChart />);
+            content = null;
+          }}>Bar Chart</Button>
+        <Button onClick={() => {
+            setPage(<PieChart />)
+            content = null;
+          }}>Pie Chart</Button>
+        <Button onClick={() => {
+          setPage(<LineChart />)
+          content = null;
+        }}>Line Chart</Button>
       </div>
     )
   }
@@ -45,7 +60,8 @@ export default function ChartContainer(){
     <div>
       < Header />
       { buttonBar() }
-      { page }
+      { chartDisplay }
     </div>
   )
 }
+
