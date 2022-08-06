@@ -1,13 +1,76 @@
 /** @jsx h */
-import { Fragment, h } from "preact";
-import { useEffect } from "preact/hooks";
-import { BarChartProps } from "../chart-props/BarChartProps.ts";
-import * as d3 from "https://esm.sh/d3@7.6.1?dev";
+import { h, Fragment } from "preact";
+import { IS_BROWSER } from "$fresh/runtime.ts";
+import { tw } from "@twind";
+import { useEffect, useState } from "preact/hooks";
+import * as d3 from "d3";
+// import suchandsuch from our library 
+// import data from user data location
 
-// need to work on paddings that dynamically update to avoid overlapping with the graph
+interface BarChartProps {
+  paddingTop?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
+  paddingRight?: number;
+  width?: number;
+  height?: number;
+  data: number[];
+  labels: string[]; // for y axes
+  addLabel?: boolean;
+  xAxisLabel?: string;
+  yAxisLabel?: string;
+  axesColor?: string;
+  axesLabelColor?: string;
+  barPadding?: number;
+  barColor?: string;
+  barHoverColor?: string;
+  animation?: boolean;
+  animationDuration?: number;
+  animationDelay?: number;
+  toolTip?: boolean;
+  toolTipText?: string;
+  fontFamily?: string;
+  addTitle?: boolean;
+  setTitle?: string;
+  setTitleSize?: string;
+  setTitleColor?: string;
+  setTitlePaddingTop?: number;
+}
 
-export default function BarChart(props: BarChartProps) {
-  // setting up data
+const userData = [];
+
+const UserInputProps = {
+  paddingTop: 60,
+  paddingLeft: 60,
+  paddingRight: 60,
+  paddingBottom: 60,
+  width: 700,
+  height: 700,
+  data: [],
+  labels: [], // for y axes
+  addLabel: false,
+  xAxisLabel: 'x label',
+  yAxisLabel: 'y label',
+  axesColor: "#4D908E",
+  axesLabelColor: "#277DA1",
+  barPadding: 5,
+  barColor: "#BFE4A3",
+  barHoverColor: "#90BE6D",
+  animation: true,
+  animationDuration: 100,
+  animationDelay: 100,
+  toolTip: true,
+  // toolTipText: 'tooltip text',
+  fontFamily: "Verdana",
+  addTitle: false,
+  setTitle: "TITLE",
+  setTitleSize: "1.5em",
+  setTitleColor: "#277DA1",
+  setTitlePaddingTop: 40
+}
+
+function Chart(props){
+
   const padding = {
     top: props.paddingTop || 60,
     left: props.paddingLeft || 60,
@@ -26,7 +89,7 @@ export default function BarChart(props: BarChartProps) {
   const animationDuration = props.animationDuration || 800;
   const animationDelay = props.animationDelay || 100;
   const xAxisLabel = props.xAxisLabel || "x label";
-  const yAxisLabel = props.yAxisLabel || "ylabel";
+  const yAxisLabel = props.yAxisLabel || "y label";
   const barColor = props.barColor || "#BFE4A3";
   const barHoverColor = props.barHoverColor || "#90BE6D";
   const fontFamily = props.fontFamily || "Verdana";
@@ -37,7 +100,7 @@ export default function BarChart(props: BarChartProps) {
   const setTitleSize = props.setTitleSize || "1.5em";
   const setTitleColor = props.setTitleColor || axesLabelColor;
   const setTitlePadding = props.setTitlePaddingTop || 40;
-
+  
   // function to add tooltip
   function updateInteractivity() {
     // add a tool tip
@@ -154,7 +217,7 @@ export default function BarChart(props: BarChartProps) {
       .call(xAxis)
       .attr(
         "transform",
-        `translate(${padding.left}, ${height - padding.bottom})`,
+        `translate(${padding.left}, ${height - padding.bottom})`
       )
       .attr("font-size", "0.5em")
       .attr("font-family", fontFamily)
@@ -220,4 +283,37 @@ export default function BarChart(props: BarChartProps) {
       </div>
     </Fragment>
   );
+}
+
+function CodeWindow(){
+
+  return (
+    <p>code window here</p>  
+  )
+}
+
+function UserInput(){
+  function changeChartHeight (number: number){
+    UserInputProps.height = number;
+  }
+
+  return (
+    <div>
+      <p>user input window here</p>
+      <input type="text"/>
+    </div>
+    
+  )
+}
+
+export default function BarChart(){
+
+  return (
+    <div>
+      <Chart props={ UserInputProps }/>
+      {/* {console.log(UserInputProps)} */}
+      <CodeWindow />
+      <UserInput />
+    </div>
+  )
 }

@@ -88,3 +88,10 @@ export default function Home() {
     </Fragment>
   );
 }
+
+/*
+PROBLEM:
+
+redirection to /charts with some data to know which island to render on arrival to /charts on specific
+chart button press
+*/
