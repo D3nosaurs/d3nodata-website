@@ -7,10 +7,10 @@ import { tw } from "@twind";
 //   chart: string
 // }
 
-export function ChartButton() {
+export function ChartButton(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
   return (
     <button
-      // {...props}
+      {...props}
       // disabled={!IS_BROWSER || props.disabled}
       class={tw`px-2 py-1 border(gray-100 2) hover:bg-gray-200`}
     />
