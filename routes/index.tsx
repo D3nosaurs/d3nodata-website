@@ -5,14 +5,6 @@ import NavBar from "../islands/NavBar.tsx";
 import BarChart from "../islands/BarChart.tsx";
 
 export default function Home() {
-  const data: number[] = [];
-  const label: string[] = [];
-  const numData = 25;
-
-  for (let i = 0; i < numData; i++) {
-    data.push(Math.floor(Math.random() * 10000));
-    label.push(i + "");
-  }
   return (
     <Fragment>
       <div
