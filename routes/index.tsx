@@ -2,6 +2,7 @@
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
+import BarChart from "../islands/BarChart.tsx";
 
 export default function Home() {
   const data: number[] = [];
@@ -21,31 +22,42 @@ export default function Home() {
 
         <div
           className={tw
-            `w-full h-full flex flex-col items-center justify-start pt-20 gap-10`}
+            `w-full h-full flex flex-col items-center justify-start pt-20 gap-12`}
         >
           <h1
             className={tw
-              `w-9/12 font-bold text-center font-sans tracking-widest text-5xl leading-normal text-green-500`}
+              `w-10/12 font-bold text-center font-sans tracking-widest text-2xl lg:text-5xl xl:text-6xl md:text-4xl  leading-normal text-green-500`}
           >
             OUT OF THE BOX DATA CHART COMPONENTS FOR DENO
           </h1>
-          <div
-            className={tw`w-5/12 shadow-md rounded-lg `}
-          >
-            <p className={tw`text-center font-mono p-1`}>
-              import * from "deno.land/x/chartcomps@v1.0.0"
-            </p>
-          </div>
-          <a href="/greet/documentation">
-            <button
+
+          <div className={tw`w-full flex flex-col items-center gap-36`}>
+            <div
               className={tw
-                `bg-green-400 p-3 rounded-lg text-white shadow-md hover:bg-green-300 hover:shadow-none transition-all duration-500`}
+                `shadow-md flex items-center justify-center rounded-lg `}
             >
-              GET STARTED
-            </button>
-          </a>
+              <p
+                className={tw
+                  `text-[10px] font-mono p-1 bg-white shadow-lg lg:text-sm rounded-lg`}
+              >
+                import * from "deno.land/x/chartcomps@v1.0.0"
+              </p>
+            </div>
+            <a
+              href="/greet/documentation"
+              className={tw`flex flex-row justify-center`}
+            >
+              <button
+                className={tw
+                  `bg-green-400 animate-pulse absolute transition-all p-3 rounded-lg text-white shadow-xl hover:bg-green-300 hover:shadow-none hover:animate-none duration-500`}
+              >
+                GET STARTED
+              </button>
+            </a>
+          </div>
         </div>
-        <svg
+        {
+          /* <svg
           className={tw`animate-bounce`}
           width="100"
           zoomAndPan="magnify"
@@ -70,18 +82,8 @@ export default function Home() {
               fill-rule="nonzero"
             />
           </g>
-        </svg>
-      </div>
-      <div className={tw`w-full flex flex-col items-center`}>
-        <h1
-          className={tw
-            `w-9/12 font-bold text-center font-sans tracking-widest text-5xl leading-normal text-green-500`}
-        >
-          CHARTS
-        </h1>
-        {/* chart display containers */}
-        <div>
-        </div>
+        </svg> */
+        }
       </div>
     </Fragment>
   );
