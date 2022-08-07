@@ -18,19 +18,19 @@ export default function Home() {
         >
           <h1
             className={tw
-              `w-10/12 font-bold text-center font-sans tracking-widest text-2xl lg:text-5xl xl:text-6xl md:text-4xl  leading-normal text-green-500`}
+              `w-10/12 font-bold text-center font-sans tracking-widest text-3xl lg:text-5xl xl:text-6xl md:text-4xl  leading-normal text-green-500`}
           >
             OUT OF THE BOX DATA CHART COMPONENTS FOR DENO
           </h1>
 
-          <div className={tw`w-full flex flex-col items-center gap-36`}>
+          <div className={tw`w-full flex flex-col items-center gap-24`}>
             <div
               className={tw
                 `shadow-md flex items-center justify-center rounded-lg `}
             >
               <p
                 className={tw
-                  `text-[10px] font-mono p-1 bg-white shadow-lg lg:text-sm rounded-lg`}
+                  `text-[10px] font-mono p-3 bg-white shadow-lg lg:text-sm rounded-lg`}
               >
                 import * from "deno.land/x/chartcomps@v1.0.0"
               </p>
@@ -41,16 +41,15 @@ export default function Home() {
             >
               <button
                 className={tw
-                  `bg-green-400 animate-pulse absolute transition-all p-3 rounded-lg text-white shadow-xl hover:bg-green-300 hover:shadow-none hover:animate-none duration-500`}
+                  `bg-green-400 absolute font-semibold transition-all p-3 rounded-lg text-white shadow-xl hover:bg-green-300 hover:shadow-none hover:animate-none duration-500`}
               >
                 GET STARTED
               </button>
             </a>
           </div>
         </div>
-        {
-          /* <svg
-          className={tw`animate-bounce`}
+        <svg
+          className={tw`animate-pulse`}
           width="100"
           zoomAndPan="magnify"
           viewBox="0 0 375 374.999991"
@@ -74,8 +73,7 @@ export default function Home() {
               fill-rule="nonzero"
             />
           </g>
-        </svg> */
-        }
+        </svg>
       </div>
     </Fragment>
   );
