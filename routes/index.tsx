@@ -2,7 +2,6 @@
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
-import BarChart from "../islands/BarChart.tsx";
 
 export default function Home() {
   return (
