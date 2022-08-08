@@ -2,8 +2,10 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+
 import * as $0 from "./routes/charts/_middleware.ts";
 import * as $1 from "./routes/charts/index.tsx";
+
 import * as $2 from "./routes/index.tsx";
 import * as $$0 from "./islands/BarChart.tsx";
 import * as $$1 from "./islands/ChartContainer.tsx";
@@ -14,6 +16,7 @@ import * as $$5 from "./islands/PieChart.tsx";
 
 const manifest = {
   routes: {
+
     "./routes/charts/_middleware.ts": $0,
     "./routes/charts/index.tsx": $1,
     "./routes/index.tsx": $2,

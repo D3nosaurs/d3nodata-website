@@ -4,7 +4,7 @@ import { useState } from "preact/hooks";
 import { tw } from "@twind";
 
 export default function NavBar() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(true);
 
   return (
     <nav
