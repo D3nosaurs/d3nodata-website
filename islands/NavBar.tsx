@@ -3,10 +3,6 @@ import { h } from "preact";
 import { useState } from "preact/hooks";
 import { tw } from "@twind";
 
-import { BarChart } from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts";
-
-import { barData, labels } from "../Dummy_Data/BarChart_data.ts";
-
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -80,7 +76,6 @@ export default function NavBar() {
               </ul>
             </div>
           )}
-        <BarChart data={barData} labels={labels} />
       </div>
     </nav>
   );
