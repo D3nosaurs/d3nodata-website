@@ -13,6 +13,7 @@ export default function Home() {
     data.push(Math.floor(Math.random() * 10000));
     label.push(i + "");
   }
+  
   return (
     <Fragment>
       <div

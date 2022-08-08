@@ -10,15 +10,10 @@ import BarChart from "./BarChart.tsx";
 import LineChart from "./LineChart.tsx";
 import PieChart from "./PieChart.tsx";
 import { Button } from "../components/Button.tsx";
-
 interface ChartProps {
   chart: string
 }
-
-
 // const chart = props.chart
-
-// 
 
 export default function ChartContainer(props: ChartProps){
  
@@ -27,7 +22,6 @@ export default function ChartContainer(props: ChartProps){
   const [page, setPage] = useState(null);
 
   let content = null;
-
   if (chart === 'pie') content = <PieChart />;
   else if (chart === 'bar') content = <BarChart />;
   else if (chart === 'line') content = <LineChart />;
@@ -35,7 +29,6 @@ export default function ChartContainer(props: ChartProps){
   let chartDisplay;
   if (page === null) chartDisplay = content;
   else chartDisplay = page;
-
 
   function buttonBar() {
     return(
