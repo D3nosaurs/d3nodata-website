@@ -3,26 +3,26 @@ import { h } from "preact";
 import { useState } from "preact/hooks";
 import { tw } from "@twind";
 
+import { BarChart } from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts";
+
+import { barData, labels } from "../Dummy_Data/BarChart_data.ts";
+
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <nav
-      className={tw
-        `flex flex-wrap pt-3 items-center justify-center bg-transparent w-full`}
+      className={tw`flex flex-wrap pt-3 items-center justify-center bg-transparent w-full`}
     >
       <div
-        className={tw
-          `container px-4 mx-auto flex flex-wrap items-center justify-between`}
+        className={tw`container px-4 mx-auto flex flex-wrap items-center justify-between`}
       >
         <div
-          className={tw
-            `w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start`}
+          className={tw`w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start`}
         >
           <img src={"./d3no-data-logo.svg"} className={tw`w-20`} />
           <button
-            className={tw
-              `cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none`}
+            className={tw`cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none`}
             type="button"
             onClick={() => {
               setOpenMenu(!openMenu);
@@ -33,13 +33,11 @@ export default function NavBar() {
             >
             </span>
             <span
-              className={tw
-                `block relative w-6 h-px rounded-sm bg-green-300 mt-1`}
+              className={tw`block relative w-6 h-px rounded-sm bg-green-300 mt-1`}
             >
             </span>
             <span
-              className={tw
-                `block relative w-6 h-px rounded-sm bg-green-300 mt-1`}
+              className={tw`block relative w-6 h-px rounded-sm bg-green-300 mt-1`}
             >
             </span>
           </button>
@@ -48,14 +46,12 @@ export default function NavBar() {
           (
             <div className={tw`lg:flex flex-grow items-center`}>
               <ul
-                className={tw
-                  `flex flex-col lg:flex-row md:justify-center md:items-center
+                className={tw`flex flex-col lg:flex-row md:justify-center md:items-center
                 sm:justify-center sm:items-center list-none ml-auto`}
               >
                 <li className={tw`nav-item`}>
                   <a
-                    className={tw
-                      `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                    className={tw`px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
                     href="/"
                   >
                     HOME
@@ -63,8 +59,7 @@ export default function NavBar() {
                 </li>
                 <li className={tw`nav-item`}>
                   <a
-                    className={tw
-                      `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                    className={tw`px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
                     href="/greet/documentation"
                   >
                     DOCUMENTATION
@@ -72,8 +67,7 @@ export default function NavBar() {
                 </li>
                 <li className={tw`nav-item`}>
                   <a
-                    className={tw
-                      `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                    className={tw`px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
                     href="https://github.com/oslabs-beta/d3no-data"
                     target="_blank"
                   >
@@ -86,6 +80,7 @@ export default function NavBar() {
               </ul>
             </div>
           )}
+        <BarChart data={barData} labels={labels} />
       </div>
     </nav>
   );

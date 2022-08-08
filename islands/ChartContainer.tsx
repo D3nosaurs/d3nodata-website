@@ -1,60 +1,56 @@
 /** @jsx h */
-import { h } from "preact";
+import { h, render } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
 
-
 import Header from "./Header.tsx";
-
-import BarChart from "./BarChart.tsx";
-import LineChart from "./LineChart.tsx";
-import PieChart from "./PieChart.tsx";
 import { Button } from "../components/Button.tsx";
-interface ChartProps {
-  chart: string
-}
-// const chart = props.chart
+import { BarChart } from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts";
+import { barData, labels } from "../Dummy_Data/BarChart_data.ts";
 
-export default function ChartContainer(props: ChartProps){
- 
-  const chart  = props.chart;
-  // console.log('chart props in chartContainer: ', chart); //this is logging infinitely 
+interface ChartProps {
+  chart: string;
+}
+
+export default function ChartContainer(props: ChartProps) {
+  const chart = props.chart;
+  // console.log('chart props in chartContainer: ', chart); //this is logging infinitely
   const [page, setPage] = useState(null);
 
-  let content = null;
-  if (chart === 'pie') content = <PieChart />;
-  else if (chart === 'bar') content = <BarChart />;
-  else if (chart === 'line') content = <LineChart />;
+  let chartType;
+  if (chart === "bar") chartType = <BarChart data={barData} labels={labels} />;
+  // else if (chart === "bar") content = ;
+  // else if (chart === "line") content = <LineChart />;
 
-  let chartDisplay;
-  if (page === null) chartDisplay = content;
-  else chartDisplay = page;
+  // let chatDisplay;
+  // if (page === null) chartDisplay = chart;
+  // else chartDisplay = page;
+
+  const chartDisplay = chart;
 
   function buttonBar() {
-    return(
+    return (
       <div>
-        <Button onClick={() => {
-            setPage(<BarChart />);
-            content = null;
-          }}>Bar Chart</Button>
-        <Button onClick={() => {
-            setPage(<PieChart />)
-            content = null;
-          }}>Pie Chart</Button>
-        <Button onClick={() => {
-          setPage(<LineChart />)
-          content = null;
-        }}>Line Chart</Button>
+        {
+          /* <Button
+          onClick={() => {
+            setPage(<BarChart data={barData} label={labels} />);
+          }}
+        >
+          Bar Chart
+        </Button> */
+        }
       </div>
-    )
+    );
   }
 
   return (
     <div>
-      < Header />
-      { buttonBar() }
-      { chartDisplay }
+      <Header />
+      {
+        /* {buttonBar()}
+      {chartDisplay} */
+      }
     </div>
-  )
+  );
 }
-
