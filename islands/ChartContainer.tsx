@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h } from "preact";
+import { h, render } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
 import * as d3 from "d3";
@@ -8,12 +8,14 @@ import * as d3 from "d3";
 import LineChart from "./LineChart.tsx";
 import PieChart from "./PieChart.tsx";
 import { Button } from "../components/Button.tsx";
+import { BarChart } from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts";
+import { barData, labels } from "../Dummy_Data/BarChart_data.ts";
 
 import { BarChart } from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts"; 
 
 
 interface ChartProps {
-  chart: string
+  chart: string;
 }
 
 // 
@@ -54,4 +56,3 @@ export default function ChartContainer(){
       </div>
     )
   }
-
