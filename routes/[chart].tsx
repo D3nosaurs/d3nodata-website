@@ -1,6 +1,5 @@
 /** @jsx h */
 import { Fragment, h } from "preact";
-import { tw } from "@twind";
 import { PageProps } from "$fresh/server.ts";
 import BarChart from "../islands/BarChart.tsx";
 
