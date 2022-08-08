@@ -10,7 +10,8 @@ import * as $$1 from "./islands/ChartContainer.tsx";
 import * as $$2 from "./islands/ChartRedirect.tsx";
 import * as $$3 from "./islands/Header.tsx";
 import * as $$4 from "./islands/LineChart.tsx";
-import * as $$5 from "./islands/PieChart.tsx";
+import * as $$5 from "./islands/NavBar.tsx";
+import * as $$6 from "./islands/PieChart.tsx";
 
 const manifest = {
   routes: {
@@ -24,7 +25,8 @@ const manifest = {
     "./islands/ChartRedirect.tsx": $$2,
     "./islands/Header.tsx": $$3,
     "./islands/LineChart.tsx": $$4,
-    "./islands/PieChart.tsx": $$5,
+    "./islands/NavBar.tsx": $$5,
+    "./islands/PieChart.tsx": $$6,
   },
   baseUrl: import.meta.url,
 };
