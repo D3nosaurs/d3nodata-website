@@ -1,8 +1,10 @@
 /** @jsx h */
-import { h } from "preact";
+import { h, Fragment } from "preact";
 import { PageProps, Handlers } from "$fresh/server.ts";
 import { tw } from "@twind";
+import NavBar from "../../islands/NavBar.tsx";
 import ChartContainer from "../../islands/ChartContainer.tsx";
+
 
 export const handler: Handlers = {
   async GET(req, ctx) {
@@ -15,15 +17,20 @@ export const handler: Handlers = {
 
 //that data gets accessed by destructuring the property of V
 //to get data and we then can use that in the return
-export default function Charts(props: PageProps) {
+export default function Charts() {
+  
   // const chartsLog = () => console.log('props data', props.data);
-  const typeChart = props.data;
+  // const typeChart = props.data;
   // chart={ typeChart } REMOVED FROM 25
   return (
-    // <div>Charts {props.params.name}</div>
-    <div class={tw`p-4 mx-auto max-w-screen-md`}>
-      <ChartContainer  chart={typeChart}/>
-      {/* { chartsLog() } */}
-    </div>
+    <Fragment>
+      <NavBar />
+      {/* // <div>Charts {props.params.name}</div> */}
+      <div class={tw`p-4 mx-auto max-w-screen-md`}>
+        
+        <ChartContainer />
+        {/* { chartsLog() } */}
+      </div>
+    </Fragment>
   )
 }

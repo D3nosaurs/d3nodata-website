@@ -2,7 +2,6 @@
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
-import BarChart from "../islands/BarChart.tsx";
 
 export default function Home() {
   const data: number[] = [];
@@ -15,6 +14,7 @@ export default function Home() {
   }
   return (
     <Fragment>
+      <BarChartIsland></BarChartIsland>
       <div
         className={tw`flex h-screen items-center bg-white flex-col w-full`}
       >

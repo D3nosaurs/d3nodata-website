@@ -5,13 +5,12 @@
 import * as $0 from "./routes/charts/_middleware.ts";
 import * as $1 from "./routes/charts/index.tsx";
 import * as $2 from "./routes/index.tsx";
-import * as $$0 from "./islands/BarChart.tsx";
-import * as $$1 from "./islands/ChartContainer.tsx";
-import * as $$2 from "./islands/ChartRedirect.tsx";
-import * as $$3 from "./islands/Header.tsx";
-import * as $$4 from "./islands/LineChart.tsx";
-import * as $$5 from "./islands/NavBar.tsx";
-import * as $$6 from "./islands/PieChart.tsx";
+import * as $$0 from "./islands/ChartContainer.tsx";
+import * as $$1 from "./islands/ChartRedirect.tsx";
+import * as $$2 from "./islands/Header.tsx";
+import * as $$3 from "./islands/LineChart.tsx";
+import * as $$4 from "./islands/NavBar.tsx";
+import * as $$5 from "./islands/PieChart.tsx";
 
 const manifest = {
   routes: {
@@ -20,13 +19,12 @@ const manifest = {
     "./routes/index.tsx": $2,
   },
   islands: {
-    "./islands/BarChart.tsx": $$0,
-    "./islands/ChartContainer.tsx": $$1,
-    "./islands/ChartRedirect.tsx": $$2,
-    "./islands/Header.tsx": $$3,
-    "./islands/LineChart.tsx": $$4,
-    "./islands/NavBar.tsx": $$5,
-    "./islands/PieChart.tsx": $$6,
+    "./islands/ChartContainer.tsx": $$0,
+    "./islands/ChartRedirect.tsx": $$1,
+    "./islands/Header.tsx": $$2,
+    "./islands/LineChart.tsx": $$3,
+    "./islands/NavBar.tsx": $$4,
+    "./islands/PieChart.tsx": $$5,
   },
   baseUrl: import.meta.url,
 };
