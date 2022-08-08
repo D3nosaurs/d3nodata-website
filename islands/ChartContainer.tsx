@@ -6,7 +6,7 @@ import { tw } from "@twind";
 import Header from "./Header.tsx";
 import { Button } from "../components/Button.tsx";
 import { BarChart } from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts";
-import { barData, labels } from "../Dummy_Data/BarChart_data.ts";
+import { barData, barLabels } from "../Dummy_Data/BarChart_data.ts";
 
 interface ChartProps {
   chart: string;
@@ -18,7 +18,7 @@ export default function ChartContainer(props: ChartProps) {
   const [page, setPage] = useState(null);
 
   let chartType;
-  if (chart === "bar") chartType = <BarChart data={barData} labels={labels} />;
+  if (chart === "bar") chartType = <BarChart data={barData} labels={barLabels} />;
   // else if (chart === "bar") content = ;
   // else if (chart === "line") content = <LineChart />;
 
