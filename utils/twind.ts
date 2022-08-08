@@ -10,6 +10,9 @@ export const config: Configuration = {
         sans: ["Quicksand"],
         mono: ["Source Code Pro"],
       },
+      colors: {
+        sideNavTitle: "#4D908E",
+      },
     },
   },
   preflight: {

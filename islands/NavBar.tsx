@@ -5,6 +5,9 @@ import { tw } from "@twind";
 
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(true);
+  const numData = 30;
+  const data: number[] = [];
+  const label: string[] = [];
 
   return (
     <nav
@@ -68,6 +71,15 @@ export default function NavBar() {
                     href="/greet/documentation"
                   >
                     DOCUMENTATION
+                  </a>
+                </li>
+                <li className={tw`nav-item`}>
+                  <a
+                    className={tw
+                      `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                    href="/samples"
+                  >
+                    SAMPLES
                   </a>
                 </li>
                 <li className={tw`nav-item`}>
