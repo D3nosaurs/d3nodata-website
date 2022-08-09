@@ -11,42 +11,43 @@ import { scatterData } from "../Dummy_Data/ScatterPlotChart_data.ts";
 import { barData, barLabels } from "../Dummy_Data/BarChart_data.ts";
 import { BarChart } from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
 import { ScatterPlotChart } from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
-
-interface ChartProps {
-  chart: string;
-}
-
-const barChartProperties = {
-  data: barData, 
-  labels: barLabels, 
-  animationDuration: 70, 
-  animationDelay: 30,
-}
-
-const scatterPlotProperties = {
-  data: scatterData
-}
+import { barChartProperties, scatterPlotChartProperties, donutChartProperties, lineChartProperties } from "../chartPropertyTypes.ts";
 
 // input: chartProperties are the properties of the chart that the user will be altering
 function ChartDisplay(chart, chartProperties) { 
 
   function Interactivity() {
+    //this separates the keys of our property object
     const propertyNames: string[] = (Object.keys(chartProperties));
 
-    const modifyInfo = (property:string, callback) => chartProperties.property = callback();
+    // const modifyInfo = (property:string, callback) => chartProperties.property = callback();
 
     // creates iteractive element for each property
-    const InteractiveElement = ({ property }) => {
+    const InteractiveElement = ({property}) => {    
+      
+      // assign interactiveEl 
+      let propFunc;
+      if (chartProperties[property + 'Func'] === 'slider') {
+        propFunc = <Slider value={chartProperties[property]}/>
+      }
+      if (chartProperties[property + 'Func'] === 'input') {
+        propFunc = <input id={property} value={chartProperties[property]} onChange={()=> {
+          chartProperties[property] = document.querySelector('#' + property).value
+          console.log('changed val ', document.querySelector('#' + property).value)
+          console.log('chartProps ', chartProperties[property]);
+        }}/>
+      }
 
       return (
         <div id="singleElement" key={property}>
-          {property}: 
+           {property}: {chartProperties[property]}
+           {propFunc}
         </div>
       )};
 
     // select all properties of the passed-in info which the user will be altering
     const propertyList = propertyNames.map(property => {
-      if(property !== "data" && property !== "labels" )
+      if(property !== "data" && property !== "labels" && !property.includes("Func"))
       return <InteractiveElement key={property} property={property} />
     })
     return (propertyList);
@@ -60,13 +61,11 @@ function ChartDisplay(chart, chartProperties) {
   )
 }
 
-
-
 export default function ChartContainer(){
   
-  const [display, setDisplay] = useState([ScatterPlotChart, scatterPlotProperties]);
+  const [display, setDisplay] = useState([BarChart, barChartProperties]);
 
-  function buttonBar() {
+  function ButtonBar() {
     return(
       <div>
         <Button onClick={() => {
@@ -74,7 +73,7 @@ export default function ChartContainer(){
           }}>Bar Chart</Button>
 
         <Button onClick={() => {
-            setDisplay([ScatterPlotChart, scatterPlotProperties]);
+            setDisplay([ScatterPlotChart, scatterPlotChartProperties]);
           }}>Scatter Chart</Button>  
       </div>
     )
@@ -90,10 +89,8 @@ export default function ChartContainer(){
 
   return (
     <div>
-      { buttonBar() }
+      <ButtonBar />
       <ChartRender />
-      {/* <BarChart data={barData} labels={labels} /> */}
-      {/* <div>{ console.log(BarChart()) }</div> */}
     </div>
   )
 }
