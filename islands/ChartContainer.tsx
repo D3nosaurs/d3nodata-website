@@ -5,7 +5,6 @@ import { tw } from "@twind";
 import * as d3 from "d3";
 // 
 
-
 import { Button } from "../components/Button.tsx";
 import { Slider } from '../components/Slider.tsx';
 
@@ -14,10 +13,10 @@ import { barData, barLabels } from "../Dummy_Data/BarChart_data.ts";
 import { BarChart } from "https://deno.land/x/d3nodata@v0.0.1.2/charts.ts";
 // import { ScatterPlotChart } from "https://deno.land/x/d3nodata@v0.0.1.2/charts.ts";
 
+
 interface ChartProps {
   chart: string;
 }
-
 
 const barChartProperties = {
   data: barData, 
@@ -29,7 +28,6 @@ const barChartProperties = {
 // const scatterPlotProperties = {
 //   data: scatterData
 // }
-
 
 // input: chartProperties are the properties of the chart that the user will be altering
 function ChartDisplay(chart, chartProperties) { 
