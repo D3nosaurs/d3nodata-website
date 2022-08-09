@@ -4,7 +4,7 @@ import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
 
 import Header from "./Header.tsx";
-import { Button } from "../components/Button.tsx";
+import Button from "../islands/Button.tsx";
 import { BarChart } from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts";
 import { barData, barLabels } from "../Dummy_Data/BarChart_data.ts";
 

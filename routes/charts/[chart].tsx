@@ -1,14 +1,10 @@
 /** @jsx h */
 import { Fragment, h } from "preact";
 import { PageProps } from "$fresh/server.ts";
-import BarChart from "../islands/BarChart.tsx";
 
 export default function Documentation(props: PageProps) {
   // determine what chart to render
   const chart = props.params.chart;
-
-  console.log(chart);
-
   const data: number[] = [];
   const label: string[] = [];
   const numData = 25;
@@ -20,7 +16,6 @@ export default function Documentation(props: PageProps) {
 
   return (
     <Fragment>
-      <BarChart data={data} labels={label} />
     </Fragment>
   );
 }
