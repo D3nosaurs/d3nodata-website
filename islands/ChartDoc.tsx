@@ -5,6 +5,8 @@ import { useEffect, useState } from "preact/hooks";
 import AceEditor from "ace-editor";
 import barChartPropsInfo from "../chart-props-info/barPropChartInfo.ts";
 import lineChartPropsInfo from "../chart-props-info/linePropChartInfo.ts";
+import scatterplotChartPropsInfo from "../chart-props-info/scatterplotPropChartInfo.ts";
+import piedonutChartPropsInfo from "../chart-props-info/piedonutPropChartInfo.ts";
 import PropsTable from "../components/BarChartPropsDoc.tsx";
 
 export default function ChartDoc(props: { chart: string }) {
@@ -48,6 +50,7 @@ export default function ChartDoc(props: { chart: string }) {
           `import ScatterplotChart from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts"
             \n<ScatterplotChart data={data} {...props}/>`,
         );
+        setPropTableInfo(scatterplotChartPropsInfo);
       } else if (props.chart === "PIE CHART & DONUT CHART") {
         setDescription(
           "Pie chart is a statiscal graph dividing the circle into numerical portions according to the input data. It is used to compare categories. Donut chart the same as pie chart but has an inner radius to resemble a donut. ",
@@ -58,6 +61,7 @@ export default function ChartDoc(props: { chart: string }) {
           \nimport DonutChart from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts";
             \n<DonutChart data={data} {...props}/>`,
         );
+        setPropTableInfo(piedonutChartPropsInfo);
       }
     }
   }, [props.chart]);

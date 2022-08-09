@@ -26,7 +26,7 @@ export default [
     defaultValue: "N/A",
     required: "Yes",
     description:
-      "data used to render bar chart. Object that contains an array of numbers and an array of corresponding labels.",
+      "data used to render scatterplot chart. An array of objects that contains the x and y for each dot.",
   },
   {
     name: "dotColor",
@@ -85,25 +85,18 @@ export default [
     description: "color for axes' labels",
   },
   {
-    name: "lineColor",
-    type: "string",
-    defaultValue: "#BFE4A3",
-    required: "No",
-    description: "color of line for line chart",
-  },
-  {
     name: "animation",
     type: "boolean",
     defaultValue: "true",
     required: "No",
-    description: "animation for line chart",
+    description: "animation for scatterplot chart",
   },
   {
     name: "animationDuration",
     type: "number",
-    defaultValue: "5000",
+    defaultValue: "1200",
     required: "No",
-    description: "time in ms for line chart to be animated",
+    description: "time in ms for dots to move to its specified position",
   },
   {
     name: "addToolTip",
