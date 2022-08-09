@@ -2,7 +2,6 @@
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
-import ChartRedirect from "../islands/ChartRedirect.tsx";
 
 export default function Home() {
   return (
@@ -11,8 +10,6 @@ export default function Home() {
         className={tw`flex h-screen items-center bg-white flex-col w-full`}
       >
         <NavBar></NavBar>
-
-        <ChartRedirect />
 
         <div
           className={tw
@@ -34,7 +31,8 @@ export default function Home() {
                 className={tw
                   `text-[10px] font-mono p-3 bg-white shadow-lg lg:text-sm rounded-lg`}
               >
-                import * from "deno.land/x/chartcomps@v1.0.0"
+                import * from
+                "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts"
               </p>
             </div>
             <a

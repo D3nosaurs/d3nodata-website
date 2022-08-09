@@ -20,7 +20,7 @@ export default function NavBar() {
           className={tw
             `w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start`}
         >
-          <img src={"./d3no-data-logo.svg"} className={tw`w-20`} />
+          <img src={"../d3no-data-logo.svg"} className={tw`w-20`} />
           <button
             className={tw
               `cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none`}
@@ -75,7 +75,7 @@ export default function NavBar() {
                   <a
                     className={tw
                       `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
-                    href="/samples"
+                    href="/samples/GET-STARTED"
                   >
                     SAMPLES
                   </a>
@@ -88,7 +88,7 @@ export default function NavBar() {
                     target="_blank"
                   >
                     <img
-                      src="github-logo.svg"
+                      src="../github-logo.svg"
                       className={tw`w-7`}
                     />
                   </a>

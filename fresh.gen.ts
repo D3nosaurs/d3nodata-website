@@ -2,12 +2,11 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import * as $0 from "./routes/charts/[charts].tsx";
-import * as $1 from "./routes/charts/_middleware.ts";
-import * as $2 from "./routes/docCharts/[charts].tsx";
-import * as $3 from "./routes/documentation.tsx";
-import * as $4 from "./routes/index.tsx";
-import * as $5 from "./routes/samples.tsx";
+import * as $0 from "./routes/docCharts/[charts].tsx";
+import * as $1 from "./routes/documentation.tsx";
+import * as $2 from "./routes/index.tsx";
+import * as $3 from "./routes/samples/[charts].tsx";
+import * as $4 from "./routes/samples/_middleware.ts";
 import * as $$0 from "./islands/Button.tsx";
 import * as $$1 from "./islands/ChartContainer.tsx";
 import * as $$2 from "./islands/ChartDoc.tsx";
@@ -18,12 +17,11 @@ import * as $$6 from "./islands/NavBar.tsx";
 
 const manifest = {
   routes: {
-    "./routes/charts/[charts].tsx": $0,
-    "./routes/charts/_middleware.ts": $1,
-    "./routes/docCharts/[charts].tsx": $2,
-    "./routes/documentation.tsx": $3,
-    "./routes/index.tsx": $4,
-    "./routes/samples.tsx": $5,
+    "./routes/docCharts/[charts].tsx": $0,
+    "./routes/documentation.tsx": $1,
+    "./routes/index.tsx": $2,
+    "./routes/samples/[charts].tsx": $3,
+    "./routes/samples/_middleware.ts": $4,
   },
   islands: {
     "./islands/Button.tsx": $$0,
