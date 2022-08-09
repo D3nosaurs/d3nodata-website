@@ -5,7 +5,7 @@ import { tw } from "@twind";
 import * as d3 from "d3";
 // 
 
-import { Button } from "./Button.tsx";
+// import { Button } from "./Button.tsx";
 import { Slider } from '../components/Slider.tsx';
 
 import { scatterData } from "../Dummy_Data/ScatterPlotChart_data.ts";
