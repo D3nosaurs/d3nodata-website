@@ -60,6 +60,8 @@ function ChartDisplay(chart, chartProperties) {
   )
 }
 
+
+
 export default function ChartContainer(){
   
   const [display, setDisplay] = useState([ScatterPlotChart, scatterPlotProperties]);
@@ -71,9 +73,17 @@ export default function ChartContainer(){
             setDisplay([BarChart, barChartProperties]);
           }}>Bar Chart</Button>
 
-        {/* <Button onClick={() => {
+        <Button onClick={() => {
             setDisplay([ScatterPlotChart, scatterPlotProperties]);
-          }}>Scatter Chart</Button>  */}
+          }}>Scatter Chart</Button>  
+      </div>
+    )
+  }
+  
+  function ChartRender(){
+    return (
+      <div>
+        { ChartDisplay(display[0], display[1]) }
       </div>
     )
   }
@@ -81,7 +91,7 @@ export default function ChartContainer(){
   return (
     <div>
       { buttonBar() }
-      { ChartDisplay(display[0], display[1]) }
+      <ChartRender />
       {/* <BarChart data={barData} labels={labels} /> */}
       {/* <div>{ console.log(BarChart()) }</div> */}
     </div>
