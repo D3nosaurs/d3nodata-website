@@ -2,7 +2,7 @@
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
-import { Button } from "../components/Button.tsx";
+import Button from "../islands/Button.tsx";
 
 export default function SamplesPage() {
   return (

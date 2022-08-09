@@ -1,13 +1,11 @@
 /** @jsx h */
 import { h } from "preact";
 import { useState } from "preact/hooks";
+import Button from "./Button.tsx";
 import { tw } from "@twind";
 
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(true);
-  const numData = 30;
-  const data: number[] = [];
-  const label: string[] = [];
 
   return (
     <nav
@@ -68,7 +66,7 @@ export default function NavBar() {
                   <a
                     className={tw
                       `px-3 py-2 hover:cursor-pointer flex items-center text-xs uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
-                    href="/greet/documentation"
+                    href="/documentation"
                   >
                     DOCUMENTATION
                   </a>

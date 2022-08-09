@@ -4,7 +4,6 @@ import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
 
 export default function Home() {
-  
   return (
     <Fragment>
       <div
@@ -75,7 +74,6 @@ export default function Home() {
           </g>
         </svg>
       </div>
-      
     </Fragment>
   );
 }
