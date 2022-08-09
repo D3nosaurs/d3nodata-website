@@ -16,7 +16,7 @@ export default function chartPage(props:PageProps) {
     return (
         <div id='chart' class={tw`p-4 mx-auto max-w-screen-md`}>
             {/* {content} */}
-            <ChartContainer  chart={typeChart}/>
+            <ChartContainer chart={typeChart}/>
         </div>
     )
 }

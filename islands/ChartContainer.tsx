@@ -3,16 +3,14 @@ import { h, render } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
 import * as d3 from "d3";
-// 
 
 import { Button } from "../components/Button.tsx";
 import { Slider } from '../components/Slider.tsx';
 
-// import { scatterData } from "../Dummy_Data/ScatterPlotChart_data.ts";
+import { scatterData } from "../Dummy_Data/ScatterPlotChart_data.ts";
 import { barData, barLabels } from "../Dummy_Data/BarChart_data.ts";
-import { BarChart } from "https://deno.land/x/d3nodata@v0.0.1.2/charts.ts";
-// import { ScatterPlotChart } from "https://deno.land/x/d3nodata@v0.0.1.2/charts.ts";
-
+import { BarChart } from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
+import { ScatterPlotChart } from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
 
 interface ChartProps {
   chart: string;
@@ -25,9 +23,9 @@ const barChartProperties = {
   animationDelay: 30,
 }
 
-// const scatterPlotProperties = {
-//   data: scatterData
-// }
+const scatterPlotProperties = {
+  data: scatterData
+}
 
 // input: chartProperties are the properties of the chart that the user will be altering
 function ChartDisplay(chart, chartProperties) { 
@@ -64,14 +62,14 @@ function ChartDisplay(chart, chartProperties) {
 
 export default function ChartContainer(){
   
-  const [display, setDisplay] = useState([BarChart, barChartProperties]);
+  const [display, setDisplay] = useState([ScatterPlotChart, scatterPlotProperties]);
 
   function buttonBar() {
     return(
       <div>
-        {/* <Button onClick={() => {
+        <Button onClick={() => {
             setDisplay([BarChart, barChartProperties]);
-          }}>Bar Chart</Button> */}
+          }}>Bar Chart</Button>
 
         {/* <Button onClick={() => {
             setDisplay([ScatterPlotChart, scatterPlotProperties]);
