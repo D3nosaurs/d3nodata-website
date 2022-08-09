@@ -36,7 +36,7 @@ export default function Home() {
               </p>
             </div>
             <a
-              href="/greet/documentation"
+              href="/documentation"
               className={tw`flex flex-row justify-center`}
             >
               <button

@@ -61,7 +61,7 @@ function ChartDisplay(chart, chartProperties) {
   );
 }
 
-export default function ChartContainer(props: { chart: string }) {
+export default function ChartContainer() {
   const [display, setDisplay] = useState([
     ScatterPlotChart,
     scatterPlotProperties,
@@ -78,18 +78,31 @@ export default function ChartContainer(props: { chart: string }) {
           Bar Chart
         </Button>
 
-        {
-          /* <Button onClick={() => {
+        <Button
+          onClick={() => {
             setDisplay([ScatterPlotChart, scatterPlotProperties]);
-          }}>Scatter Chart</Button>  */
-        }
+          }}
+        >
+          Scatter Chart
+        </Button>
+      </div>
+    );
+  }
+
+  function ChartRender() {
+    return (
+      <div>
+        {ChartDisplay(display[0], display[1])}
       </div>
     );
   }
 
   return (
-    <div class={tw`h-full col-span-4 border-2`}>
-      {props.chart}
+    <div>
+      {buttonBar()}
+      <ChartRender />
+      {/* <BarChart data={barData} labels={labels} /> */}
+      {/* <div>{ console.log(BarChart()) }</div> */}
     </div>
   );
 }
