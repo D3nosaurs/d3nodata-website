@@ -30,7 +30,7 @@ export default function SamplesPage() {
             </li>
             <li>
               <a>
-                <Button text="SCATTERPLOT CHART"></Button>
+                <Button text="SCATTERPLOT CHART" ></Button>
               </a>
             </li>
             <li>

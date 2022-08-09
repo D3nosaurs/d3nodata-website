@@ -3,16 +3,14 @@ import { h, render } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
 import * as d3 from "d3";
-// 
 
-// import { Button } from "./Button.tsx";
+import { Button } from "../components/Button.tsx";
 import { Slider } from '../components/Slider.tsx';
 
 import { scatterData } from "../Dummy_Data/ScatterPlotChart_data.ts";
 import { barData, barLabels } from "../Dummy_Data/BarChart_data.ts";
 import { BarChart } from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
 import { ScatterPlotChart } from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
-
 
 interface ChartProps {
   chart: string;
@@ -69,9 +67,9 @@ export default function ChartContainer(){
   function buttonBar() {
     return(
       <div>
-        {/* <Button onClick={() => {
+        <Button onClick={() => {
             setDisplay([BarChart, barChartProperties]);
-          }}>Bar Chart</Button> */}
+          }}>Bar Chart</Button>
 
         {/* <Button onClick={() => {
             setDisplay([ScatterPlotChart, scatterPlotProperties]);
