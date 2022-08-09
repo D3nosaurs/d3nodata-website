@@ -21,10 +21,7 @@ export default function ChartRedirect () {
       //   //   "Chart-Type": 'pie'
       //   // }
       // })
-
-      // const data = await resp.json();
-      window.location.href = './charts/'
-      // window.location.replace('./charts')
+      window.location.replace('./charts/pie')
     } }
     >Graph Chart Button </ChartButton>
   )

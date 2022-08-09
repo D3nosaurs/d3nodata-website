@@ -2,6 +2,7 @@
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
+import ChartRedirect from "../islands/ChartRedirect.tsx";
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
         className={tw`flex h-screen items-center bg-white flex-col w-full`}
       >
         <NavBar></NavBar>
+
+        <ChartRedirect />
 
         <div
           className={tw

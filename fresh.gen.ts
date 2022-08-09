@@ -26,6 +26,7 @@ const manifest = {
     "./routes/documentation.tsx": $4,
     "./routes/index.tsx": $5,
     "./routes/samples.tsx": $6,
+
   },
   islands: {
     "./islands/Button.tsx": $$0,
