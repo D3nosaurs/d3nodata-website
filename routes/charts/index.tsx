@@ -18,18 +18,15 @@ export const handler: Handlers = {
 //that data gets accessed by destructuring the property of V
 //to get data and we then can use that in the return
 export default function Charts() {
-  
-  // const chartsLog = () => console.log('props data', props.data);
-  // const typeChart = props.data;
-  // chart={ typeChart } REMOVED FROM 25
+
   return (
     <Fragment>
       <NavBar />
-      {/* // <div>Charts {props.params.name}</div> */}
+
       <div class={tw`p-4 mx-auto max-w-screen-md`}>
         
         <ChartContainer />
-        {/* { chartsLog() } */}
+
       </div>
     </Fragment>
   )
