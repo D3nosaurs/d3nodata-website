@@ -20,23 +20,22 @@ export default function ChartContainer2(props: { chart: string }) {
   const [showChart, setShowChart] = useState(false);
   const [numData, setNumData] = useState(25);
   const [fakeData, setFakeData] = useState(null);
-  const height = "500";
-  const width = "1000";
+  const height = 500;
+  const width = 1000;
 
   useEffect(() => {
     if (props.chart === "GET STARTED") {
       setShowChart(false);
     } else {
       setShowChart(true);
+
       if (props.chart === "BAR CHART") {
-        console.log(barData);
         setChartDisplay(
           <BarChart
             data={barData}
             height={height}
             width={width}
-          >
-          </BarChart>,
+          />,
         );
       } else if (props.chart === "LINE CHART") {
         setChartDisplay(

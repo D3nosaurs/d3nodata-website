@@ -1,3 +1,4 @@
+
 const num = 10;
 
 const barData: { x: string; y: number }[] = [];
