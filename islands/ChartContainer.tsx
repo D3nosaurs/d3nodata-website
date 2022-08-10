@@ -18,6 +18,8 @@ import {
   lineChartProperties,
   scatterPlotChartProperties,
 } from "../chartPropertyTypes.ts";
+import { tw } from "../utils/twind.ts";
+import { Input } from "../components/Input.tsx";
 
 // input: chartProperties are the properties of the chart that the user will be altering
 function ChartDisplay(chart, chartProperties) {
