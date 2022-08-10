@@ -1,11 +1,14 @@
 {
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.0.2/",
-    "preact": "https://esm.sh/preact@10.10.0",
-    "preact/": "https://esm.sh/preact@10.10.0/",
+    "preact": "https://esm.sh/preact@10.8.2",
+    "preact/": "https://esm.sh/preact@10.8.2/",
     "preact-render-to-string": "https://esm.sh/preact-render-to-string@5.2.1?external=preact",
     "@twind": "./utils/twind.ts",
     "twind": "https://esm.sh/twind@0.16.17",
-    "twind/": "https://esm.sh/twind@0.16.17/"
+    "twind/": "https://esm.sh/twind@0.16.17/",
+    "d3": "https://cdn.skypack.dev/d3",
+    "ace-editor": "https://cdn.skypack.dev/@cedric05/preact-ace",
+    "react-toggle": "https://cdn.skypack.dev/react-toggle"
   }
 }
