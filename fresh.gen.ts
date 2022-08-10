@@ -19,10 +19,22 @@ import * as $$8 from "./islands/NavBar.tsx";
 import * as $$9 from "./islands/Samples.tsx";
 import * as $$10 from "./islands/ScatterplotChartEg.tsx";
 
+import * as $1 from "./routes/charts/_middleware.ts";
+import * as $2 from "./routes/documentation.tsx";
+import * as $3 from "./routes/index.tsx";
+import * as $4 from "./routes/samples.tsx";
+import * as $$0 from "./islands/Button.tsx";
+import * as $$1 from "./islands/ChartContainer.tsx";
+import * as $$2 from "./islands/ChartDoc.tsx";
+import * as $$3 from "./islands/ChartRedirect.tsx";
+import * as $$4 from "./islands/Documentation.tsx";
+import * as $$5 from "./islands/Header.tsx";
+import * as $$6 from "./islands/NavBar.tsx";
+
 const manifest = {
   routes: {
     "./routes/charts/[charts].tsx": $0,
-    "./routes/docCharts/[charts].tsx": $1,
+
     "./routes/documentation.tsx": $2,
     "./routes/index.tsx": $3,
     "./routes/samples.tsx": $4,
