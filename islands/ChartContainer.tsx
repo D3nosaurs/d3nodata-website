@@ -100,9 +100,7 @@ export default function ChartContainer(props) {
               class={tw
                 `w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
               onChange={(e) => {
-                console.log("slider properties: ", chartProperties[property]);
                 chartProperties[property] = e.target.value;
-                console.log("changed property: ", chartProperties[property]);
                 setDisplay([chart, chartProperties]);
               }}
             />
@@ -116,18 +114,24 @@ export default function ChartContainer(props) {
               class={tw
                 `block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
               onChange={() => {
-                chartProperties[property] =
-                  document.querySelector("#" + property).value;
-                console.log(
-                  "changed val ",
-                  document.querySelector("#" + property).value,
-                );
+                chartProperties[property] = document.querySelector("#" + property).value;
                 setDisplay([chart, chartProperties]);
-                // chart.updateChart()
-                // console.log('chart: ',  )
               }}
             />
           );
+        }
+        if (chartProperties[property + "Func"] === 'colorPicker') {
+          propFunc = (
+            <input 
+            id={property}
+            value={chartProperties[property]}
+            type='color'
+            onChange={(e) => {
+              chartProperties[property] = e.target.value;
+              setDisplay([chart, chartProperties])
+            }}
+            />
+          )
         }
 
         return (
