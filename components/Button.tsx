@@ -8,7 +8,8 @@ export function Button(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
     <button
       {...props}
       disabled={!IS_BROWSER || props.disabled}
-      class={tw`px-2 py-1 border(gray-100 2) hover:bg-gray-200`}
+      class={tw
+        `w-full text-left pl-5 text-sideNavTitle  rounded-sm hover:bg-gray-200 hover:font-semibold duration-300`}
     />
   );
 }

@@ -3,10 +3,9 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/charts/[charts].tsx";
-import * as $1 from "./routes/docCharts/[charts].tsx";
-import * as $2 from "./routes/documentation.tsx";
-import * as $3 from "./routes/index.tsx";
-import * as $4 from "./routes/samples.tsx";
+import * as $1 from "./routes/documentation.tsx";
+import * as $2 from "./routes/index.tsx";
+import * as $3 from "./routes/samples.tsx";
 import * as $$0 from "./islands/BarChartEg.tsx";
 import * as $$1 from "./islands/Button.tsx";
 import * as $$2 from "./islands/ChartContainer.tsx";
@@ -22,10 +21,9 @@ import * as $$10 from "./islands/ScatterplotChartEg.tsx";
 const manifest = {
   routes: {
     "./routes/charts/[charts].tsx": $0,
-    "./routes/docCharts/[charts].tsx": $1,
-    "./routes/documentation.tsx": $2,
-    "./routes/index.tsx": $3,
-    "./routes/samples.tsx": $4,
+    "./routes/documentation.tsx": $1,
+    "./routes/index.tsx": $2,
+    "./routes/samples.tsx": $3,
   },
   islands: {
     "./islands/BarChartEg.tsx": $$0,

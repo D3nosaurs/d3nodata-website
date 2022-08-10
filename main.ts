@@ -23,4 +23,4 @@ function render(ctx: RenderContext, render: InnerRenderFunction) {
   ctx.state.set("twind", newSnapshot);
 }
 
-await start(manifest, { render, port: 3000 });
+await start(manifest, { render, port: 8000 });
