@@ -9,8 +9,9 @@ type SliderProps = {
 
 // h.JSX.HTMLAttributes<HTMLInputElement>
 
-export function Slider(props: SliderProps) {
+export function Slider() {
   return (
+
     <input
       type="range"
       min="1"
@@ -19,5 +20,6 @@ export function Slider(props: SliderProps) {
       class={tw`w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
     >
     </input>
+
   );
 }
