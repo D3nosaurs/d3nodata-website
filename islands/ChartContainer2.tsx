@@ -8,7 +8,7 @@ import {
   LineChart,
   PieChart,
   ScatterPlotChart,
-} from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
+} from "https://deno.land/x/d3nodata@v.0.0.1.2.2.2/charts.ts";
 import InteractiveButton from "../components/InteractiveButton.tsx";
 import { barData } from "../Dummy_Data/BarChart_data.ts";
 import { scatterData } from "../Dummy_Data/ScatterPlotChart_data.ts";
