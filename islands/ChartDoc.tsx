@@ -7,7 +7,7 @@ import barChartPropsInfo from "../chart-props-info/barPropChartInfo.ts";
 import lineChartPropsInfo from "../chart-props-info/linePropChartInfo.ts";
 import scatterplotChartPropsInfo from "../chart-props-info/scatterplotPropChartInfo.ts";
 import piedonutChartPropsInfo from "../chart-props-info/piedonutPropChartInfo.ts";
-import PropsTable from "../components/BarChartPropsDoc.tsx";
+import PropsTable from "../components/PropsTable.tsx";
 
 export default function ChartDoc(props: { chart: string }) {
   const [description, setDescription] = useState("");
@@ -67,7 +67,9 @@ export default function ChartDoc(props: { chart: string }) {
   }, [props.chart]);
 
   return (
-    <div class={tw`col-span-4 p-5 w-full border-2 h-full flex flex-col gap-10`}>
+    <div
+      class={tw`col-span-4 p-5 border-l-2 w-full h-full flex flex-col gap-10`}
+    >
       <h1 class={tw`text-4xl font-semibold text-green-600`}>
         {props.chart.toUpperCase()}
       </h1>

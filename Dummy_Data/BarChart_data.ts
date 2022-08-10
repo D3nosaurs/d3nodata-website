@@ -1,10 +1,10 @@
-// Required: labels: string[], data: number[]
-const barLabels: string[] = [];
-const barData: number[] = [];
-const num = 50;
+const barData: { x: string; y: number }[] = [];
+const num = 10;
 
 for (let i = 0; i < num; i++) {
-  barLabels.push(i + "");
-  barData.push(Math.random() * 100);
+  barData.push({
+    x: i + "",
+    y: Math.random() * 1000,
+  });
 }
-export { barData, barLabels };
+export { barData };

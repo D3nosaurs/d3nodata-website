@@ -2,7 +2,11 @@
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
-import ChartRedirect from "../islands/ChartRedirect.tsx";
+import { useEffect, useState } from "preact/hooks";
+import BarChartEg from "../islands/BarChartEg.tsx";
+import DonutChartEg from "../islands/DonutChartEg.tsx";
+import ScatterplotEg from "../islands/ScatterplotChartEg.tsx";
+import LineChartEg from "../islands/LineChartEg.tsx";
 
 export default function Home() {
   return (
@@ -11,8 +15,6 @@ export default function Home() {
         className={tw`flex h-screen items-center bg-white flex-col w-full`}
       >
         <NavBar></NavBar>
-
-        <ChartRedirect />
 
         <div
           className={tw
@@ -34,11 +36,12 @@ export default function Home() {
                 className={tw
                   `text-[10px] font-mono p-3 bg-white shadow-lg lg:text-sm rounded-lg`}
               >
-                import * from "deno.land/x/chartcomps@v1.0.0"
+                import * from
+                "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts"
               </p>
             </div>
             <a
-              href="/greet/documentation"
+              href="/documentation"
               className={tw`flex flex-row justify-center`}
             >
               <button
@@ -76,6 +79,68 @@ export default function Home() {
             />
           </g>
         </svg>
+      </div>
+      {/* feature to show that it is animated */}
+      <div
+        class={tw
+          `w-9/12 h-full m-auto p-3 rounded-lg border-2 border-green-300 shadow-lg flex flex-col items-center`}
+      >
+        <h1 class={tw`text-3xl font-bold text-green-500`}>FEATURES</h1>
+        <div class={tw`w-full p-5`}>
+          <div
+            class={tw`flex flex-row w-full gap-8 justify-between`}
+          >
+            <div class={tw`w-[100%] h-max shadow-lg rounded-lg`}>
+              <BarChartEg />
+            </div>
+            <div
+              class={tw`flex flex-col w-full items-center justify-center`}
+            >
+              <p class={tw`font-semibold text-xl text-green-400`}>
+                BUILT IN ANIMATION
+              </p>
+              <p class={tw`text-center`}>
+                Each chart comes with a built in animation
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class={tw`w-full p-5`}>
+          <div
+            class={tw`flex flex-row w-full gap-8 justify-between`}
+          >
+            <div class={tw`flex flex-col w-full items-center justify-center`}>
+              <p class={tw`font-semibold text-green-400 text-xl`}>
+                INTERACTIVITY
+              </p>
+              <p class={tw`text-center`}>
+                Tooltips and transition upon interaction are also provided for
+                each chart
+              </p>
+            </div>
+            <div class={tw`w-max h-max shadow-lg rounded-lg`}>
+              <DonutChartEg />
+            </div>
+          </div>
+        </div>
+        <div class={tw`w-full p-5`}>
+          <div
+            class={tw`flex flex-row w-full gap-8 justify-between`}
+          >
+            <div class={tw`w h-max shadow-lg rounded-lg`}>
+              <LineChartEg />
+            </div>
+            <div class={tw`flex flex-col w-full items-center justify-center`}>
+              <p class={tw`font-semibold text-green-400 text-xl`}>
+                CUSTOMIZATION
+              </p>
+              <p class={tw`text-center`}>
+                Each chart has different properties that you can customize the
+                chart upon
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </Fragment>
   );

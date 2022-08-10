@@ -1,24 +1,22 @@
 /** @jsx h */
 import { h, render } from "preact";
 import { useEffect, useState } from "preact/hooks";
-import { tw } from "@twind";
-import * as d3 from "d3";
 
 import { Button } from "../components/Button.tsx";
-import { Slider } from '../components/Slider.tsx';
 
 import { scatterData } from "../Dummy_Data/ScatterPlotChart_data.ts";
-import { barData, barLabels } from "../Dummy_Data/BarChart_data.ts";
+import { barData } from "../Dummy_Data/BarChart_data.ts";
 import { BarChart } from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
 import { ScatterPlotChart } from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
+
 import { barChartProperties, scatterPlotChartProperties, donutChartProperties, lineChartProperties } from "../chartPropertyTypes.ts";
 
 // input: chartProperties are the properties of the chart that the user will be altering
-function ChartDisplay(chart, chartProperties) { 
-
+function ChartDisplay(chart, chartProperties) {
   function Interactivity() {
     //this separates the keys of our property object
     const propertyNames: string[] = (Object.keys(chartProperties));
+
 
     // const modifyInfo = (property:string, callback) => chartProperties.property = callback();
 
@@ -43,7 +41,8 @@ function ChartDisplay(chart, chartProperties) {
            {property}: {chartProperties[property]}
            {propFunc}
         </div>
-      )};
+      );
+    };
 
     // select all properties of the passed-in info which the user will be altering
     const propertyList = propertyNames.map(property => {
@@ -55,11 +54,12 @@ function ChartDisplay(chart, chartProperties) {
 
   return (
     <div>
-      { chart(chartProperties) }
-      { Interactivity() }
+      {chart(chartProperties)}
+      {Interactivity()}
     </div>
-  )
+  );
 }
+
 
 export default function ChartContainer(){
   
@@ -68,23 +68,27 @@ export default function ChartContainer(){
   function ButtonBar() {
     return(
       <div>
-        <Button onClick={() => {
+        <Button
+          onClick={() => {
             setDisplay([BarChart, barChartProperties]);
-          }}>Bar Chart</Button>
+          }}
+        >
+          Bar Chart
+        </Button>
 
         <Button onClick={() => {
             setDisplay([ScatterPlotChart, scatterPlotChartProperties]);
           }}>Scatter Chart</Button>  
       </div>
-    )
+    );
   }
-  
-  function ChartRender(){
+
+  function ChartRender() {
     return (
       <div>
-        { ChartDisplay(display[0], display[1]) }
+        {ChartDisplay(display[0], display[1])}
       </div>
-    )
+    );
   }
 
   return (
@@ -92,5 +96,5 @@ export default function ChartContainer(){
       <ButtonBar />
       <ChartRender />
     </div>
-  )
+  );
 }

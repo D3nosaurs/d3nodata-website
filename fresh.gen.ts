@@ -3,6 +3,22 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/charts/[charts].tsx";
+import * as $1 from "./routes/docCharts/[charts].tsx";
+import * as $2 from "./routes/documentation.tsx";
+import * as $3 from "./routes/index.tsx";
+import * as $4 from "./routes/samples.tsx";
+import * as $$0 from "./islands/BarChartEg.tsx";
+import * as $$1 from "./islands/Button.tsx";
+import * as $$2 from "./islands/ChartContainer.tsx";
+import * as $$3 from "./islands/ChartContainer2.tsx";
+import * as $$4 from "./islands/ChartDoc.tsx";
+import * as $$5 from "./islands/Documentation.tsx";
+import * as $$6 from "./islands/DonutChartEg.tsx";
+import * as $$7 from "./islands/LineChartEg.tsx";
+import * as $$8 from "./islands/NavBar.tsx";
+import * as $$9 from "./islands/Samples.tsx";
+import * as $$10 from "./islands/ScatterplotChartEg.tsx";
+
 import * as $1 from "./routes/charts/_middleware.ts";
 import * as $2 from "./routes/documentation.tsx";
 import * as $3 from "./routes/index.tsx";
@@ -18,19 +34,23 @@ import * as $$6 from "./islands/NavBar.tsx";
 const manifest = {
   routes: {
     "./routes/charts/[charts].tsx": $0,
-    "./routes/charts/_middleware.ts": $1,
+
     "./routes/documentation.tsx": $2,
     "./routes/index.tsx": $3,
     "./routes/samples.tsx": $4,
   },
   islands: {
-    "./islands/Button.tsx": $$0,
-    "./islands/ChartContainer.tsx": $$1,
-    "./islands/ChartDoc.tsx": $$2,
-    "./islands/ChartRedirect.tsx": $$3,
-    "./islands/Documentation.tsx": $$4,
-    "./islands/Header.tsx": $$5,
-    "./islands/NavBar.tsx": $$6,
+    "./islands/BarChartEg.tsx": $$0,
+    "./islands/Button.tsx": $$1,
+    "./islands/ChartContainer.tsx": $$2,
+    "./islands/ChartContainer2.tsx": $$3,
+    "./islands/ChartDoc.tsx": $$4,
+    "./islands/Documentation.tsx": $$5,
+    "./islands/DonutChartEg.tsx": $$6,
+    "./islands/LineChartEg.tsx": $$7,
+    "./islands/NavBar.tsx": $$8,
+    "./islands/Samples.tsx": $$9,
+    "./islands/ScatterplotChartEg.tsx": $$10,
   },
   baseUrl: import.meta.url,
 };

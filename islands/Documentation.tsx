@@ -11,7 +11,7 @@ export default function Documentation() {
   return (
     <div class={tw`grid grid-cols-5 gap-2 h-full`}>
       <div
-        class={tw`col-span-1 w-full h-[89vh] border-2`}
+        class={tw`col-span-1 w-full h-[89vh]`}
       >
         <ul class={tw` flex flex-col pt-5 gap-5`}>
           <li>

@@ -10,7 +10,7 @@ export default function NavBar() {
   return (
     <nav
       className={tw
-        `flex flex-wrap pt-3 items-center justify-center bg-transparent w-full`}
+        `flex flex-wrap pt-3 items-center justify-center bg-transparent w-full border-b-2`}
     >
       <div
         className={tw

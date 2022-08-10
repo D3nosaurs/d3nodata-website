@@ -1,12 +1,12 @@
 // Required data [{x: number, y: number}]
 
-const num = 30;
+const num = 6;
 // const x: number = Math.random() * num;
 // const y: number = Math.random() * num;
-const donutData: { x: number; y: number }[] = [];
+const donutData: { ages: number; count: number }[] = [];
 
 for (let i = 0; i < num; i++) {
-  donutData.push({ x: Math.random() * 100, y: Math.random() * 100 });
+  donutData.push({ ages: i, count: Math.floor(Math.random() * 100) });
 }
 
 export { donutData };
