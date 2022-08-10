@@ -4,14 +4,22 @@ import { IS_BROWSER } from "$fresh/runtime.ts";
 import { tw } from "@twind";
 
 type SliderProps = {
-  value: number
-}
+  value: number;
+};
 
 // h.JSX.HTMLAttributes<HTMLInputElement>
 
 export function Slider() {
   return (
-    <input type="range" min="1" max="100"
-    class={tw`px-2 py-1 border(gray-100 2) hover:bg-gray-200`}></input>
+
+    <input
+      type="range"
+      min="1"
+      max="100"
+      value={props.value}
+      class={tw`w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
+    >
+    </input>
+
   );
 }
