@@ -8,7 +8,7 @@ import {
   LineChart,
   PieChart,
   ScatterPlotChart,
-} from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
+} from "https://deno.land/x/d3nodata@v.0.0.1.2.2.2/charts.ts";
 import InteractiveButton from "../components/InteractiveButton.tsx";
 import { barData } from "../Dummy_Data/BarChart_data.ts";
 import { scatterData } from "../Dummy_Data/ScatterPlotChart_data.ts";
@@ -20,23 +20,22 @@ export default function ChartContainer2(props: { chart: string }) {
   const [showChart, setShowChart] = useState(false);
   const [numData, setNumData] = useState(25);
   const [fakeData, setFakeData] = useState(null);
-  const height = "500";
-  const width = "1000";
+  const height = 500;
+  const width = 1000;
 
   useEffect(() => {
     if (props.chart === "GET STARTED") {
       setShowChart(false);
     } else {
       setShowChart(true);
+
       if (props.chart === "BAR CHART") {
-        console.log(barData);
         setChartDisplay(
           <BarChart
             data={barData}
             height={height}
             width={width}
-          >
-          </BarChart>,
+          />,
         );
       } else if (props.chart === "LINE CHART") {
         setChartDisplay(
