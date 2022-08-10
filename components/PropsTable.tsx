@@ -86,7 +86,7 @@ export default function PropsTable(props: { info: DocProps[] }) {
   }
 
   return (
-    <table class={tw`table-fixed w-[80%]`}>
+    <table class={tw`table-fixed w-[90%]`}>
       <thead>
         <tr>
           <th class={tw`w-[25%]`}>NAME</th>

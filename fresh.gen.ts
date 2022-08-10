@@ -7,16 +7,17 @@ import * as $1 from "./routes/docCharts/[charts].tsx";
 import * as $2 from "./routes/documentation.tsx";
 import * as $3 from "./routes/index.tsx";
 import * as $4 from "./routes/samples.tsx";
-import * as $5 from "./routes/samples/[charts].tsx";
-import * as $6 from "./routes/samples/_middleware.ts";
-import * as $$0 from "./islands/Button.tsx";
-import * as $$1 from "./islands/ChartContainer.tsx";
-import * as $$2 from "./islands/ChartDoc.tsx";
-import * as $$3 from "./islands/ChartRedirect.tsx";
-import * as $$4 from "./islands/Documentation.tsx";
-import * as $$5 from "./islands/Header.tsx";
-import * as $$6 from "./islands/NavBar.tsx";
-import * as $$7 from "./islands/Samples.tsx";
+import * as $$0 from "./islands/BarChartEg.tsx";
+import * as $$1 from "./islands/Button.tsx";
+import * as $$2 from "./islands/ChartContainer.tsx";
+import * as $$3 from "./islands/ChartContainer2.tsx";
+import * as $$4 from "./islands/ChartDoc.tsx";
+import * as $$5 from "./islands/Documentation.tsx";
+import * as $$6 from "./islands/DonutChartEg.tsx";
+import * as $$7 from "./islands/LineChartEg.tsx";
+import * as $$8 from "./islands/NavBar.tsx";
+import * as $$9 from "./islands/Samples.tsx";
+import * as $$10 from "./islands/ScatterplotChartEg.tsx";
 
 const manifest = {
   routes: {
@@ -25,18 +26,19 @@ const manifest = {
     "./routes/documentation.tsx": $2,
     "./routes/index.tsx": $3,
     "./routes/samples.tsx": $4,
-    "./routes/samples/[charts].tsx": $5,
-    "./routes/samples/_middleware.ts": $6,
   },
   islands: {
-    "./islands/Button.tsx": $$0,
-    "./islands/ChartContainer.tsx": $$1,
-    "./islands/ChartDoc.tsx": $$2,
-    "./islands/ChartRedirect.tsx": $$3,
-    "./islands/Documentation.tsx": $$4,
-    "./islands/Header.tsx": $$5,
-    "./islands/NavBar.tsx": $$6,
-    "./islands/Samples.tsx": $$7,
+    "./islands/BarChartEg.tsx": $$0,
+    "./islands/Button.tsx": $$1,
+    "./islands/ChartContainer.tsx": $$2,
+    "./islands/ChartContainer2.tsx": $$3,
+    "./islands/ChartDoc.tsx": $$4,
+    "./islands/Documentation.tsx": $$5,
+    "./islands/DonutChartEg.tsx": $$6,
+    "./islands/LineChartEg.tsx": $$7,
+    "./islands/NavBar.tsx": $$8,
+    "./islands/Samples.tsx": $$9,
+    "./islands/ScatterplotChartEg.tsx": $$10,
   },
   baseUrl: import.meta.url,
 };

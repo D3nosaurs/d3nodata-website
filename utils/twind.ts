@@ -22,11 +22,15 @@ export const config: Configuration = {
     ":global": {
       "td": {
         textAlign: "start",
-        border: "1px solid black",
+        border: "1px solid #BFE4A3",
         padding: "10px",
+        borderRadius: "40px",
       },
       "th": {
-        border: "1px solid black",
+        border: "1px solid #BFE4A3",
+        padding: "15px",
+        color: "grey",
+        background: "#BFE4A3",
       },
       "code": {
         background: "#f6f7f8",

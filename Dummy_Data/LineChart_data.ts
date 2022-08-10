@@ -6,6 +6,6 @@ const num = 30;
 const lineData: { x: number; y: number }[] = [];
 
 for (let i = 0; i < num; i++) {
-  lineData.push({ x: Math.random() * 100, y: Math.random() * 100 });
+  lineData.push({ x: i, y: Math.random() * 100 });
 }
 export { lineData };
