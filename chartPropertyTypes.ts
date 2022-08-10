@@ -7,7 +7,7 @@ const barChartProperties = {
   data: barData,
   barColor: "#BFE4A3",
   animationDuration: 70,
-  barColorFunc: "input",
+  barColorFunc: "colorPicker",
   animationDurationFunc: "slider",
   animationDelay: 30,
   animationDelayFunc: "slider",
@@ -19,6 +19,7 @@ const scatterPlotChartProperties = {
   dotColorFunc: "colorPicker",
   axesColor: "#4D908E",
   axesLabelColor: "#277DA1",
+  axesLabelColorFunc: 'colorPicker',
   setTitle: "ScatterPlot",
 };
 
