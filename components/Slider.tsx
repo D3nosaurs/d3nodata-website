@@ -9,12 +9,9 @@ type SliderProps = {
 
 // h.JSX.HTMLAttributes<HTMLInputElement>
 
-export function Slider(props: SliderProps) {
+export function Slider() {
   return (
-    <input type="range" min="1" max="100" value={props.value}
-    onInput={(e) =>{
-      props.value = e.target
-    }} 
+    <input type="range" min="1" max="100"
     class={tw`px-2 py-1 border(gray-100 2) hover:bg-gray-200`}></input>
   );
 }

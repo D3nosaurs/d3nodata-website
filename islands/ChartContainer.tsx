@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h, render } from "preact";
 import { useEffect, useState } from "preact/hooks";
+import { tw } from "@twind";
 
 import { Button } from "../components/Button.tsx";
 import { Slider } from "../components/Slider.tsx";
@@ -20,92 +21,106 @@ import {
 } from "../chartPropertyTypes.ts";
 
 // input: chartProperties are the properties of the chart that the user will be altering
-function ChartDisplay(chart, chartProperties) {
-  function Interactivity() {
-    //this separates the keys of our property object
-    const propertyNames: string[] = (Object.keys(chartProperties));
 
-    // const modifyInfo = (property:string, callback) => chartProperties.property = callback();
+export default function ChartContainer(props) {
 
-    // creates iteractive element for each property
-    const InteractiveElement = ({ property }) => {
-      // assign interactiveEl
-      let propFunc;
-      if (chartProperties[property + "Func"] === "slider") {
-        propFunc = <Slider value={chartProperties[property]} />;
-      }
-      if (chartProperties[property + "Func"] === "input") {
-        propFunc = (
-          <input
-            id={property}
-            value={chartProperties[property]}
-            onChange={() => {
-              chartProperties[property] =
-                document.querySelector("#" + property).value;
-              console.log(
-                "changed val ",
-                document.querySelector("#" + property).value,
-              );
-              console.log("chartProps ", chartProperties[property]);
-            }}
-          />
-        );
-      }
+  const barBundle = [BarChart, barChartProperties]
+  const scatterBundle = [ScatterPlotChart, scatterPlotChartProperties]
 
-      return (
-        <div id="singleElement" key={property}>
-          {property}: {chartProperties[property]}
-          {propFunc}
-        </div>
-      );
-    };
-
-    // select all properties of the passed-in info which the user will be altering
-    const propertyList = propertyNames.map((property) => {
-      if (
-        property !== "data" && property !== "labels" &&
-        !property.includes("Func")
-      ) {
-        return <InteractiveElement key={property} property={property} />;
-      }
-    });
-    return (propertyList);
-  }
-
-  return (
-    <div>
-      {chart(chartProperties)}
-      {Interactivity()}
-    </div>
-  );
-}
-
-export default function ChartContainer() {
-  const [display, setDisplay] = useState([BarChart, barChartProperties]);
+  const [display, setDisplay] = useState(barBundle);
 
   function ButtonBar() {
     return (
       <div>
         <Button
           onClick={() => {
-            setDisplay([BarChart, barChartProperties]);
+            setDisplay(barBundle);
           }}
-        >
-          Bar Chart
-        </Button>
+        > Bar Chart </Button>
 
         <Button
           onClick={() => {
-            setDisplay([ScatterPlotChart, scatterPlotChartProperties]);
+            setDisplay(scatterBundle);
           }}
-        >
-          Scatter Chart
-        </Button>
+        > Scatter Chart </Button>
       </div>
     );
   }
 
-  function ChartRender() {
+  function ChartDisplay(chart, chartProperties) {
+    function Interactivity() {
+      //this separates the keys of our property object
+      const propertyNames: string[] = (Object.keys(chartProperties));
+  
+      // const modifyInfo = (property:string, callback) => chartProperties.property = callback();
+  
+      // creates iteractive element for each property
+      const InteractiveElement = ({ property }) => {
+        // assign interactiveEl
+        let propFunc;
+        if (chartProperties[property + "Func"] === "slider") {
+          propFunc = <input
+          type='range'
+          min="1" max="100"
+          class={tw`px-2 py-1 border(gray-100 2) hover:bg-gray-200`} 
+          value={chartProperties[property]}
+          onInput={() => {
+            console.log('slider properties: ', chartProperties[property])
+            chartProperties[property] = document.querySelector('#' + property).value;
+            console.log('changed property: ', chartProperties[property])
+            setDisplay([chart, chartProperties]);
+          }} />;
+        }
+        if (chartProperties[property + "Func"] === "input") {
+          propFunc = (
+            <input
+              id={property}
+              value={chartProperties[property]}
+              onChange={() => {
+                chartProperties[property] =
+                  document.querySelector("#" + property).value;
+                console.log(
+                  "changed val ",
+                  document.querySelector("#" + property).value,
+                );
+                console.log("chartProps ", chartProperties[property]);
+                setDisplay([chart, chartProperties]);
+                // chart.updateChart()
+                // console.log('chart: ',  )
+              }}
+            />
+          );
+        }
+  
+        return (
+          <div id="singleElement" key={property}>
+            {property}: {chartProperties[property]}
+            {propFunc}
+          </div>
+        );
+      };
+  
+      // select all properties of the passed-in info which the user will be altering
+      const propertyList = propertyNames.map((property) => {
+        if (
+          property !== "data" && property !== "labels" &&
+          !property.includes("Func")
+        ) {
+          return <InteractiveElement key={property} property={property} />;
+        }
+      });
+      return (propertyList);
+    }
+
+    return (
+      <div>
+        {Interactivity()}
+        {chart(chartProperties)}
+      </div>
+    );
+  }
+
+  function ChartRender(){
     return (
       <div>
         {ChartDisplay(display[0], display[1])}
