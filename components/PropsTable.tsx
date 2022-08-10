@@ -34,6 +34,7 @@ export default function PropsTable(props: { info: DocProps[] }) {
           <code>
             {prop.name}
           </code>
+          <br/>
         </Fragment>,
       );
     }
