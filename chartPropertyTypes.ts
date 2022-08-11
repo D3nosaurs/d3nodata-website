@@ -28,17 +28,12 @@ const scatterPlotChartProperties = {
 
 const donutChartProperties = {
   data: donutData,
-  setTitle: "Donut",
+  setTitle: "Ages",
   setTitleFunc: 'input',
-  colorRange: [
-    "#CED89E",
-    "#F9F9C5",
-    "#6CC4A1",
-    "#AEDBCE",
-    "#76BA99",
-    "#D9F8C4",
-    "#90C8AC",
-  ],
+  colorStart: '#cefad0',
+  colorStartFunc: 'colorPicker',
+  colorEnd: 'green',
+  colorEndFunc: 'colorPicker'
 };
 
 const lineChartProperties = {
