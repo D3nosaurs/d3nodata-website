@@ -12,6 +12,7 @@ const barChartProperties = {
   animationDurationFunc: "slider",
   animationDelay: 30,
   animationDelayFunc: "slider",
+  addAxesLabel: true,
 };
 
 const scatterPlotChartProperties = {
@@ -37,7 +38,6 @@ const donutChartProperties = {
     "#AEDBCE",
     "#76BA99",
     "#D9F8C4",
-    "#90C8AC",
   ],
 };
 
