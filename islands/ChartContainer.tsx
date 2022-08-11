@@ -15,7 +15,7 @@ import {
   DonutChart,
   LineChart,
   ScatterPlotChart,
-} from "https://deno.land/x/d3nodata@v.0.0.1.2.2.2/charts.ts";
+} from "https://deno.land/x/d3nodata@v.0.0.1.2.2.2.1/charts.ts";
 
 import {
   barChartProperties,
@@ -112,8 +112,18 @@ export default function ChartContainer(props) {
               class={tw
                 `block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
               onChange={() => {
-                chartProperties[property] =
-                  document.querySelector("#" + property).value;
+                let value = null;
+                if (document.querySelector("#" + property).value === "true") {
+                  value = true;
+                } else if (
+                  document.querySelector("#" + property).value === "false"
+                ) {
+                  value = false;
+                } else {
+                  value = document.querySelector("#" + property).value;
+                }
+
+                chartProperties[property] = value;
                 setDisplay([chart, chartProperties]);
               }}
             />
@@ -124,7 +134,7 @@ export default function ChartContainer(props) {
           <div
             id="singleElement"
             key={property}
-            class={tw`flex flex-row items-center gap-3`}
+            class={tw`flex flex-row items-center gap-3 pb-3`}
           >
             {property}: {propFunc}
           </div>
