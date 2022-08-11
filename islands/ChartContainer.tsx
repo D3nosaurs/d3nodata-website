@@ -84,8 +84,6 @@ export default function ChartContainer(props) {
       //this separates the keys of our property object
       const propertyNames: string[] = (Object.keys(chartProperties));
 
-      // const modifyInfo = (property:string, callback) => chartProperties.property = callback();
-
       // creates iteractive element for each property
       const InteractiveElement = ({ property }) => {
         // assign interactiveEl
@@ -100,9 +98,7 @@ export default function ChartContainer(props) {
               class={tw
                 `w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
               onChange={(e) => {
-                console.log("slider properties: ", chartProperties[property]);
                 chartProperties[property] = e.target.value;
-                console.log("changed property: ", chartProperties[property]);
                 setDisplay([chart, chartProperties]);
               }}
             />
@@ -118,20 +114,18 @@ export default function ChartContainer(props) {
               onChange={() => {
                 chartProperties[property] =
                   document.querySelector("#" + property).value;
-                console.log(
-                  "changed val ",
-                  document.querySelector("#" + property).value,
-                );
                 setDisplay([chart, chartProperties]);
-                // chart.updateChart()
-                // console.log('chart: ',  )
               }}
             />
           );
         }
 
         return (
-          <div id="singleElement" key={property}>
+          <div
+            id="singleElement"
+            key={property}
+            class={tw`flex flex-row items-center gap-3`}
+          >
             {property}: {propFunc}
           </div>
         );
