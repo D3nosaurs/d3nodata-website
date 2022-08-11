@@ -96,7 +96,8 @@ export default function ChartContainer(props) {
               min="1"
               max="1000"
               value={chartProperties[property]}
-              class={tw`w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
+              class={tw
+                `w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
               onChange={(e) => {
                 chartProperties[property] = e.target.value;
                 setDisplay([chart, chartProperties]);
@@ -112,9 +113,21 @@ export default function ChartContainer(props) {
               type="text"
               id={property}
               value={chartProperties[property]}
-              class={tw`block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
-              onChange={(e) => {
-                chartProperties[property] = e.target.value;
+              class={tw
+                `block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
+              onChange={() => {
+                let value = null;
+                if (document.querySelector("#" + property).value === "true") {
+                  value = true;
+                } else if (
+                  document.querySelector("#" + property).value === "false"
+                ) {
+                  value = false;
+                } else {
+                  value = document.querySelector("#" + property).value;
+                }
+
+                chartProperties[property] = value;
                 setDisplay([chart, chartProperties]);
               }}
             />
@@ -155,7 +168,7 @@ export default function ChartContainer(props) {
           <div
             id="singleElement"
             key={property}
-            class={tw`flex flex-row items-center gap-3`}
+            class={tw`flex flex-row items-center gap-3 pb-3`}
           >
             {property}: {propFunc}
           </div>
