@@ -14,6 +14,7 @@ import {
   ScatterPlotChart,
 } from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts";
 
+
 // these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {
   barChartProperties,
@@ -46,7 +47,7 @@ export default function ChartContainer(props) {
           <li>
             <Button
               onClick={() => {
-                setDisplay(donutBundle)
+                setDisplay(donutBundle);
               }}
             >
               DONUT CHART
@@ -76,16 +77,18 @@ export default function ChartContainer(props) {
   }
 
   function ChartDisplay(chart: h.JSX.Element, chartProperties) {
+    // Module way of displaying chart property interactive elements --> defined in chartPropertyTypes.ts
+    // current elements: slider, checkbox, input, colorPicker
     function Interactivity() {
-      //this separates the keys of our property object
+      // this separates the keys of our property object
       const propertyNames: string[] = (Object.keys(chartProperties));
-
-      // const modifyInfo = (property:string, callback) => chartProperties.property = callback();
 
       // creates iteractive element for each property
       const InteractiveElement = ({ property }) => {
         // assign interactiveEl
         let propFunc: h.JSX.Element;
+
+        // Slider interactive element
         if (chartProperties[property + "Func"] === "slider") {
           propFunc = (
             <input
@@ -93,8 +96,7 @@ export default function ChartContainer(props) {
               min="1"
               max="1000"
               value={chartProperties[property]}
-              class={tw
-                `w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
+              class={tw`w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
               onChange={(e) => {
                 chartProperties[property] = e.target.value;
                 setDisplay([chart, chartProperties]);
@@ -102,36 +104,59 @@ export default function ChartContainer(props) {
             />
           );
         }
+
+        // Input interactive elements
         if (chartProperties[property + "Func"] === "input") {
           propFunc = (
             <input
+              type="text"
               id={property}
               value={chartProperties[property]}
-              class={tw
-                `block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
-              onChange={() => {
-                chartProperties[property] = document.querySelector("#" + property).value;
+              class={tw`block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
+              onChange={(e) => {
+                chartProperties[property] = e.target.value;
                 setDisplay([chart, chartProperties]);
               }}
             />
           );
         }
-        if (chartProperties[property + "Func"] === 'colorPicker') {
+
+        // ColorPicker interactive element
+        if (chartProperties[property + "Func"] === "colorPicker") {
           propFunc = (
-            <input 
-            id={property}
-            value={chartProperties[property]}
-            type='color'
-            onChange={(e ) => {
-              chartProperties[property] = e.target.value;
-              setDisplay([chart, chartProperties])
-            }}
+            <input
+              type="color"
+              id={property}
+              value={chartProperties[property]}
+              onChange={(e) => {
+                chartProperties[property] = e.target.value;
+                setDisplay([chart, chartProperties]);
+              }}
             />
-          )
+          );
+        }
+
+        // Checkbox interactive element
+        if (chartProperties[property + "Func"] === "checkbox") {
+          propFunc = (
+            <input
+              type="checkbox"
+              id={property}
+              checked={chartProperties[property]}
+              onChange={(e) => {
+                chartProperties[property] = e.target.checked;
+                setDisplay([chart, chartProperties]);
+              }}
+            />
+          );
         }
 
         return (
-          <div id="singleElement" key={property}>
+          <div
+            id="singleElement"
+            key={property}
+            class={tw`flex flex-row items-center gap-3`}
+          >
             {property}: {propFunc}
           </div>
         );
