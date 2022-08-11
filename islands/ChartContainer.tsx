@@ -1,30 +1,26 @@
 /** @jsx h */
-import { h, render } from "preact";
-import { useEffect, useState } from "preact/hooks";
+import { h } from "preact";
+import { useState } from "preact/hooks";
 import { tw } from "@twind";
 
 import { Button } from "../components/Button.tsx";
-import { Slider } from "../components/Slider.tsx";
 
-import { scatterData } from "../Dummy_Data/ScatterPlotChart_data.ts";
-import { barData } from "../Dummy_Data/BarChart_data.ts";
-import { donutData } from "../Dummy_Data/DonutChart_data.ts";
-import { lineData } from "../Dummy_Data/LineChart_data.ts";
+// importing charts from our library
 import {
   BarChart,
   DonutChart,
   LineChart,
+  // PieChart,
   ScatterPlotChart,
 } from "https://deno.land/x/d3nodata@v.0.0.1.2.2.2.1/charts.ts";
 
+// these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {
   barChartProperties,
   donutChartProperties,
   lineChartProperties,
   scatterPlotChartProperties,
 } from "../chartPropertyTypes.ts";
-
-// input: chartProperties are the properties of the chart that the user will be altering
 
 export default function ChartContainer(props) {
   const barBundle = [BarChart, barChartProperties];
@@ -50,6 +46,15 @@ export default function ChartContainer(props) {
           <li>
             <Button
               onClick={() => {
+                setDisplay(donutBundle);
+              }}
+            >
+              DONUT CHART
+            </Button>
+          </li>
+          <li>
+            <Button
+              onClick={() => {
                 setDisplay(lineBundle);
               }}
             >
@@ -65,29 +70,24 @@ export default function ChartContainer(props) {
               SCATTERPLOT CHART
             </Button>
           </li>
-          <li>
-            <Button
-              onClick={() => {
-                setDisplay(donutBundle);
-              }}
-            >
-              DONUT CHART
-            </Button>
-          </li>
         </ul>
       </div>
     );
   }
 
-  function ChartDisplay(chart, chartProperties) {
+  function ChartDisplay(chart: h.JSX.Element, chartProperties) {
+    // Module way of displaying chart property interactive elements --> defined in chartPropertyTypes.ts
+    // current elements: slider, checkbox, input, colorPicker
     function Interactivity() {
-      //this separates the keys of our property object
+      // this separates the keys of our property object
       const propertyNames: string[] = (Object.keys(chartProperties));
 
       // creates iteractive element for each property
       const InteractiveElement = ({ property }) => {
         // assign interactiveEl
-        let propFunc;
+        let propFunc: h.JSX.Element;
+
+        // Slider interactive element
         if (chartProperties[property + "Func"] === "slider") {
           propFunc = (
             <input
@@ -104,9 +104,12 @@ export default function ChartContainer(props) {
             />
           );
         }
+
+        // Input interactive elements
         if (chartProperties[property + "Func"] === "input") {
           propFunc = (
             <input
+              type="text"
               id={property}
               value={chartProperties[property]}
               class={tw
@@ -124,6 +127,36 @@ export default function ChartContainer(props) {
                 }
 
                 chartProperties[property] = value;
+                setDisplay([chart, chartProperties]);
+              }}
+            />
+          );
+        }
+
+        // ColorPicker interactive element
+        if (chartProperties[property + "Func"] === "colorPicker") {
+          propFunc = (
+            <input
+              type="color"
+              id={property}
+              value={chartProperties[property]}
+              onChange={(e) => {
+                chartProperties[property] = e.target.value;
+                setDisplay([chart, chartProperties]);
+              }}
+            />
+          );
+        }
+
+        // Checkbox interactive element
+        if (chartProperties[property + "Func"] === "checkbox") {
+          propFunc = (
+            <input
+              type="checkbox"
+              id={property}
+              checked={chartProperties[property]}
+              onChange={(e) => {
+                chartProperties[property] = e.target.checked;
                 setDisplay([chart, chartProperties]);
               }}
             />

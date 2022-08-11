@@ -2,10 +2,8 @@
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import NavBar from "../islands/NavBar.tsx";
-import { useEffect, useState } from "preact/hooks";
 import BarChartEg from "../islands/BarChartEg.tsx";
 import DonutChartEg from "../islands/DonutChartEg.tsx";
-import ScatterplotEg from "../islands/ScatterplotChartEg.tsx";
 import LineChartEg from "../islands/LineChartEg.tsx";
 
 export default function Home() {
@@ -55,10 +53,10 @@ export default function Home() {
         </div>
         <svg
           className={tw`animate-pulse`}
-          width="100"
+          width="250"
           zoomAndPan="magnify"
           viewBox="0 0 375 374.999991"
-          height="100"
+          height="250"
           preserveAspectRatio="xMidYMid meet"
           version="1.0"
         >
