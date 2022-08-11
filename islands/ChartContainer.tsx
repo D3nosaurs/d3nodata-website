@@ -22,8 +22,6 @@ import {
   scatterPlotChartProperties,
 } from "../chartPropertyTypes.ts";
 
-// import {DonutBundleProps} from '../types.ts';
-
 export default function ChartContainer(props) {
   const barBundle = [BarChart, barChartProperties];
   const scatterBundle = [ScatterPlotChart, scatterPlotChartProperties];
