@@ -13,7 +13,6 @@ import * as $$4 from "./islands/Documentation.tsx";
 import * as $$5 from "./islands/DonutChartEg.tsx";
 import * as $$6 from "./islands/LineChartEg.tsx";
 import * as $$7 from "./islands/NavBar.tsx";
-import * as $$8 from "./islands/ScatterplotChartEg.tsx";
 
 const manifest = {
   routes: {
@@ -30,7 +29,6 @@ const manifest = {
     "./islands/DonutChartEg.tsx": $$5,
     "./islands/LineChartEg.tsx": $$6,
     "./islands/NavBar.tsx": $$7,
-    "./islands/ScatterplotChartEg.tsx": $$8,
   },
   baseUrl: import.meta.url,
 };
