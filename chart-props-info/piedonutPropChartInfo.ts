@@ -5,7 +5,28 @@ export default [
     defaultValue: "N/A",
     required: "Yes",
     description:
-      "data used to render pie / donut chart. It is an array of objects that has corresponding x and y values as number to define the proportion and its labels.",
+      "an array of objects that has corresponding x and y values as numbers to define the proportions and its labels",
+  },
+  {
+    name: "color",
+    type: "string",
+    defaultValue: "N/A",
+    required: "No",
+    description: "NOT MODIFIABLE - FIX PENDING",
+  },
+  {
+    name: "colorStart",
+    type: "string",
+    defaultValue: "#cefad0",
+    required: "No",
+    description: "starting color for interpolation",
+  },
+  {
+    name: "colorEnd",
+    type: "string",
+    defaultValue: "green",
+    required: "No",
+    description: "ending color for interpolation",
   },
   {
     name: ["paddingTop", "paddingLeft", "paddingRight", "paddingBottom"],
@@ -27,21 +48,6 @@ export default [
     defaultValue: "500",
     required: "No",
     description: "set height size of the chart",
-  },
-  {
-    name: "colorRange",
-    type: "string",
-    defaultValue: [
-      "#CED89E",
-      "#F9F9C5",
-      "#6CC4A1",
-      "#AEDBCE",
-      "#76BA99",
-      "#D9F8C4",
-      "#90C8AC",
-    ],
-    required: "No",
-    description: "range of color used on the chart",
   },
   {
     name: "animation",
@@ -99,4 +105,11 @@ export default [
     required: "No",
     description: "set color of the chart's title",
   },
+  {
+    name: "setTitlePaddingTop",
+    type: "number",
+    defaultValue: "40",
+    required: "No",
+    description: "set padding top for the chart's title"
+  }
 ];

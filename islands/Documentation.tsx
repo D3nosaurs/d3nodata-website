@@ -35,13 +35,14 @@ export default function Documentation() {
           </li>
           <li>
             <a>
-              <Button text="SCATTERPLOT CHART" update={setCurrentChart}>
+              <Button text="PIE & DONUT CHARTS" update={setCurrentChart}>
+              
               </Button>
             </a>
           </li>
           <li>
             <a>
-              <Button text="PIE CHART & DONUT CHART" update={setCurrentChart}>
+              <Button text="SCATTERPLOT CHART" update={setCurrentChart}>
               </Button>
             </a>
           </li>

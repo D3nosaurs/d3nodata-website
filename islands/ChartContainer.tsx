@@ -14,7 +14,6 @@ import {
   ScatterPlotChart,
 } from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts";
 
-
 // these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {
   barChartProperties,
@@ -23,14 +22,18 @@ import {
   scatterPlotChartProperties,
 } from "../chartPropertyTypes.ts";
 
-export default function ChartContainer(props) {
+// contains the charts and the interactive elements
+export default function ChartContainer() {
+  // these are arrays which bundle the chart with the properties we pass through interactivity and back into the chart
   const barBundle = [BarChart, barChartProperties];
   const scatterBundle = [ScatterPlotChart, scatterPlotChartProperties];
   const donutBundle = [DonutChart, donutChartProperties];
   const lineBundle = [LineChart, lineChartProperties];
 
+  // allows for the charts above to be switched between easily, and opens the bar chart by default
   const [display, setDisplay] = useState(barBundle);
 
+  // sidebar of buttons that allows user to switch between charts
   function ButtonBar() {
     return (
       <div class={tw`col-span-1 w-full h-[89vh]`}>
@@ -75,15 +78,15 @@ export default function ChartContainer(props) {
       </div>
     );
   }
-
+  // actual chart display and interactive elements handled here
   function ChartDisplay(chart: h.JSX.Element, chartProperties) {
-    // Module way of displaying chart property interactive elements --> defined in chartPropertyTypes.ts
+    // Modular way of displaying chart property interactive elements --> defined in chartPropertyTypes.ts
     // current elements: slider, checkbox, input, colorPicker
     function Interactivity() {
       // this separates the keys of our property object
       const propertyNames: string[] = (Object.keys(chartProperties));
 
-      // creates iteractive element for each property
+      // creates interactive element for each property
       const InteractiveElement = ({ property }) => {
         // assign interactiveEl
         let propFunc: h.JSX.Element;
@@ -163,7 +166,7 @@ export default function ChartContainer(props) {
             />
           );
         }
-
+        // creates the element containing the name of the property and its corresponding functional jsx element as defined in chartPropertyTypes
         return (
           <div
             id="singleElement"
@@ -175,7 +178,7 @@ export default function ChartContainer(props) {
         );
       };
 
-      // select all properties of the passed-in info which the user will be altering
+      // select all properties of the passed-in info which the user will be altering, iterate through, and create an element out of each
       const propertyList = propertyNames.map((property) => {
         if (
           property !== "data" && property !== "labels" &&
@@ -195,6 +198,7 @@ export default function ChartContainer(props) {
     );
   }
 
+  // allows chart to be sent as jsx element with props passed in from the state while being modified by the interactive elements above
   function ChartRender() {
     return (
       <div class={tw`h-full col-span-4 border-l-2 flex flex-col items-center`}>
@@ -203,6 +207,7 @@ export default function ChartContainer(props) {
     );
   }
 
+  // chart container only renders the button bar and the chart render above
   return (
     <div class={tw`grid grid-cols-5 gap-2 h-full`}>
       <ButtonBar />

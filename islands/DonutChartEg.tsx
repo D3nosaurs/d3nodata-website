@@ -8,6 +8,7 @@ import { donutData } from "../Dummy_Data/DonutChart_data.ts";
 export default function DonutChartEg() {
   return (
     <DonutChart 
+      addTitle = { false }
       width = { 400 } 
       height = { 400 } 
       animation = { false } 
