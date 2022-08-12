@@ -26,7 +26,7 @@ export default function ChartDoc(props: { chart: string }) {
       setPropTableOn(true);
       if (props.chart === "BAR CHART") {
         setDescription(
-          "Bar chart is a graph that used rectangular shapes to represent data. It is often utilized to show trend and compare multiple values side by side",
+          "The bar chart is a graph that used rectangular shapes to represent data. It is often utilized to show trend and compare multiple values side by side",
         );
         setCode(
           `import BarChart from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts"
@@ -35,7 +35,7 @@ export default function ChartDoc(props: { chart: string }) {
         setPropTableInfo(barChartPropsInfo);
       } else if (props.chart === "LINE CHART") {
         setDescription(
-          "Line chart is used to connect individual data points. The graph is usually used to show changes and trend for data overtime.",
+          "The line chart is used to connect individual data points. The graph is usually used to show changes and trend for data overtime.",
         );
         setCode(
           `import LineChart from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts"
@@ -51,9 +51,9 @@ export default function ChartDoc(props: { chart: string }) {
             \n<ScatterplotChart data={data} {...props}/>`,
         );
         setPropTableInfo(scatterplotChartPropsInfo);
-      } else if (props.chart === "PIE CHART & DONUT CHART") {
+      } else if (props.chart === "PIE & DONUT CHARTS") {
         setDescription(
-          "Pie chart is a statiscal graph dividing the circle into numerical portions according to the input data. It is used to compare categories. Donut chart the same as pie chart but has an inner radius to resemble a donut. ",
+          "The pie chart is a statiscal graph dividing the circle proportionally according to the input data. The donut chart is the same as the pie chart but has an inner radius to resemble a donut. Mmm, donuts. ",
         );
         setCode(
           `import PieChart from "https://deno.land/x/d3nodata@v.0.0.1.1/charts.ts";
