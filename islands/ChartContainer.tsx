@@ -14,7 +14,6 @@ import {
   ScatterPlotChart,
 } from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts";
 
-
 // these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {
   barChartProperties,
@@ -96,12 +95,11 @@ export default function ChartContainer(props) {
               min="1"
               max="1000"
               value={chartProperties[property]}
-              class={tw
-                `w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
               onChange={(e) => {
                 chartProperties[property] = e.target.value;
                 setDisplay([chart, chartProperties]);
               }}
+              class={tw`ml-2 w-1/2 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
             />
           );
         }
@@ -113,8 +111,6 @@ export default function ChartContainer(props) {
               type="text"
               id={property}
               value={chartProperties[property]}
-              class={tw
-                `block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
               onChange={() => {
                 let value = null;
                 if (document.querySelector("#" + property).value === "true") {
@@ -126,10 +122,10 @@ export default function ChartContainer(props) {
                 } else {
                   value = document.querySelector("#" + property).value;
                 }
-
                 chartProperties[property] = value;
                 setDisplay([chart, chartProperties]);
               }}
+              class={tw`ml-2 block p-2 w-1/2 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
             />
           );
         }
@@ -145,6 +141,7 @@ export default function ChartContainer(props) {
                 chartProperties[property] = e.target.value;
                 setDisplay([chart, chartProperties]);
               }}
+              class={tw`ml-2 cursor-pointer`}
             />
           );
         }
@@ -160,6 +157,7 @@ export default function ChartContainer(props) {
                 chartProperties[property] = e.target.checked;
                 setDisplay([chart, chartProperties]);
               }}
+              class={tw`ml-2 cursor-pointer`}
             />
           );
         }
@@ -168,7 +166,7 @@ export default function ChartContainer(props) {
           <div
             id="singleElement"
             key={property}
-            class={tw`flex flex-row items-center gap-3 pb-3`}
+            class={tw`flex flex-row items-center gap- pb-3`}
           >
             {property}: {propFunc}
           </div>
@@ -179,6 +177,7 @@ export default function ChartContainer(props) {
       const propertyList = propertyNames.map((property) => {
         if (
           property !== "data" && property !== "labels" &&
+          property !== "height" && property !== "width" &&
           !property.includes("Func")
         ) {
           return <InteractiveElement key={property} property={property} />;
@@ -188,9 +187,21 @@ export default function ChartContainer(props) {
     }
 
     return (
-      <div>
-        {chart(chartProperties)}
-        {Interactivity()}
+      <div class={tw`container w-full flex flex-wrap mx-auto`}>
+        <div id="chart" class={tw`w-full lg:w-1/2`}>
+          {chart(chartProperties)}
+        </div>
+        <div
+          id="interactive"
+          class={tw`w-full lg:w-1/2 self-center`}
+        >
+          <div
+            id="interactive-list"
+            class={tw`p-3 w-3/4 shadow-xl hover:shadow-2xl border-1 border-gray-200 overscroll-auto `}
+          >
+            {Interactivity()}
+          </div>
+        </div>
       </div>
     );
   }
