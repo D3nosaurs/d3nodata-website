@@ -12,7 +12,7 @@ import {
   LineChart,
   // PieChart,
   ScatterPlotChart,
-} from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts";
+} from "https://deno.land/x/d3nodata/charts.ts";
 
 // these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {
@@ -115,16 +115,16 @@ export default function ChartContainer() {
               type="text"
               id={property}
               value={chartProperties[property]}
-              onChange={() => {
+              onChange={(e) => {
                 let value = null;
-                if (document.querySelector("#" + property).value === "true") {
+                if (e.target.value === "true") {
                   value = true;
                 } else if (
-                  document.querySelector("#" + property).value === "false"
+                  e.target.value === "false"
                 ) {
                   value = false;
                 } else {
-                  value = document.querySelector("#" + property).value;
+                  value = e.target.value;
                 }
                 chartProperties[property] = value;
                 setDisplay([chart, chartProperties]);
