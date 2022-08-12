@@ -50,16 +50,20 @@ const scatterPlotChartProperties = {
   axesLabelColorFunc: "colorPicker",
   setTitle: "ScatterPlot",
   setTitleFunc: "input",
+  width: "700",
+  height: "700",
 };
 
 const donutChartProperties = {
   data: donutData,
   setTitle: "Ages",
-  setTitleFunc: 'input',
-  colorStart: '#cefad0',
-  colorStartFunc: 'colorPicker',
-  colorEnd: 'green',
-  colorEndFunc: 'colorPicker'
+  setTitleFunc: "input",
+  colorStart: "#cefad0",
+  colorStartFunc: "colorPicker",
+  colorEnd: "green",
+  colorEndFunc: "colorPicker",
+  width: "700",
+  height: "700",
 };
 
 const lineChartProperties = {
@@ -68,9 +72,9 @@ const lineChartProperties = {
   setTitleFunc: "input",
   lineColor: "#BFE4A3",
   lineColorFunc: "colorPicker",
-  width: 800,
+  width: 700,
   widthFunc: "input",
-  height: 600,
+  height: 700,
   heightFunc: "input",
   fontFamily: "Verdana",
   fontFamilyFunc: "input",
