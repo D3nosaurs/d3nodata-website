@@ -15,24 +15,20 @@ export default function Home() {
         <NavBar></NavBar>
 
         <div
-          className={tw
-            `w-full h-full flex flex-col items-center justify-start pt-20 gap-12`}
+          className={tw`w-full h-full flex flex-col items-center justify-start pt-20 gap-12`}
         >
           <h1
-            className={tw
-              `w-10/12 font-bold text-center font-sans tracking-widest text-3xl lg:text-5xl xl:text-6xl md:text-4xl  leading-normal text-green-500`}
+            className={tw`w-10/12 font-bold text-center font-sans tracking-widest text-3xl lg:text-5xl xl:text-6xl md:text-4xl  leading-normal text-green-500`}
           >
             OUT OF THE BOX DATA CHART COMPONENTS FOR DENO
           </h1>
 
           <div className={tw`w-full flex flex-col items-center gap-24`}>
             <div
-              className={tw
-                `shadow-md flex items-center justify-center rounded-lg `}
+              className={tw`shadow-md flex items-center justify-center rounded-lg `}
             >
               <p
-                className={tw
-                  `text-[10px] font-mono p-3 bg-white shadow-lg lg:text-sm rounded-lg`}
+                className={tw`text-[10px] font-mono p-3 bg-white shadow-lg lg:text-sm rounded-lg`}
               >
                 import * from
                 "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts"
@@ -43,8 +39,7 @@ export default function Home() {
               className={tw`flex flex-row justify-center`}
             >
               <button
-                className={tw
-                  `bg-green-400 absolute font-semibold transition-all p-3 rounded-lg text-white shadow-xl hover:bg-green-300 hover:shadow-none hover:animate-none duration-500`}
+                className={tw`bg-green-400 absolute font-semibold transition-all p-3 rounded-lg text-white shadow-xl hover:bg-green-300 hover:shadow-none hover:animate-none duration-500`}
               >
                 GET STARTED
               </button>
@@ -80,15 +75,16 @@ export default function Home() {
       </div>
       {/* feature to show that it is animated */}
       <div
-        class={tw
-          `w-9/12 h-full m-auto p-3 rounded-lg border-2 border-green-300 shadow-lg flex flex-col items-center`}
+        class={tw`w-9/12 h-full m-auto p-3 rounded-lg border-2 border-green-300 shadow-lg flex flex-col items-center`}
       >
         <h1 class={tw`text-3xl font-bold text-green-500`}>FEATURES</h1>
         <div class={tw`w-full p-5`}>
           <div
             class={tw`flex flex-row w-full gap-8 justify-between`}
           >
-            <div class={tw`w-[100%] h-max shadow-lg rounded-lg`}>
+            <div
+              class={tw`wx h-max shadow-lg rounded-lg`}
+            >
               <BarChartEg />
             </div>
             <div
