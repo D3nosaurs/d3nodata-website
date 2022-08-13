@@ -29,7 +29,7 @@ export default function ChartDoc(props: { chart: string }) {
           "The bar chart is a graph that used rectangular shapes to represent data. It is often utilized to show trend and compare multiple values side by side",
         );
         setCode(
-          `import BarChart from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts"
+          `import BarChart from "https://deno.land/x/d3nodata/charts.ts"
             \n<BarChart data={data} {...props}/>`,
         );
         setPropTableInfo(barChartPropsInfo);
@@ -38,7 +38,7 @@ export default function ChartDoc(props: { chart: string }) {
           "The line chart is used to connect individual data points. The graph is usually used to show changes and trend for data overtime.",
         );
         setCode(
-          `import LineChart from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts"
+          `import LineChart from "https://deno.land/x/d3nodata/charts.ts"
             \n<LineChart data={data} {...props}/>`,
         );
         setPropTableInfo(lineChartPropsInfo);
@@ -47,7 +47,7 @@ export default function ChartDoc(props: { chart: string }) {
           "Scatterplot is a mathematical diagram used to depict values for two variables. The data are displayed as collection of points on the graph, each having value determined on the horizontal and vertical axes.",
         );
         setCode(
-          `import ScatterplotChart from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts"
+          `import ScatterplotChart from "https://deno.land/x/d3nodata/charts.ts"
             \n<ScatterplotChart data={data} {...props}/>`,
         );
         setPropTableInfo(scatterplotChartPropsInfo);
@@ -56,9 +56,9 @@ export default function ChartDoc(props: { chart: string }) {
           "The pie chart is a statiscal graph dividing the circle proportionally according to the input data. The donut chart is the same as the pie chart but has an inner radius to resemble a donut. Mmm, donuts. ",
         );
         setCode(
-          `import PieChart from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts";
+          `import PieChart from "https://deno.land/x/d3nodata/charts.ts";
             \n<PieChart data={data} {...props}/>
-          \nimport DonutChart from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts";
+          \nimport DonutChart from "https://deno.land/x/d3nodata/charts.ts";
             \n<DonutChart data={data} {...props}/>`,
         );
         setPropTableInfo(piedonutChartPropsInfo);
