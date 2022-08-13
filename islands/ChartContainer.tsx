@@ -52,7 +52,7 @@ export default function ChartContainer() {
               onClick={() => {
                 setDisplay(donutBundle);
               }}
-            >
+          >
               DONUT CHART
             </Button>
           </li>
@@ -61,7 +61,7 @@ export default function ChartContainer() {
               onClick={() => {
                 setDisplay(lineBundle);
               }}
-            >
+          >
               LINE CHART
             </Button>
           </li>
@@ -70,7 +70,7 @@ export default function ChartContainer() {
               onClick={() => {
                 setDisplay(scatterBundle);
               }}
-            >
+          >
               SCATTERPLOT CHART
             </Button>
           </li>
