@@ -30,7 +30,7 @@ export default function Home() {
               <p
                 className={tw`text-[10px] font-mono p-3 bg-white shadow-lg lg:text-sm rounded-lg`}
               >
-                import * from "https://deno.land/x/d3nodata/charts.ts"
+                import chartName from "https://deno.land/x/d3nodata@X/charts.ts"
               </p>
             </div>
             <a
