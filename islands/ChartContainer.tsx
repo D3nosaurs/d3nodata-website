@@ -2,7 +2,6 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
 import { tw } from "@twind";
-
 import { Button } from "../components/Button.tsx";
 
 // importing charts from our library
@@ -13,7 +12,6 @@ import {
   // PieChart,
   ScatterPlotChart,
 } from "https://deno.land/x/d3nodata@v.0.0.1.2.3/charts.ts";
-
 
 // these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {

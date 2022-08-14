@@ -10,7 +10,7 @@ export default function NavBar() {
   return (
     <nav
       className={tw
-        `flex flex-wrap pt-3 items-center justify-center bg-transparent w-full border-b-2`}
+        `flex flex-wrap pt-3 items-center justify-center bg-transparent w-full`}
     >
       <div
         className={tw
@@ -20,7 +20,7 @@ export default function NavBar() {
           className={tw
             `w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start`}
         >
-          <img src={"../d3no-data-logo.svg"} className={tw`w-20`} />
+          {/* <img src={"../deno-data-logo.svg"} className={tw`w-30`} /> */}
           <button
             className={tw
               `cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none`}
@@ -56,7 +56,7 @@ export default function NavBar() {
                 <li className={tw`nav-item`}>
                   <a
                     className={tw
-                      `px-3 py-2 hover:cursor-pointer flex items-center text-base uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                      `px-3 py-2 hover:cursor-pointer flex items-center text-base uppercase leading-snug text-green-600 hover:opacity-75`}
                     href="/"
                   >
                     HOME
@@ -65,7 +65,7 @@ export default function NavBar() {
                 <li className={tw`nav-item`}>
                   <a
                     className={tw
-                      `px-3 py-2 hover:cursor-pointer flex items-center text-base uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                      `px-3 py-2 hover:cursor-pointer flex items-center text-base uppercase font leading-snug text-green-600 hover:opacity-75`}
                     href="/documentation"
                   >
                     DOCUMENTATION
@@ -74,7 +74,7 @@ export default function NavBar() {
                 <li className={tw`nav-item`}>
                   <a
                     className={tw
-                      `px-3 py-2 hover:cursor-pointer flex items-center text-base uppercase font-bold leading-snug text-green-600 hover:opacity-75`}
+                      `px-3 py-2 hover:cursor-pointer flex items-center text-base uppercase font leading-snug text-green-600 hover:opacity-75`}
                     href="/samples"
                   >
                     SAMPLES
