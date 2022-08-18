@@ -1,4 +1,5 @@
 /** @jsx h */
+/** @jsxFrag Fragment */
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 
@@ -20,12 +21,12 @@ export default function PropsTable(props: { info: DocProps[] }) {
     if (Array.isArray(prop.name)) {
       for (let name of prop.name) {
         nameData.push(
-          <Fragment>
+          <>
             <code>
               {name}
             </code>
             <br />
-          </Fragment>,
+          </>,
         );
       }
     } else {
