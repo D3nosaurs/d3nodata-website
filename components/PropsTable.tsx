@@ -13,6 +13,7 @@ type DocProps = {
 
 export default function PropsTable(props: { info: DocProps[] }) {
   const dataRow = [];
+  // console.log('props in propstable: ', props);
 
   // looping through the array of properties
   for (let prop of props.info) {
