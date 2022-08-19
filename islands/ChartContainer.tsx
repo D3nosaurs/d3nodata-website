@@ -12,7 +12,7 @@ import {
   LineChart,
   // PieChart,
   ScatterPlotChart,
-} from "https://deno.land/x/d3nodata/charts.ts";
+} from "https://deno.land/x/d3nodata@v0.0.1.2.1/charts.ts";
 
 // these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {

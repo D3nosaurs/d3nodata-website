@@ -1,4 +1,5 @@
 /** @jsx h */
+/** @jsxFrag Fragment */
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 
@@ -12,6 +13,7 @@ type DocProps = {
 
 export default function PropsTable(props: { info: DocProps[] }) {
   const dataRow = [];
+  // console.log('props in propstable: ', props);
 
   // looping through the array of properties
   for (let prop of props.info) {
@@ -20,12 +22,12 @@ export default function PropsTable(props: { info: DocProps[] }) {
     if (Array.isArray(prop.name)) {
       for (let name of prop.name) {
         nameData.push(
-          <Fragment>
+          <>
             <code>
               {name}
             </code>
             <br />
-          </Fragment>,
+          </>,
         );
       }
     } else {
