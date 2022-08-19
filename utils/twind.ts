@@ -21,7 +21,8 @@ export const config: Configuration = {
     ],
     ":global": {
       "td": {
-        textAlign: "start",
+        // textAlign: "start",
+        textAlign: 'center',
         border: "1px solid #BFE4A3",
         padding: "10px",
         borderRadius: "40px",

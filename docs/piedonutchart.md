@@ -1,0 +1,23 @@
+# **Pie and Donut Chart Documentation**
+
+## Schema for Props
+
+This is all separate props when you call the JSX element
+
+|                             **Prop name **                             |          **Type**          | **Default Value** | **Required** |                                **Description**                                 |
+| :--------------------------------------------------------------------: | :------------------------: | :---------------: | :----------: | :----------------------------------------------------------------------------: |
+|                                  data                                  | `{x: number, y: number}[]` |        N/A        |     Yes      | An Array of Objects that have the shape that is designated in the Type section |
+|                               colorStart                               |          `string`          |     `cefad0`      |      No      |           The color you wish to start off with in the color gradient           |
+|                                colorEnd                                |          `string`          |      `green`      |      No      |               The color you wish to end on in the color gradient               |
+| paddingTop, </br> paddingLeft, </br> paddingRight, </br> paddingBottom |          `number`          |       `60`        |      No      |   The padding to the Top, Left, Right, and Bottom of the chart, respectively   |
+|                                 width                                  |          `number`          |       `700`       |      No      |                           Set the width of the chart                           |
+|                                 height                                 |          `number`          |       `700`       |      No      |                          Set the height of the chart                           |
+|                               animation                                |         `boolean`          |      `true`       |      No      |   A switch as to whether you want animation to your chart upon initial load    |
+|                           animationDuration                            |          `number`          |       `120`       |      No      |       Time (in ms) for each bar of the chart to reach the desired height       |
+|                               addToolTip                               |         `boolean`          |      `true`       |      No      |     A switch to determine if you want information to show up on mouse over     |
+|                               fontFamily                               |          `string`          |     `Verdana`     |      No      |                        Font for all text in your chart                         |
+|                                addTitle                                |         `boolean`          |      `false`      |      No      |                     A switch to add a title to your chart                      |
+|                                setTitle                                |          `string`          |      `TITLE`      |      No      |                            The title for your chart                            |
+|                              setTitleSize                              |          `string`          |       `1em`       |      No      |                  Set font size for the chart's title (in em)                   |
+|                             setTitleColor                              |          `string`          |     `#277DA1`     |      No      |                       Set the color of the chart's title                       |
+|                           setTitlePaddingTop                           |          `number`          |       `40`        |      No      |        Set the distance from the top of the chart to where the title is        |

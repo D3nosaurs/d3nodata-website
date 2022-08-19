@@ -7,7 +7,7 @@ import { tw } from "@twind";
 
 import NavBar from "../../islands/NavBar.tsx";
 import DocsSideBar from "../../components/Docs/Sidebar.tsx";
-
+import DocsBar from "../../components/Docs/DocsBar.tsx";
 
 export default function ChartHomepage () {
 
@@ -16,6 +16,7 @@ export default function ChartHomepage () {
       <NavBar />
       <h1 class={tw`text-4xl font-semibold text-green-600`}>Pick any chart!</h1>
       <DocsSideBar />
+      {/* <DocsBar /> */}
     </>
   )
 }
