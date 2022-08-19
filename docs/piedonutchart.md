@@ -1,10 +1,4 @@
-# **Pie and Donut Chart Documentation**
-
-## Schema for Props
-
-This is all separate props when you call the JSX element
-
-|                             **Prop name **                             |          **Type**          | **Default Value** | **Required** |                                **Description**                                 |
+|                             Prop Name                             |          **Type**          | **Default Value** | **Required** |                                **Description**                                 |
 | :--------------------------------------------------------------------: | :------------------------: | :---------------: | :----------: | :----------------------------------------------------------------------------: |
 |                                  data                                  | `{x: number, y: number}[]` |        N/A        |     Yes      | An Array of Objects that have the shape that is designated in the Type section |
 |                               colorStart                               |          `string`          |     `cefad0`      |      No      |           The color you wish to start off with in the color gradient           |

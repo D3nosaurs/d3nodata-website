@@ -20,8 +20,13 @@ export const config: Configuration = {
       `url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap')`,
     ],
     ":global": {
+      "table": {
+        marginLeft: "auto",
+        marginRight: "auto", 
+        marginTop: "50px",
+        marginBottom: "50px"
+      },
       "td": {
-        // textAlign: "start",
         textAlign: 'center',
         border: "1px solid #BFE4A3",
         padding: "10px",

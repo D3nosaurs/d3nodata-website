@@ -1,10 +1,4 @@
-# **Pie and Donut Chart Documentation**
-
-## Schema for Props
-
-This is all separate props when you call the JSX element
-
-|                             **Prop name **                             |          **Type**          | **Default Value** | **Required** |                              **Description**                               |
+|                               Prop Name                                |          **Type**          | **Default Value** | **Required** |                              **Description**                               |
 | :--------------------------------------------------------------------: | :------------------------: | :---------------: | :----------: | :------------------------------------------------------------------------: |
 |                                  data                                  | `{x: number, y: number}[]` |        N/A        |     Yes      |             Array of objects as structred in the Types column              |
 |                                dotColor                                |          `string`          |     `#BFE4A3`     |      No      |                        Color of each individual dot                        |

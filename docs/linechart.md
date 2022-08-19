@@ -1,12 +1,6 @@
-# **Line Chart Documentation**
-
-## Schema for Props
-
-This is all separate props when you call the JSX element
-
-|                           **Prop name **                            |         **Type**         | **Default Value** | **Required** |                                **Description**                                 |
+|                              Prop Name                              |         **Type**         | **Default Value** | **Required** |                                **Description**                                 |
 | :-----------------------------------------------------------------: | :----------------------: | :---------------: | :----------: | :----------------------------------------------------------------------------: |
-|                                Data                                 | `{x: Date, y: number}[]` |        N/A        |     Yes      | An Array of Objects that have the shape that is designated in the Type section |
+|                                data                                 | `{x: Date, y: number}[]` |        N/A        |     Yes      | An Array of Objects that have the shape that is designated in the Type section |
 |                              lineColor                              |         `string`         |     `#BFE4A3`     |      No      |                             The color of the line                              |
 | paddingTop </br> paddingLeft </br> paddingRight </br> paddingBottom |         `number`         |       `70`        |      No      |        Add Top, left, right, and bottom padding to chart, respectively         |
 |                                width                                |         `number`         |       `800`       |      No      |                             The width of the chart                             |

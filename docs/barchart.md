@@ -1,12 +1,6 @@
-# **Bar Chart Documentation**
-
-Schema for Props:
-
-This is all separate props when you call the JSX element
-
 |                             **Prop Name**                              |              **Type**               | **Default Value** | **Required** |                                    **Description**                                     |
 | :--------------------------------------------------------------------: | :---------------------------------: | :---------------: | :----------: | :------------------------------------------------------------------------------------: |
-|                                  Data                                  | `{data: numbers, labels: string}[]` |        N/A        |     Yes      | An array containing objects with with 2 properties listed in the Default Value section |
+|                                  data                                  | `{data: numbers, labels: string}[]` |        N/A        |     Yes      | An array containing objects with with 2 properties listed in the Default Value section |
 |                               barPadding                               |              `number`               |        `5`        |      No      |                           Amount of padding in between bars                            |
 |                                barColor                                |              `string`               |     `#BFE4A3`     |      No      |                                 The color of the bars                                  |
 |                             barHoverColor                              |              `string`               |     `#90BE6D`     |      No      |            The color of the bars when you over over each bar with the mouse            |
@@ -28,3 +22,4 @@ This is all separate props when you call the JSX element
 |                              setTitleSize                              |              `string`               |      `1.5em`      |      No      |                      Set font size for the chart's title (in em)                       |
 |                             setTitleColor                              |              `string`               |     `#277DA1`     |      No      |                           Set the color of the chart's title                           |
 |                           setTitlePaddingTop                           |              `number`               |       `40`        |      No      |            Set the distance from the top of the chart to where the title is            |
+
