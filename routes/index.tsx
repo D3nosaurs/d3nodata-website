@@ -228,12 +228,22 @@ export default function Home() {
         </svg>
 
         {/* div to show code of importing */}
-        <div
-          className={tw`w-max text-sm font-mono p-1 rounded-lg`}
-        >
-          <p className={tw`text-[#2EE59D]`}>
-            import * from deno.land/x/
-          </p>
+        <div className={tw`text-[#2EE59D] font-mono wrapper`}>
+          <div class="static-txt">import</div>
+          <ul class="dynamic-txts">
+            <li>
+              <span>BarChart</span>
+            </li>
+            <li>
+              <span>LineChart</span>
+            </li>
+            <li>
+              <span>ScatterPlotChart</span>
+            </li>
+          </ul>
+          <div class="static-txt">
+            from {`"https://deno.land/x/d3nodata@v0.0.1.3.1/mod.ts"`}
+          </div>
         </div>
 
         {/* get started button */}

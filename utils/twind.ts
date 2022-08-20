@@ -107,6 +107,31 @@ export const config: Configuration = {
         animation: "5.3s ease appear",
       },
 
+      ".wrapper": {
+        display: "flex",
+      },
+
+      ".wrapper .static-txt": {
+        color: "#2EE59D",
+      },
+
+      ".wrapper .dynamic-txts": {
+        marginLeft: "15px",
+      },
+
+      ".dynamic-txts li": {
+        listStyle: "none",
+        color: "#ff4c29",
+        position: "relative",
+        "&::after": {
+          content: '""'!,
+          position: "absolute"!,
+          height: "100%"!,
+          width: "100%"!,
+          backgroundColor: "#ff4c29"!,
+        },
+      },
+
       "@keyframes line-anim": {
         "to": {
           strokeDashoffset: "0",
