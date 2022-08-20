@@ -1,11 +1,18 @@
 /** @jsx h */
 import { h } from "preact";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import Button from "./Button.tsx";
 import { tw } from "@twind";
 
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(true);
+
+  useEffect(() => {
+    const paths = document.querySelectorAll("#logo path");
+    for (let i = 0; i < 8; i++) {
+      console.log(`shape ${i} has length ${paths[i].getTotalLength()}`);
+    }
+  }, []);
 
   return (
     <nav
@@ -63,11 +70,7 @@ export default function NavBar() {
                   </a>
                 </li>
                 <li className={tw`nav-item`}>
-                  <a
-                    className={tw
-                      `px-3 py-2 hover:cursor-pointer flex items-center text-base uppercase font leading-snug text-green-600 hover:opacity-75`}
-                    href="/documentation"
-                  >
+                  <a>
                     DOCUMENTATION
                   </a>
                 </li>

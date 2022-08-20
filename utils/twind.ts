@@ -21,11 +21,71 @@ export const config: Configuration = {
     ],
     ":global": {
       "*": {
-        margin: "0",
-        padding: "0",
+        padding: 0,
+        margin: 0,
+        boxSizing: "border-box",
+      },
+      "body": {
+        width: "100%",
+        height: "100vh",
+        "background-color": "black",
+      },
+
+      "#logo": {
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+      },
+
+      "#logo path:nth-child(1)": {
+        strokeDasharray: "952.628662109375px",
+        strokeDashoffset: "952.628662109375px",
+        animation: "line-anim 2s ease forwards 0.3s",
+      },
+      "#logo path:nth-child(2)": {
+        strokeDasharray: "862.2592163085938px",
+        strokeDashoffset: "862.2592163085938px",
+        animation: "line-anim 2s ease forwards 0.6s",
+      },
+      "#logo path:nth-child(3)": {
+        strokeDasharray: "1008.71826171875px",
+        strokeDashoffset: "1008.71826171875px",
+        animation: "line-anim 2s ease forwards 0.9s",
+      },
+      "#logo path:nth-child(4)": {
+        strokeDasharray: "669.2959594726562px",
+        strokeDashoffset: "669.2959594726562px",
+        animation: "line-anim 2s ease forwards 1.2s",
+      },
+      "#logo path:nth-child(5)": {
+        strokeDasharray: "952.629150390625px",
+        strokeDashoffset: "952.629150390625px",
+        animation: "line-anim 2s ease forwards 1.5s",
+      },
+      "#logo path:nth-child(6)": {
+        strokeDasharray: "813.01953125px",
+        strokeDashoffset: "813.01953125px",
+        animation: "line-anim 2s ease forwards 1.8s",
+      },
+      "#logo path:nth-child(7)": {
+        strokeDasharray: "573.1198120117188px",
+        strokeDashoffset: "573.1198120117188px",
+        animation: "line-anim 2s ease forwards 2.1s",
+      },
+      "#logo path:nth-child(8)": {
+        strokeDasharray: "813.0161743164062px",
+        strokeDashoffset: "813.0161743164062px",
+        animation: "line-anim 2s ease forwards 2.4s",
+      },
+      "table": {
+        marginLeft: "auto",
+        marginRight: "auto",
+        marginTop: "50px",
+        marginBottom: "50px",
       },
       "td": {
-        textAlign: "start",
+        textAlign: "center",
         border: "1px solid #BFE4A3",
         padding: "10px",
         borderRadius: "40px",
@@ -41,6 +101,28 @@ export const config: Configuration = {
         padding: "2px",
         border: "1px solid grey",
         borderRadius: "5px",
+      },
+
+      "#deno-logo": {
+        animation: "5.3s ease appear",
+      },
+
+      "@keyframes line-anim": {
+        "to": {
+          strokeDashoffset: "0",
+        },
+      },
+
+      "@keyframes appear": {
+        "0%": {
+          opacity: 0,
+        },
+        "88%": {
+          opacity: 0,
+        },
+        "100%": {
+          opacity: 1,
+        },
       },
     },
   },
