@@ -117,18 +117,26 @@ export const config: Configuration = {
 
       ".wrapper .dynamic-txts": {
         marginLeft: "15px",
+        lineHeight: "1em",
+        height: "1em",
+        overflow: "hidden",
       },
 
       ".dynamic-txts li": {
         listStyle: "none",
         color: "#ff4c29",
         position: "relative",
+        top: 0,
+        animation: "slide 12s steps(4) infinite",
         "&::after": {
-          content: '""'!,
-          position: "absolute"!,
-          height: "100%"!,
-          width: "100%"!,
-          backgroundColor: "#ff4c29"!,
+          content: '""',
+          position: "absolute",
+          left: 0,
+          height: "100%",
+          width: "100%",
+          borderLeft: "2px solid #ff4c29",
+          backgroundColor: "black",
+          animation: "typing 3s steps(10) infinite",
         },
       },
 
@@ -147,6 +155,22 @@ export const config: Configuration = {
         },
         "100%": {
           opacity: 1,
+        },
+      },
+
+      "@keyframes typing": {
+        "40%": {},
+        "60%": {
+          left: "calc(100% + 30px)",
+        },
+        "100%": {
+          left: 0,
+        },
+      },
+
+      "@keyframes slide": {
+        "100%": {
+          top: "-90px",
         },
       },
     },
