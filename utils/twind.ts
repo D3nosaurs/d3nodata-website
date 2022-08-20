@@ -31,12 +31,12 @@ export const config: Configuration = {
         "background-color": "black",
       },
 
-      "#logo": {
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-      },
+      // "#logo": {
+      //   position: "absolute",
+      //   top: "50%",
+      //   left: "50%",
+      //   transform: "translate(-50%, -50%)",
+      // },
 
       "#logo path:nth-child(1)": {
         strokeDasharray: "952.628662109375px",
