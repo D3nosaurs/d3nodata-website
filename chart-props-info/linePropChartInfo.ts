@@ -1,5 +1,20 @@
 export default [
   {
+    name: "data",
+    type: "{x: Date, y: number}[]",
+    defaultValue: "N/A",
+    required: "Yes",
+    description:
+      "an object that contains an array of numbers and an array of corresponding labels",
+  },
+  {
+    name: "lineColor",
+    type: "string",
+    defaultValue: "#BFE4A3",
+    required: "No",
+    description: "color of line for line chart",
+  },
+  {
     name: ["paddingTop", "paddingLeft", "paddingRight", "paddingBottom"],
     type: "number",
     defaultValue: "70",
@@ -19,14 +34,6 @@ export default [
     defaultValue: "600",
     required: "No",
     description: "set height size of the chart",
-  },
-  {
-    name: "data",
-    type: "{x: Date, y: number}[]",
-    defaultValue: "N/A",
-    required: "Yes",
-    description:
-      "data used to render bar chart. Object that contains an array of numbers and an array of corresponding labels.",
   },
   {
     name: "addAxesLabel",
@@ -62,13 +69,6 @@ export default [
     defaultValue: "#277DA1",
     required: "No",
     description: "color for axes' labels",
-  },
-  {
-    name: "lineColor",
-    type: "string",
-    defaultValue: "#BFE4A3",
-    required: "No",
-    description: "color of line for line chart",
   },
   {
     name: "animation",

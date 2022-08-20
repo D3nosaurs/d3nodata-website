@@ -1,32 +1,11 @@
 export default [
   {
-    name: ["paddingTop", "paddingLeft", "paddingRight", "paddingBottom"],
-    type: "number",
-    defaultValue: "70",
-    required: "No",
-    description: "add top, left, right, bottom padding to the chart",
-  },
-  {
-    name: "width",
-    type: "number",
-    defaultValue: "600",
-    required: "No",
-    description: "set width size of the chart",
-  },
-  {
-    name: "height",
-    type: "number",
-    defaultValue: "600",
-    required: "No",
-    description: "set height size of the chart",
-  },
-  {
     name: "data",
     type: "{x: number, y: number}[]",
     defaultValue: "N/A",
     required: "Yes",
     description:
-      "data used to render scatterplot chart. An array of objects that contains the x and y for each dot.",
+      "an array of objects that contains the x and y for each plot",
   },
   {
     name: "dotColor",
@@ -48,6 +27,27 @@ export default [
     defaultValue: "5",
     required: "No",
     description: "radius of each dot on chart",
+  },
+  {
+    name: ["paddingTop", "paddingLeft", "paddingRight", "paddingBottom"],
+    type: "number",
+    defaultValue: "70",
+    required: "No",
+    description: "add top, left, right, bottom padding to the chart",
+  },
+  {
+    name: "width",
+    type: "number",
+    defaultValue: "600",
+    required: "No",
+    description: "set width size of the chart",
+  },
+  {
+    name: "height",
+    type: "number",
+    defaultValue: "600",
+    required: "No",
+    description: "set height size of the chart",
   },
   {
     name: "addAxesLabel",

@@ -1,5 +1,34 @@
 export default [
   {
+    name: "data",
+    type: "{data: numbers, labels: string}[]",
+    defaultValue: "N/A",
+    required: "Yes",
+    description:
+      "an object that contains an array of numbers and an array of corresponding labels",
+  },
+  {
+    name: "barPadding",
+    type: "number",
+    defaultValue: "#4D908E",
+    required: "No",
+    description: "padding between bars",
+  },
+  {
+    name: "barColor",
+    type: "string",
+    defaultValue: "#BFE4A3",
+    required: "No",
+    description: "color of bars for bar chart",
+  },
+  {
+    name: "barHoverColor",
+    type: "string",
+    defaultValue: "#90BE6D",
+    required: "No",
+    description: "color of bars for bar chart",
+  },
+  {
     name: ["paddingTop", "paddingLeft", "paddingRight", "paddingBottom"],
     type: "number",
     defaultValue: "60",
@@ -19,14 +48,6 @@ export default [
     defaultValue: "700",
     required: "No",
     description: "set height size of the chart",
-  },
-  {
-    name: "data",
-    type: "{data: numbers, labels: string}[]",
-    defaultValue: "N/A",
-    required: "Yes",
-    description:
-      "data used to render bar chart. Object that contains an array of numbers and an array of corresponding labels.",
   },
   {
     name: "addAxesLabel",
@@ -62,27 +83,6 @@ export default [
     defaultValue: "#4D908E",
     required: "No",
     description: "color for axes' labels",
-  },
-  {
-    name: "barPadding",
-    type: "number",
-    defaultValue: "#4D908E",
-    required: "No",
-    description: "color for axes' labels",
-  },
-  {
-    name: "barColor",
-    type: "string",
-    defaultValue: "#BFE4A3",
-    required: "No",
-    description: "color of bars for bar chart",
-  },
-  {
-    name: "barHoverColor",
-    type: "string",
-    defaultValue: "#90BE6D",
-    required: "No",
-    description: "color of bars for bar chart",
   },
   {
     name: "animation",
