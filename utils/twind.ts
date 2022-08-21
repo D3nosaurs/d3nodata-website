@@ -28,15 +28,8 @@ export const config: Configuration = {
       "body": {
         width: "100%",
         height: "100vh",
-        "background-color": "black",
+        "background-color": "#42476d",
       },
-
-      // "#logo": {
-      //   position: "absolute",
-      //   top: "50%",
-      //   left: "50%",
-      //   transform: "translate(-50%, -50%)",
-      // },
 
       "#logo path:nth-child(1)": {
         strokeDasharray: "952.628662109375px",
@@ -107,42 +100,52 @@ export const config: Configuration = {
         animation: "5.3s ease appear",
       },
 
-      ".wrapper": {
-        display: "flex",
-      },
-
-      ".wrapper .static-txt": {
-        color: "#2EE59D",
-      },
-
-      ".wrapper .dynamic-txts": {
-        marginLeft: "15px",
-        lineHeight: "1em",
-        height: "1em",
+      ".container": {
         overflow: "hidden",
       },
-
-      ".dynamic-txts li": {
-        listStyle: "none",
-        color: "#ff4c29",
+      ".container .text": {
         position: "relative",
+      },
+
+      ".text.sec-text::before": {
+        content: "''",
+        position: "absolute",
         top: 0,
-        animation: "slide 12s steps(4) infinite",
-        "&::after": {
-          content: '""',
-          position: "absolute",
-          left: 0,
-          height: "100%",
-          width: "100%",
-          borderLeft: "2px solid #ff4c29",
-          backgroundColor: "black",
-          animation: "typing 3s steps(10) infinite",
+        left: 0,
+        height: "100%",
+        width: "100%",
+        backgroundColor: "#42476d",
+        borderLeft: "2px solid #2EE59D",
+        animation: "animate 4s steps(12) infinite",
+      },
+
+      "@keyframes animate": {
+        "40%, 60%": {
+          left: "100%",
+        },
+        "100%": {
+          left: "0%",
         },
       },
 
       "@keyframes line-anim": {
         "to": {
           strokeDashoffset: "0",
+        },
+      },
+
+      "#chart-typing": {
+        positiion: "relative",
+        "&::before, &::after": {
+          content: "''",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+        },
+        "&::before": {
+          background: "teal",
         },
       },
 
@@ -155,22 +158,6 @@ export const config: Configuration = {
         },
         "100%": {
           opacity: 1,
-        },
-      },
-
-      "@keyframes typing": {
-        "40%": {},
-        "60%": {
-          left: "calc(100% + 30px)",
-        },
-        "100%": {
-          left: 0,
-        },
-      },
-
-      "@keyframes slide": {
-        "100%": {
-          top: "-90px",
         },
       },
     },
