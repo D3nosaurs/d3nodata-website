@@ -68,7 +68,7 @@ export default function ChartDoc(props: { chart: string }) {
 
   return (
     <div
-      class={tw`col-span-4 p-5 border-l-2 w-full h-full flex flex-col gap-10`}
+      class={tw`col-span-4 p-5 w-full h-full flex flex-col gap-10`}
     >
       <h1 class={tw`text-4xl font-semibold text-green-600`}>
         {props.chart.toUpperCase()}

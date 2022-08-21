@@ -2,7 +2,6 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
 import { tw } from "@twind";
-
 import { Button } from "../components/Button.tsx";
 
 // importing charts from our library
@@ -103,7 +102,8 @@ export default function ChartContainer() {
                 chartProperties[property] = e.target.value;
                 setDisplay([chart, chartProperties]);
               }}
-              class={tw`ml-2 w-1/2 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
+              class={tw
+                `ml-2 w-1/2 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
             />
           );
         }
@@ -129,7 +129,8 @@ export default function ChartContainer() {
                 chartProperties[property] = value;
                 setDisplay([chart, chartProperties]);
               }}
-              class={tw`ml-2 block p-2 w-1/2 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
+              class={tw
+                `ml-2 block p-2 w-1/2 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
             />
           );
         }
@@ -201,7 +202,8 @@ export default function ChartContainer() {
         >
           <div
             id="interactive-list"
-            class={tw`p-3 w-3/4 shadow-xl hover:shadow-2xl border-1 border-gray-200 overscroll-auto `}
+            class={tw
+              `p-3 w-3/4 shadow-xl hover:shadow-2xl border-1 border-gray-200 overscroll-auto `}
           >
             {Interactivity()}
           </div>
