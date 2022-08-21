@@ -242,13 +242,15 @@ export default function Home() {
           </span>
         </div>
 
-        {/* get started button */}
-        <button
-          className={tw
-            `text-[#2EE59D] font-light bg-[#545454] p-3 text-sm rounded-3xl hover:bg-[#43AA8B] hover:opacity-80 duration-1000`}
-        >
-          GET STARTED
-        </button>
+        <a>
+          <button
+            id="bt-started"
+            className={tw
+              `text-[#2EE59D] shadow-xl font-light bg-[#545454] p-3 text-sm rounded-3xl hover:bg-[#43AA8B] hover:opacity-80 duration-1000 hover:shadow-none hover:translate-y-1`}
+          >
+            GET STARTED
+          </button>
+        </a>
       </div>
     </Fragment>
   );
