@@ -28,7 +28,7 @@ export const config: Configuration = {
       "body": {
         width: "100%",
         height: "100vh",
-        "background-color": "#42476d",
+        "background-color": "white",
       },
 
       "#logo path:nth-child(1)": {

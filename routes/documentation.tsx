@@ -7,7 +7,7 @@ import Documentation from "../islands/Documentation.tsx";
 export default function DocumentationPage() {
   return (
     <Fragment>
-      <NavBar></NavBar>
+      <NavBar />
       <Documentation></Documentation>
     </Fragment>
   );

@@ -10,7 +10,7 @@ export default function Home() {
     <Fragment>
       <div
         className={tw
-          `w-full h-full flex flex-col items-center justify-center gap-20`}
+          `w-full h-full flex flex-col items-center justify-center gap-20 bg-[#42476d]`}
       >
         <svg
           width="1028"
@@ -238,11 +238,11 @@ export default function Home() {
           }
           <TypeWriting />
           <span class="text import-text">
-            from {`"https://deno.land/x/d3nodata@v0.0.1.3.1/mod.ts"`}
+            from {`"https://deno.land/x/d3nodata@v0.0.1.3.1/charts.ts"`}
           </span>
         </div>
 
-        <a>
+        <a href="./documentation">
           <button
             id="bt-started"
             className={tw
