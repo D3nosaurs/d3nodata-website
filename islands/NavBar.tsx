@@ -23,7 +23,7 @@ export default function NavBar() {
         <section class={tw`flex justify-end w-full gap-5`}>
           <section
             class={tw
-              `flex gap-4 items-center bg-[#113c4a] border-[1px] border-[#2EE59D] pl-8 pr-8 pt-2 pb-2 rounded-xl`}
+              `flex gap-4 items-center shadow-lg bg-[#113c4a] pl-8 pr-8 pt-2 pb-2 rounded-xl`}
           >
             <a href="./" className={tw`flex justify-center items-center`}>
               <p
