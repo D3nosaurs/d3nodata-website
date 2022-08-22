@@ -63,7 +63,7 @@ export default function Home() {
             <linearGradient id="gradient">
               <stop
                 offset="0%"
-                stop-color="#50717b"
+                stop-color="#113c4a"
               >
                 <animate
                   begin="2.7s"
@@ -246,7 +246,7 @@ export default function Home() {
           <button
             id="bt-started"
             className={tw
-              `text-[#2EE59D] shadow-xl font-light bg-[#545454] p-3 text-sm rounded-3xl hover:bg-[#43AA8B] hover:opacity-80 duration-1000 hover:shadow-none hover:translate-y-1`}
+              `text-[#2EE59D] shadow-xl font-light bg-[#113c4a] p-3 text-sm rounded-3xl hover:bg-[#43AA8B] hover:opacity-80 duration-1000 hover:shadow-none hover:translate-y-1`}
           >
             GET STARTED
           </button>

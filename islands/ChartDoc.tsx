@@ -70,7 +70,10 @@ export default function ChartDoc(props: { chart: string }) {
     <div
       class={tw`col-span-4 p-5 w-full h-full flex flex-col gap-10`}
     >
-      <h1 class={tw`text-4xl font-semibold text-green-600`}>
+      <h1
+        class={tw
+          `text-4xl font-semibold text-[transparent] bg-gradient-to-r from-[#028090] to-[#02c39a] bg-clip-text`}
+      >
         {props.chart.toUpperCase()}
       </h1>
       <div class={tw`flex flex-col gap-5`}>
