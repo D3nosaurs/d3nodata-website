@@ -242,7 +242,7 @@ export default function Home() {
           </span>
         </div>
 
-        <a href="./documentation">
+        <a href="./docs">
           <button
             id="bt-started"
             className={tw

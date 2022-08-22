@@ -1,12 +1,23 @@
 /** @jsx h */
 import { h } from "preact";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
 import Button from "../islands/Button.tsx";
 import ChartDoc from "../islands/ChartDoc.tsx";
 
+const CHARTS = [
+  "GET STARTED",
+  "BAR CHART",
+  "LINE CHART",
+  "PIE & DONUT CHARTS",
+  "SCATTERPLOT CHART",
+];
 export default function Documentation() {
   const [currentChart, setCurrentChart] = useState("GET STARTED");
+  const arrayButtons = [];
+
+  useEffect(() => {
+  }, [currentChart]);
 
   return (
     <div class={tw`w-full flex items-center justify-center`}>
@@ -14,7 +25,7 @@ export default function Documentation() {
         <div
           class={tw`col-span-1 w-[max-content] max-w-l h-full`}
         >
-          <ul class={tw` flex flex-col pt-5 gap-5`}>
+          <ul class={tw`flex flex-col pt-5 gap-5`}>
             <li>
               <a>
                 <Button

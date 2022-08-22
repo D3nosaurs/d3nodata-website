@@ -1,43 +1,40 @@
 /**@jsx h */
 /**@jsxFrag Fragment */
-import { h, Fragment } from 'preact';
+import { Fragment, h } from "preact";
 import { tw } from "@twind";
+import Button from "../../islands/Button.tsx";
 
-export default function DocsSideBar (): h.JSX.Element{
+export default function DocsSideBar(): h.JSX.Element {
   return (
-      <div>
-        <ul class={tw` flex flex-col p-8 gap-5`}>
-          <li>
-            <a class={tw`w-full text-left text-sideNavTitle  rounded-sm hover:bg-gray-200 hover:font-semibold duration-300`} 
-              href='/docs/'> 
-              HOME
-            </a>
-          </li>
-          <li>
-            <a class={tw`w-full text-left text-sideNavTitle  rounded-sm hover:bg-gray-200 hover:font-semibold duration-300`} 
-              href='/docs/bar'> 
-              BAR CHART
-            </a>
-          </li>
-          <li>
-            <a class={tw`w-full text-left text-sideNavTitle  rounded-sm hover:bg-gray-200 hover:font-semibold duration-300`} 
-              href='/docs/line'> 
-              LINE CHART
-            </a>
-          </li>
-          <li>
-            <a class={tw`w-full text-left text-sideNavTitle  rounded-sm hover:bg-gray-200 hover:font-semibold duration-300`} 
-              href='/docs/scatter'>
-              SCATTERPLOT CHART
-            </a>
-          </li>
-          <li>
-            <a class={tw`w-full text-left text-sideNavTitle  rounded-sm hover:bg-gray-200 hover:font-semibold duration-300`}
-              href='/docs/piedonut' >
-              DONUT & PIE CHART
-            </a>
-          </li>
-        </ul>
-    </div>
-  )
+    <ul class={tw`flex flex-col pt-5 gap-5`}>
+      <li>
+        <a href="/docs/">
+          <Button text="GET STARTED" chosen={true}>
+          </Button>
+        </a>
+      </li>
+      <li>
+        <a href="/docs/bar">
+          <Button text="BAR CHART"></Button>
+        </a>
+      </li>
+      <li>
+        <a href="/docs/line">
+          <Button text="LINE CHART"></Button>
+        </a>
+      </li>
+      <li>
+        <a href="/docs/scatter">
+          <Button text="PIE & DONUT CHARTS">
+          </Button>
+        </a>
+      </li>
+      <li>
+        <a href="/docs/piedonut">
+          <Button text="SCATTERPLOT CHART">
+          </Button>
+        </a>
+      </li>
+    </ul>
+  );
 }

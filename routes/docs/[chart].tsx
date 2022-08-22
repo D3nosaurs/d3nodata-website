@@ -17,6 +17,8 @@ import DocsSideBar from "../../components/Docs/Sidebar.tsx";
 
 // import PropsTable from "../../components/PropsTable.tsx";
 
+import Button from "../../islands/Button.tsx";
+
 import DocsBar from "../../components/Docs/DocsBar.tsx";
 import DocsDonutPie from "../../components/Docs/DocsDonutPie.tsx";
 import DocsLine from "../../components/Docs/DocsLine.tsx";
@@ -35,11 +37,48 @@ export default function DocsPage(props: PageProps) {
   return (
     <>
       <NavBar />
+      <div class={tw`w-full flex items-center justify-center`}>
+        <div class={tw`grid grid-cols-5 gap-2 h-full w-full max-w-5xl`}>
+          <div
+            class={tw`col-span-1 w-[max-content] max-w-l h-full`}
+          >
+            <ul class={tw` flex flex-col pt-5 gap-5`}>
+              <li>
+                <a href="/docs/">
+                  <Button text="GET STARTED">
+                  </Button>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <Button text="BAR CHART"></Button>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <Button text="LINE CHART"></Button>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <Button text="PIE & DONUT CHARTS">
+                  </Button>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <Button text="SCATTERPLOT CHART">
+                  </Button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div class={tw`grid grid-cols-7`}>
         <div class={tw`border-r-2 col-span-1`}>
           <DocsSideBar />
         </div>
-
         {/* <DocsBar /> */}
         <div class={tw`w-full col-span-6`}>
           {content}
