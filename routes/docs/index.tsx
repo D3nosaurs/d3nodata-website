@@ -6,6 +6,7 @@ import { tw } from "@twind";
 
 import NavBar from "../../islands/NavBar.tsx";
 import DocsSideBar from "../../components/Docs/Sidebar.tsx";
+import GetStarted from "../../components/Docs/GetStarted.tsx";
 
 export default function ChartHomepage() {
   return (
@@ -16,7 +17,10 @@ export default function ChartHomepage() {
           <div
             class={tw`col-span-1 w-[max-content] max-w-l h-full`}
           >
-            <DocsSideBar />
+            <DocsSideBar selectedChart="" />
+          </div>
+          <div class={tw`col-span-4 w-full h-full flex flex-col pt-5 pl-5`}>
+            <GetStarted />
           </div>
         </div>
       </div>

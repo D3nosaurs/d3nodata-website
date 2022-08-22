@@ -28,11 +28,20 @@ export default function DocsPage(props: PageProps) {
   // console.log('props:', props)
   const { chart } = props.params;
   let content;
-
-  if (chart === "bar") content = <DocsBar />;
-  else if (chart === "piedonut") content = <DocsDonutPie />;
-  else if (chart === "line") content = <DocsLine />;
-  else if (chart === "scatter") content = <DocsScatterPlot />;
+  let selection;
+  if (chart === "bar") {
+    content = <DocsBar />;
+    selection = <DocsSideBar selectedChart="bar" />;
+  } else if (chart === "piedonut") {
+    content = <DocsDonutPie />;
+    selection = <DocsSideBar selectedChart="piedonut" />;
+  } else if (chart === "line") {
+    content = <DocsLine />;
+    selection = <DocsSideBar selectedChart="line" />;
+  } else if (chart === "scatter") {
+    content = <DocsScatterPlot />;
+    selection = <DocsSideBar selectedChart="scatter" />;
+  }
 
   return (
     <>
@@ -42,48 +51,12 @@ export default function DocsPage(props: PageProps) {
           <div
             class={tw`col-span-1 w-[max-content] max-w-l h-full`}
           >
-            <ul class={tw` flex flex-col pt-5 gap-5`}>
-              <li>
-                <a href="/docs/">
-                  <Button text="GET STARTED">
-                  </Button>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <Button text="BAR CHART"></Button>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <Button text="LINE CHART"></Button>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <Button text="PIE & DONUT CHARTS">
-                  </Button>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <Button text="SCATTERPLOT CHART">
-                  </Button>
-                </a>
-              </li>
-            </ul>
+            {selection}
+          </div>
+          <div class={tw`col-span-4 p-5 w-full h-full flex flex-col gap-10`}>
+            {content}
           </div>
         </div>
-      </div>
-      <div class={tw`grid grid-cols-7`}>
-        <div class={tw`border-r-2 col-span-1`}>
-          <DocsSideBar />
-        </div>
-        {/* <DocsBar /> */}
-        <div class={tw`w-full col-span-6`}>
-          {content}
-        </div>
-        {/* <PropsTable info={content}/> */}
       </div>
     </>
   );
