@@ -34,7 +34,7 @@ export default function NavBar() {
               </p>
             </a>
             <a
-              href="./documentation"
+              href="./docs"
               className={tw`flex justify-center items-center`}
             >
               <p
