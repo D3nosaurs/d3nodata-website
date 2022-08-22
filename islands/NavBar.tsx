@@ -19,7 +19,7 @@ export default function NavBar() {
       className={tw`flex items-center justify-center bg-[#42476d] shadow-xl`}
     >
       <main className={tw`flex w-full items-center max-w-5xl p-3`}>
-        <img src="./d3no-data-logo.svg" width="300px" />
+        <img src="../d3no-data-logo.svg" width="300px" />
         <section class={tw`flex justify-end w-full gap-5`}>
           <section
             class={tw
