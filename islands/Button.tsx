@@ -14,7 +14,7 @@ export default function Button(props: ButtonProps) {
     return (
       <button
         class={tw
-          `w-full text-left p-3 rounded-lg bg-[#113c4a] text-[#45eba5] scale-110`}
+          `w-full text-left p-3 rounded-lg bg-[#113c4a] text-sm text-[#45eba5] scale-110`}
         onClick={() => {
           props.update(props.text);
         }}
@@ -26,7 +26,7 @@ export default function Button(props: ButtonProps) {
     return (
       <button
         class={tw
-          `w-full text-left text-[#21aba5] p-3 rounded-lg hover:bg-[#113c4a] hover:text-[#45eba5] hover:scale-110 duration-300`}
+          `w-full text-left text-[#21aba5] p-3 rounded-lg text-sm hover:bg-[#113c4a] hover:text-[#45eba5] hover:scale-110 duration-300`}
         onClick={() => {
           setChosen(true);
           props.update(props.text);
