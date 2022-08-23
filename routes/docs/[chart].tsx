@@ -9,6 +9,7 @@ import DocsBar from "../../components/Docs/DocsBar.tsx";
 import DocsDonutPie from "../../components/Docs/DocsDonutPie.tsx";
 import DocsLine from "../../components/Docs/DocsLine.tsx";
 import DocsScatterPlot from "../../components/Docs/DocsScatterPlot.tsx";
+import DocsChoropleth from "../../components/Docs/DocsChoropleth.tsx"
 
 export default function DocsPage(props: PageProps) {
   // console.log('props:', props)
@@ -27,6 +28,9 @@ export default function DocsPage(props: PageProps) {
   } else if (chart === "scatter") {
     content = <DocsScatterPlot />;
     selection = <DocsSideBar selectedChart="scatter" />;
+  } else if (chart === "choropleth") {
+    content = <DocsChoropleth />
+    selection = <DocsSideBar selectedChart="choropleth" />;
   }
 
   return (

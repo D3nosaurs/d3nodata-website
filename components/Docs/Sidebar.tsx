@@ -14,6 +14,7 @@ const CHART_TYPES = [
   { link: "/docs/line", text: "LINE CHART" },
   { link: "/docs/scatter", text: "SCATTERPLOT CHART" },
   { link: "/docs/piedonut", text: "PIE & DONUT CHARTS" },
+  { link: "/docs/choropleth", text: "CHOROPLETH CHART" },
 ];
 export default function DocsSideBar(props: DocSideProp): h.JSX.Element {
   const linkArray = [];
