@@ -1,15 +1,15 @@
-import { barData } from "./Dummy_Data/BarChart_data.ts";
+import { barDatasets } from "./Dummy_Data/BarChart_data.ts";
 import { scatterData } from "./Dummy_Data/ScatterPlotChart_data.ts";
 import { donutData } from "./Dummy_Data/DonutChart_data.ts";
-import { lineData } from "./Dummy_Data/LineChart_data.ts";
+import { datasets } from "./Dummy_Data/LineChart_data.ts";
 // import { pieChartData } from "./Dummy_Data/PieChart_data.ts";
 
 // Interactive elements for each property are defined in propFunc
 // Func types: slider, checkbox, input, colorPicker
 const barChartProperties = {
-  data: barData,
-  barColor: "#BFE4A3",
-  barColorFunc: "colorPicker",
+  datasets: barDatasets,
+  // barColor: "#BFE4A3",
+  // barColorFunc: "colorPicker",
   animationDuration: 70,
   animationDurationFunc: "slider",
   animationDelay: 30,
@@ -41,9 +41,9 @@ const barChartProperties = {
 };
 
 const scatterPlotChartProperties = {
-  data: scatterData,
-  dotColor: "#BFE4A3",
-  dotColorFunc: "colorPicker",
+  datasets: scatterData,
+  // dotColor: "#BFE4A3",
+  // dotColorFunc: "colorPicker",
   axesColor: "#4D908E",
   axesColorFunc: "colorPicker",
   axesLabelColor: "#277DA1",
@@ -64,14 +64,16 @@ const donutChartProperties = {
   colorEndFunc: "colorPicker",
   width: "700",
   height: "700",
+  innerRadius: "100",
+  innerRadiusFunc: "slider",
 };
 
 const lineChartProperties = {
-  data: lineData,
+  datasets: datasets,
   setTitle: "Line",
   setTitleFunc: "input",
-  lineColor: "#BFE4A3",
-  lineColorFunc: "colorPicker",
+  // lineColor: "#BFE4A3",
+  // lineColorFunc: "colorPicker",
   width: 700,
   widthFunc: "input",
   height: 700,
