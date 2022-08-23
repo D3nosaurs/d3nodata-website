@@ -11,7 +11,7 @@ import {
   LineChart,
   // PieChart,
   ScatterPlotChart,
-} from "https://deno.land/x/d3nodata@v.0.0.1.3.7/charts.ts";
+} from "https://deno.land/x/d3nodata@v.0.0.1.3.9.2/charts.ts";
 
 // these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {
@@ -30,7 +30,7 @@ export default function ChartContainer() {
   const lineBundle = [LineChart, lineChartProperties];
 
   // allows for the charts above to be switched between easily, and opens the bar chart by default
-  const [display, setDisplay] = useState(lineBundle);
+  const [display, setDisplay] = useState(barBundle);
 
   // sidebar of buttons that allows user to switch between charts
   function ButtonBar() {

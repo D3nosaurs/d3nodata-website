@@ -1,4 +1,4 @@
-import { barData } from "./Dummy_Data/BarChart_data.ts";
+import { barDatasets } from "./Dummy_Data/BarChart_data.ts";
 import { scatterData } from "./Dummy_Data/ScatterPlotChart_data.ts";
 import { donutData } from "./Dummy_Data/DonutChart_data.ts";
 import { datasets } from "./Dummy_Data/LineChart_data.ts";
@@ -7,7 +7,7 @@ import { datasets } from "./Dummy_Data/LineChart_data.ts";
 // Interactive elements for each property are defined in propFunc
 // Func types: slider, checkbox, input, colorPicker
 const barChartProperties = {
-  data: barData,
+  datasets: barDatasets,
   // barColor: "#BFE4A3",
   // barColorFunc: "colorPicker",
   animationDuration: 70,
