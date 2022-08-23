@@ -8,7 +8,7 @@
 |                                 height                                 |          `number`          |     `700`     |    No    |                          Set the height of the chart                           |
 |                               animation                                |         `boolean`          |    `true`     |    No    |   A switch as to whether you want animation to your chart upon initial load    |
 |                           animationDuration                            |          `number`          |     `120`     |    No    |       Time (in ms) for each bar of the chart to reach the desired height       |
-|                               addToolTip                               |         `boolean`          |    `true`     |    No    |     A switch to determine if you want information to show up on mouse over     |
+|                                toolTip                                 |         `boolean`          |    `true`     |    No    |     A switch to determine if you want information to show up on mouse over     |
 |                               fontFamily                               |          `string`          |   `Verdana`   |    No    |                        Font for all text in your chart                         |
 |                                addTitle                                |         `boolean`          |    `false`    |    No    |                     A switch to add a title to your chart                      |
 |                                setTitle                                |          `string`          |    `TITLE`    |    No    |                            The title for your chart                            |
