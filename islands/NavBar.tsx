@@ -9,9 +9,9 @@ export default function NavBar() {
 
   useEffect(() => {
     const paths = document.querySelectorAll("#logo path");
-    for (let i = 0; i < 8; i++) {
-      console.log(`shape ${i} has length ${paths[i].getTotalLength()}`);
-    }
+    // for (let i = 0; i < 8; i++) {
+    //   console.log(`shape ${i} has length ${paths[i].getTotalLength()}`);
+    // }
   }, []);
 
   return (
@@ -45,7 +45,7 @@ export default function NavBar() {
               </p>
             </a>
             <a
-              href="./samples"
+              href="../samples"
               className={tw`flex justify-center items-center`}
             >
               <p

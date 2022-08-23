@@ -99,7 +99,7 @@ export const config: Configuration = {
 
       ".container": {
         overflow: "hidden",
-        animation: "6.3s ease appear",
+        animation: "0.1s ease appear",
       },
 
       "#bt-started": {
