@@ -227,7 +227,8 @@ export default function Home() {
 
         {/* div to show code of importing */}
         <div
-          className={tw`text-[#2EE59D] font-mono container flex justify-center`}
+          className={tw
+            `text-[#2EE59D] font-mono code-container flex justify-center`}
         >
           <span class="text first-text">import</span>&nbsp;
 
