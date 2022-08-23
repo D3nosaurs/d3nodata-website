@@ -87,9 +87,29 @@ const lineChartProperties = {
   yAxisLabel: "y label",
 };
 
+const choroplethChartProperties = {
+  lowColor: "#e6f6fe",
+  lowColorFunc: 'colorPicker',
+  highColor: "#00008B",
+  highColorFunc: 'colorPicker',
+  title: "Map of the World",
+  titleFunc: "input",
+  scale: 75,
+  scaleFunc: 'input',
+  width: 600,
+  widthFunc: 'input',
+  height: 600,
+  heightFunc: 'input', 
+  thresholdScale: false,
+  thresholdScaleFunc: 'checkbox',
+  fontSize: '10px',
+  fontSizeFunc: 'input'
+}
+
 export {
   barChartProperties,
   donutChartProperties,
   lineChartProperties,
   scatterPlotChartProperties,
+  choroplethChartProperties,
 };

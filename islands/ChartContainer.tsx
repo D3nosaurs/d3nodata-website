@@ -11,7 +11,8 @@ import {
   LineChart,
   // PieChart,
   ScatterPlotChart,
-} from "https://deno.land/x/d3nodata@v.0.0.1.3.9.2/charts.ts";
+  ChoroplethChart,
+} from "https://deno.land/x/d3nodata@v.0.0.1.3.11/charts.ts";
 
 // these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {
@@ -19,6 +20,7 @@ import {
   donutChartProperties,
   lineChartProperties,
   scatterPlotChartProperties,
+  choroplethChartProperties,
 } from "../chartPropertyTypes.ts";
 
 // contains the charts and the interactive elements
@@ -28,6 +30,7 @@ export default function ChartContainer() {
   const scatterBundle = [ScatterPlotChart, scatterPlotChartProperties];
   const donutBundle = [DonutChart, donutChartProperties];
   const lineBundle = [LineChart, lineChartProperties];
+  const chloroplethBundle = [ChoroplethChart, choroplethChartProperties];
 
   // allows for the charts above to be switched between easily, and opens the bar chart by default
   const [display, setDisplay] = useState(barBundle);
@@ -71,6 +74,15 @@ export default function ChartContainer() {
               }}
             >
               SCATTERPLOT CHART
+            </Button>
+          </li>
+          <li>
+            <Button
+              onClick={() => {
+                setDisplay(chloroplethBundle);
+              }}
+            >
+              CHOROPLETH CHART
             </Button>
           </li>
         </ul>
