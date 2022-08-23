@@ -68,23 +68,29 @@ export const config: Configuration = {
         strokeDashoffset: "813.0161743164062px",
         animation: "line-anim 2s ease forwards 2.4s",
       },
+
+      // styling chart props documentation
       "table": {
         marginLeft: "auto",
         marginRight: "auto",
         marginTop: "50px",
         marginBottom: "50px",
+        borderWidth: "10px",
+        borderStyle: "solid",
+        borderRadius: "30px",
       },
       "td": {
         textAlign: "center",
-        border: "1px solid #BFE4A3",
+        // border: "1px solid #307470",
         padding: "10px",
-        borderRadius: "40px",
+        fontSize: "0.8em",
       },
       "th": {
-        border: "1px solid #BFE4A3",
         padding: "15px",
-        color: "grey",
-        background: "#BFE4A3",
+        fontWeight: "normal",
+        color: "#2EE59D",
+        background: "#42476d",
+        borderBottom: "2px solid #4c5f7a",
       },
       "code": {
         background: "#f6f7f8",
@@ -120,6 +126,14 @@ export const config: Configuration = {
         backgroundColor: "#42476d",
         borderLeft: "2px solid #2EE59D",
         animation: "animate 4s steps(12) infinite",
+      },
+
+      ".js-keycode": {
+        color: "#f29696",
+      },
+
+      ".js-stringcode": {
+        color: "#9d65c9",
       },
 
       "@keyframes animate": {
