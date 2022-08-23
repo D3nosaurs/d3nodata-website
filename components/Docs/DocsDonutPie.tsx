@@ -19,9 +19,6 @@ export default function DocsDonutPie() {
           `w-max h-min rounded-lg p-2 text-sm shadow-lg m-auto font-mono`}
       >
         <p>
-          <ImportCode chartType="PieChart" />
-        </p>
-        <p>
           <ImportCode chartType="DonutChart" />
         </p>
       </div>
