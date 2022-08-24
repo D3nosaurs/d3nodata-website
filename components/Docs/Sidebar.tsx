@@ -31,7 +31,11 @@ export default function DocsSideBar(props: DocSideProp): h.JSX.Element {
       linkArray.push(
         <li>
           <a href={`${obj.link}`}>
-            <Button text={`${obj.text}`} chosen={false}></Button>
+            <Button
+              text={`${obj.text}`}
+              chosen={false}
+            >
+            </Button>
           </a>
         </li>,
       );

@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import { useState } from "preact/hooks";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 import { tw } from "@twind";
 
 type ButtonProps = {
@@ -9,15 +10,16 @@ type ButtonProps = {
   update: any;
 };
 
-export default function Button(props: ButtonProps) {
+export default function Button(
+  props: ButtonProps | h.JSX.HTMLAttributes<HTMLButtonElement>,
+) {
   if (props.chosen) {
     return (
       <button
+        {...props}
+        disabled={!IS_BROWSER || props.disabled}
         class={tw
           `w-full text-left p-3 rounded-lg bg-[#113c4a] text-sm text-[#45eba5] scale-110`}
-        onClick={() => {
-          props.update(props.text);
-        }}
       >
         {props.text}
       </button>
@@ -25,12 +27,13 @@ export default function Button(props: ButtonProps) {
   } else {
     return (
       <button
+        {...props}
+        disabled={!IS_BROWSER || props.disabled}
         class={tw
           `w-full text-left text-[#21aba5] p-3 rounded-lg text-sm hover:bg-[#113c4a] hover:text-[#45eba5] hover:scale-110 duration-300`}
-        onClick={() => {
-          setChosen(true);
-          props.update(props.text);
-        }}
+        // onClick={() => {
+        //   props.update(props.text);
+        // }}
       >
         {props.text}
       </button>

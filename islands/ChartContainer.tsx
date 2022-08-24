@@ -1,26 +1,26 @@
 /** @jsx h */
 import { h } from "preact";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
-import { Button } from "../components/Button.tsx";
+import Button from "../islands/Button.tsx";
+// import Title;
 
 // importing charts from our library
 import {
   BarChart,
+  ChoroplethChart,
   DonutChart,
   LineChart,
-  // PieChart,
   ScatterPlotChart,
-  ChoroplethChart,
 } from "https://deno.land/x/d3nodata@v.0.0.1.3.11/charts.ts";
 
 // these are the properties we're defining exclusively for the demo charts to add interactibility alongside
 import {
   barChartProperties,
+  choroplethChartProperties,
   donutChartProperties,
   lineChartProperties,
   scatterPlotChartProperties,
-  choroplethChartProperties,
 } from "../chartPropertyTypes.ts";
 
 // contains the charts and the interactive elements
@@ -31,60 +31,76 @@ export default function ChartContainer() {
   const donutBundle = [DonutChart, donutChartProperties];
   const lineBundle = [LineChart, lineChartProperties];
   const chloroplethBundle = [ChoroplethChart, choroplethChartProperties];
-
   // allows for the charts above to be switched between easily, and opens the bar chart by default
   const [display, setDisplay] = useState(barBundle);
+  const [displayChart, setDisplayChart] = useState("BAR CHART");
+
+  let buttonArray = [];
+
+  const chartTypes: { name: string; bundle: any }[] = [
+    {
+      name: "BAR CHART",
+      bundle: barBundle,
+    },
+    {
+      name: "LINE CHART",
+      bundle: lineBundle,
+    },
+    {
+      name: "SCATTERPLOT CHART",
+      bundle: scatterBundle,
+    },
+    {
+      name: "PIE & DONUT CHART",
+      bundle: donutBundle,
+    },
+    {
+      name: "CHOROPLETH CHART",
+      bundle: chloroplethBundle,
+    },
+  ];
+
+  for (const c of chartTypes) {
+    if (display == c.bundle) {
+      buttonArray.push(
+        <li>
+          <Button
+            onClick={() => {
+              setDisplay(c.bundle);
+            }}
+            chosen={true}
+            text={c.name}
+          >
+          </Button>
+        </li>,
+      );
+    } else {
+      buttonArray.push(
+        <li>
+          <Button
+            onClick={() => {
+              setDisplay(c.bundle);
+            }}
+            chosen={false}
+            text={c.name}
+          >
+          </Button>
+        </li>,
+      );
+    }
+  }
+
+  useEffect(() => {
+    buttonArray = [];
+    console.log(buttonArray);
+  }, [display]);
 
   // sidebar of buttons that allows user to switch between charts
   function ButtonBar() {
     return (
       <div class={tw`col-span-1 w-full h-[89vh]`}>
         <ul class={tw`flex flex-col pt-5 gap-5`}>
-          <li>
-            <Button
-              onClick={() => {
-                setDisplay(barBundle);
-              }}
-            >
-              BAR CHART
-            </Button>
-          </li>
-          <li>
-            <Button
-              onClick={() => {
-                setDisplay(donutBundle);
-              }}
-            >
-              DONUT CHART
-            </Button>
-          </li>
-          <li>
-            <Button
-              onClick={() => {
-                setDisplay(lineBundle);
-              }}
-            >
-              LINE CHART
-            </Button>
-          </li>
-          <li>
-            <Button
-              onClick={() => {
-                setDisplay(scatterBundle);
-              }}
-            >
-              SCATTERPLOT CHART
-            </Button>
-          </li>
-          <li>
-            <Button
-              onClick={() => {
-                setDisplay(chloroplethBundle);
-              }}
-            >
-              CHOROPLETH CHART
-            </Button>
-          </li>
+          {buttonArray}
         </ul>
       </div>
     );
@@ -114,7 +130,8 @@ export default function ChartContainer() {
                 chartProperties[property] = e.target.value;
                 setDisplay([chart, chartProperties]);
               }}
-              class={tw`ml-2 w-1/2 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
+              class={tw
+                `ml-2 w-1/2 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
             />
           );
         }
@@ -140,7 +157,8 @@ export default function ChartContainer() {
                 chartProperties[property] = value;
                 setDisplay([chart, chartProperties]);
               }}
-              class={tw`ml-2 block p-2 w-1/2 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
+              class={tw
+                `ml-2 block p-2 w-1/2 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-50`}
             />
           );
         }
@@ -202,20 +220,14 @@ export default function ChartContainer() {
     }
 
     return (
-      <div class={tw`container w-full flex flex-wrap mx-auto`}>
-        <div id="chart" class={tw`w-full lg:w-1/2`}>
-          {chart(chartProperties)}
-        </div>
+      <div class={tw`container w-full flex flex-col items-center`}>
+        {chart(chartProperties)}
+
         <div
-          id="interactive"
-          class={tw`w-full lg:w-1/2 self-center`}
+          class={tw
+            `p-3 w-[90%] shadow-xl hover:shadow-2xl border-1 border-gray-200 overscroll-auto `}
         >
-          <div
-            id="interactive-list"
-            class={tw`p-3 w-3/4 shadow-xl hover:shadow-2xl border-1 border-gray-200 overscroll-auto `}
-          >
-            {Interactivity()}
-          </div>
+          {Interactivity()}
         </div>
       </div>
     );
@@ -232,9 +244,11 @@ export default function ChartContainer() {
 
   // chart container only renders the button bar and the chart render above
   return (
-    <div class={tw`grid grid-cols-5 gap-2 h-full`}>
-      <ButtonBar />
-      <ChartRender />
+    <div class={tw`w-full flex items-center justify-center`}>
+      <div class={tw`grid grid-cols-5 w-full gap-2 h-full max-w-5xl`}>
+        <ButtonBar />
+        <ChartRender />
+      </div>
     </div>
   );
 }
