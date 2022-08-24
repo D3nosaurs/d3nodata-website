@@ -3,6 +3,8 @@
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 
+//the title for each chart in the documentation page
+
 type TitleProps = {
   text: string;
 };

@@ -6,6 +6,7 @@ const barDatasets: {
     y: number;
   }[];
 }[] = [];
+
 for (let i = 0; i < 5; i++) {
   const data: { x: string; y: number }[] = [];
   for (let i = 0; i < 15; i++) {

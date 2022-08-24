@@ -2,8 +2,7 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
-import Button from "../islands/Button.tsx";
-// import Title;
+import Button from "./Button.tsx";
 
 // importing charts from our library
 import {
@@ -36,7 +35,7 @@ export default function ChartContainer() {
   const [chartDisplay, setChartDisplay] = useState("BAR CHART");
   const [buttonArray, setButtonArray] = useState([]);
 
-  let tempButtonArray = [];
+  const tempButtonArray = [];
 
   const chartTypes: { name: string; bundle: any }[] = [
     {
@@ -61,6 +60,7 @@ export default function ChartContainer() {
     },
   ];
 
+  //creating sidebar of buttons
   useEffect(() => {
     for (const c of chartTypes) {
       if (chartDisplay == c.name) {
@@ -96,7 +96,7 @@ export default function ChartContainer() {
     setButtonArray(tempButtonArray);
   }, [display]);
 
-  // sidebar of buttons that allows user to switch between charts
+  // rendering sidebar of buttons that allows user to switch between charts
   function ButtonBar() {
     return (
       <div class={tw`col-span-1 w-full h-[89vh]`}>

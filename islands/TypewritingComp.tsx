@@ -2,6 +2,8 @@
 import { Fragment, h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 
+//typewriter animation for the homepage
+
 const charts = [
   "BarChart",
   "LineChart",

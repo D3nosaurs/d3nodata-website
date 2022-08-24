@@ -81,7 +81,6 @@ export const config: Configuration = {
       },
       "td": {
         textAlign: "center",
-        // border: "1px solid #307470",
         padding: "10px",
         fontSize: "0.8em",
       },

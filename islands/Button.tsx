@@ -4,6 +4,8 @@ import { useState } from "preact/hooks";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { tw } from "@twind";
 
+//button for the documentation sidebar and for the samples page
+
 type ButtonProps = {
   text: string;
   chosen: boolean;
