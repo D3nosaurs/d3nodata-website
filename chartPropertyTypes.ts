@@ -64,7 +64,7 @@ const scatterPlotChartProperties = {
 
 const donutChartProperties = {
   data: donutData,
-  setTitle: "Ages",
+  setTitle: "Random Data",
   setTitleFunc: "input",
   colorStart: "#cefad0",
   colorStartFunc: "colorPicker",
