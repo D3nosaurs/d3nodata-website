@@ -1,8 +1,7 @@
 /** @jsx h */
 import { Fragment, h } from "preact";
-import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
-import NavBar from "../islands/NavBar.tsx";
+// import NavBar from "../islands/NavBar.tsx"; ????
 import TypeWriting from "../islands/TypewritingComp.tsx";
 
 export default function Home() {

@@ -1,6 +1,6 @@
 /**@jsx h */
-/**@jsxFrag Fragment */
-import { Fragment, h } from "preact";
+
+import { h } from "preact";
 import { tw } from "@twind";
 import Button from "../../islands/Button.tsx";
 

@@ -1,7 +1,5 @@
 /** @jsx h */
 import { h } from "preact";
-import { useEffect, useState } from "preact/hooks";
-import Button from "./Button.tsx";
 import { tw } from "@twind";
 
 //creating nav bar to be at the top of every webpage
