@@ -17,7 +17,7 @@ export default function DocsPage(props: PageProps) {
   let content;
   let selection;
 
-  //logic flow for the URL change from params
+  //logic flow for the URL and page change from params
   if (chart === "bar") {
     content = <DocsBar />;
     selection = <DocsSideBar selectedChart="bar" />;

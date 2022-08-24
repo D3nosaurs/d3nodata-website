@@ -1,8 +1,7 @@
 /** @jsx h */
 import { Fragment, h } from "preact";
-import { useEffect, useState } from "preact/hooks";
 import { tw } from "@twind";
-import NavBar from "../islands/NavBar.tsx";
+// import NavBar from "../islands/NavBar.tsx"; ????
 import TypeWriting from "../islands/TypewritingComp.tsx";
 
 export default function Home() {
@@ -235,7 +234,7 @@ export default function Home() {
 
           <TypeWriting />
           <span class="text import-text">
-            from {`"https://deno.land/x/d3nodata@v0.0.1.3.11/charts.ts"`}
+            from {`"https://deno.land/x/d3nodata@v.0.0.1.3.11/charts.ts"`}
           </span>
         </div>
 

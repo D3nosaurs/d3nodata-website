@@ -1,7 +1,6 @@
 /**@jsx h */
-/**@jsxFrag Fragment */
 
-import { Fragment, h } from "preact";
+import { h } from "preact";
 import { tw } from "@twind";
 import { render } from "gfm";
 import Title from "./Title.tsx";
