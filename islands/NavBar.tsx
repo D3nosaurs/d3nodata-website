@@ -4,15 +4,9 @@ import { useEffect, useState } from "preact/hooks";
 import Button from "./Button.tsx";
 import { tw } from "@twind";
 
-export default function NavBar() {
-  const [openMenu, setOpenMenu] = useState(true);
+//creating nav bar to be at the top of every webpage
 
-  useEffect(() => {
-    const paths = document.querySelectorAll("#logo path");
-    // for (let i = 0; i < 8; i++) {
-    //   console.log(`shape ${i} has length ${paths[i].getTotalLength()}`);
-    // }
-  }, []);
+export default function NavBar() {
 
   return (
     <nav
@@ -55,7 +49,7 @@ export default function NavBar() {
                 SAMPLES
               </p>
             </a>
-
+  {/* from figma */}
             <section
               className={tw
                 `flex items-center pl-6 gap-2 border-l-[1px] border-[#2EE59D] justify-center`}
@@ -81,7 +75,7 @@ export default function NavBar() {
                 </svg>
               </a>
               <a
-                href="https://deno.land/x/d3nodata@v0.0.1.3.1/charts.ts"
+                href="https://deno.land/x/d3nodata/charts.ts"
                 target="_blank"
               >
                 <svg

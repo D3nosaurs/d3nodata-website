@@ -2,6 +2,8 @@
 import { h } from "preact";
 import { tw } from "@twind";
 
+//the text at the top of each documentation page to denote where to import a specific chart from
+
 type ImportCodeProps = {
   chartType: string;
 };

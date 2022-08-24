@@ -11,11 +11,13 @@ import DocsLine from "../../components/Docs/DocsLine.tsx";
 import DocsScatterPlot from "../../components/Docs/DocsScatterPlot.tsx";
 import DocsChoropleth from "../../components/Docs/DocsChoropleth.tsx"
 
+
 export default function DocsPage(props: PageProps) {
-  // console.log('props:', props)
   const { chart } = props.params;
   let content;
   let selection;
+
+  //logic flow for the URL change from params
   if (chart === "bar") {
     content = <DocsBar />;
     selection = <DocsSideBar selectedChart="bar" />;

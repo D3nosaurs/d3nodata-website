@@ -1,5 +1,3 @@
-// Required data [{x: number, y: number}]
-
 const datasets = [];
 for (let i = 0; i < 4; i++) {
   const data: { x: Date; y: number }[] = [];

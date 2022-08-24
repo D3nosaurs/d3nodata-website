@@ -6,13 +6,10 @@ import * as $0 from "./routes/docs/[chart].tsx";
 import * as $1 from "./routes/docs/index.tsx";
 import * as $2 from "./routes/index.tsx";
 import * as $3 from "./routes/samples.tsx";
-import * as $$0 from "./islands/BarChartEg.tsx";
-import * as $$1 from "./islands/Button.tsx";
-import * as $$2 from "./islands/ChartContainer.tsx";
-import * as $$3 from "./islands/DonutChartEg.tsx";
-import * as $$4 from "./islands/LineChartEg.tsx";
-import * as $$5 from "./islands/NavBar.tsx";
-import * as $$6 from "./islands/TypewritingComp.tsx";
+import * as $$0 from "./islands/Button.tsx";
+import * as $$1 from "./islands/ChartContainer.tsx";
+import * as $$2 from "./islands/NavBar.tsx";
+import * as $$3 from "./islands/TypewritingComp.tsx";
 
 const manifest = {
   routes: {
@@ -22,13 +19,10 @@ const manifest = {
     "./routes/samples.tsx": $3,
   },
   islands: {
-    "./islands/BarChartEg.tsx": $$0,
-    "./islands/Button.tsx": $$1,
-    "./islands/ChartContainer.tsx": $$2,
-    "./islands/DonutChartEg.tsx": $$3,
-    "./islands/LineChartEg.tsx": $$4,
-    "./islands/NavBar.tsx": $$5,
-    "./islands/TypewritingComp.tsx": $$6,
+    "./islands/Button.tsx": $$0,
+    "./islands/ChartContainer.tsx": $$1,
+    "./islands/NavBar.tsx": $$2,
+    "./islands/TypewritingComp.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };

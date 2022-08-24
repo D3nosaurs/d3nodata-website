@@ -12,6 +12,7 @@ export default function Home() {
         className={tw
           `w-full h-full flex flex-col items-center justify-center gap-20 bg-[#42476d]`}
       >
+        {/* from figma */}
         <svg
           width="1028"
           height="217"
@@ -232,14 +233,9 @@ export default function Home() {
         >
           <span class="text first-text">import</span>&nbsp;
 
-          {
-            /* <span class="text sec-text">
-            {code}
-          </span>&nbsp; */
-          }
           <TypeWriting />
           <span class="text import-text">
-            from {`"https://deno.land/x/d3nodata@v0.0.1.3.1/charts.ts"`}
+            from {`"https://deno.land/x/d3nodata@v0.0.1.3.11/charts.ts"`}
           </span>
         </div>
 

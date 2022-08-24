@@ -4,22 +4,24 @@ import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import Button from "../../islands/Button.tsx";
 
+//the sidebar to change charts in documentation
+
 type DocSideProp = {
   selectedChart: string;
 };
 
 const CHART_TYPES = [
-  { link: "/docs", text: "GET STARTED" },
-  { link: "/docs/bar", text: "BAR CHART" },
-  { link: "/docs/line", text: "LINE CHART" },
-  { link: "/docs/scatter", text: "SCATTERPLOT CHART" },
-  { link: "/docs/piedonut", text: "PIE & DONUT CHARTS" },
-  { link: "/docs/choropleth", text: "CHOROPLETH CHART" },
+  { link: "../docs", text: "GET STARTED" },
+  { link: "../docs/bar", text: "BAR CHART" },
+  { link: "../docs/line", text: "LINE CHART" },
+  { link: "../docs/scatter", text: "SCATTERPLOT CHART" },
+  { link: "../docs/piedonut", text: "PIE & DONUT CHARTS" },
+  { link: "../docs/choropleth", text: "CHOROPLETH CHART" },
 ];
 export default function DocsSideBar(props: DocSideProp): h.JSX.Element {
   const linkArray = [];
-  for (let obj of CHART_TYPES) {
-    if (obj.link.slice(6) === props.selectedChart) {
+  for (const obj of CHART_TYPES) {
+    if (obj.link.slice(8) === props.selectedChart) {
       linkArray.push(
         <li>
           <a href={`${obj.link}`}>
