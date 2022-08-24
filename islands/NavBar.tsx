@@ -5,7 +5,6 @@ import { tw } from "@twind";
 //creating nav bar to be at the top of every webpage
 
 export default function NavBar() {
-
   return (
     <nav
       className={tw`flex items-center justify-center bg-[#42476d] shadow-xl`}
@@ -47,7 +46,18 @@ export default function NavBar() {
                 SAMPLES
               </p>
             </a>
-  {/* from figma */}
+            <a
+              href="../contributors"
+              className={tw`flex justify-center items-center`}
+            >
+              <p
+                className={tw
+                  `text-[#8fc9ae] text-xs hover:scale-125 hover:text-[#cfee91] transition-all duration-200`}
+              >
+                CONTRIBUTORS
+              </p>
+            </a>
+            {/* from figma */}
             <section
               className={tw
                 `flex items-center pl-6 gap-2 border-l-[1px] border-[#2EE59D] justify-center`}
