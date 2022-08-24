@@ -33,9 +33,10 @@ export default function ChartContainer() {
   const chloroplethBundle = [ChoroplethChart, choroplethChartProperties];
   // allows for the charts above to be switched between easily, and opens the bar chart by default
   const [display, setDisplay] = useState(barBundle);
-  const [displayChart, setDisplayChart] = useState("BAR CHART");
+  const [chartDisplay, setChartDisplay] = useState("BAR CHART");
+  const [buttonArray, setButtonArray] = useState([]);
 
-  let buttonArray = [];
+  let tempButtonArray = [];
 
   const chartTypes: { name: string; bundle: any }[] = [
     {
@@ -60,39 +61,39 @@ export default function ChartContainer() {
     },
   ];
 
-  for (const c of chartTypes) {
-    if (display == c.bundle) {
-      buttonArray.push(
-        <li>
-          <Button
-            onClick={() => {
-              setDisplay(c.bundle);
-            }}
-            chosen={true}
-            text={c.name}
-          >
-          </Button>
-        </li>,
-      );
-    } else {
-      buttonArray.push(
-        <li>
-          <Button
-            onClick={() => {
-              setDisplay(c.bundle);
-            }}
-            chosen={false}
-            text={c.name}
-          >
-          </Button>
-        </li>,
-      );
-    }
-  }
-
   useEffect(() => {
-    buttonArray = [];
-    console.log(buttonArray);
+    for (const c of chartTypes) {
+      if (chartDisplay == c.name) {
+        tempButtonArray.push(
+          <li>
+            <Button
+              onClick={() => {
+                setChartDisplay(c.name);
+                setDisplay(c.bundle);
+              }}
+              chosen={true}
+              text={c.name}
+            >
+            </Button>
+          </li>,
+        );
+      } else {
+        tempButtonArray.push(
+          <li>
+            <Button
+              onClick={() => {
+                setChartDisplay(c.name);
+                setDisplay(c.bundle);
+              }}
+              chosen={false}
+              text={c.name}
+            >
+            </Button>
+          </li>,
+        );
+      }
+    }
+    setButtonArray(tempButtonArray);
   }, [display]);
 
   // sidebar of buttons that allows user to switch between charts
@@ -236,7 +237,7 @@ export default function ChartContainer() {
   // allows chart to be sent as jsx element with props passed in from the state while being modified by the interactive elements above
   function ChartRender() {
     return (
-      <div class={tw`h-full col-span-4 border-l-2 flex flex-col items-center`}>
+      <div class={tw`h-full col-span-4 flex flex-col items-center`}>
         {ChartDisplay(display[0], display[1])}
       </div>
     );
