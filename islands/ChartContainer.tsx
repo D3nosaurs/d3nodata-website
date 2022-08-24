@@ -132,7 +132,7 @@ export default function ChartContainer() {
                 setDisplay([chart, chartProperties]);
               }}
               class={tw
-                `ml-2 w-1/2 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
+                `ml-2 w-3/4 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700`}
             />
           );
         }
@@ -200,9 +200,17 @@ export default function ChartContainer() {
           <div
             id="singleElement"
             key={property}
-            class={tw`flex flex-row items-center gap- pb-3`}
+            class={tw`grid grid-cols-7 pb-3 w-[80%]`}
           >
-            {property}: {propFunc}
+            <div
+              class={tw
+                `col-span-2 flex justify-end text-[#81e1af] font-sans font-light`}
+            >
+              {property}
+            </div>
+            <div class={tw`col-span-5 flex justify-center w-full`}>
+              {propFunc}
+            </div>
           </div>
         );
       };
@@ -226,7 +234,7 @@ export default function ChartContainer() {
 
         <div
           class={tw
-            `p-3 w-[90%] shadow-xl hover:shadow-2xl border-1 border-gray-200 overscroll-auto `}
+            `p-3 w-[85%] mb-3 rounded-lg bg-[#36485e] flex flex-col items-center shadow-2xl transition-all duration-300 hover:shadow-none border-2 border-gray-200 overscroll-auto `}
         >
           {Interactivity()}
         </div>
@@ -237,7 +245,7 @@ export default function ChartContainer() {
   // allows chart to be sent as jsx element with props passed in from the state while being modified by the interactive elements above
   function ChartRender() {
     return (
-      <div class={tw`h-full col-span-4 flex flex-col items-center`}>
+      <div class={tw`h-full col-span-4 flex flex-col items-center mt-10`}>
         {ChartDisplay(display[0], display[1])}
       </div>
     );
