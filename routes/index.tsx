@@ -66,8 +66,7 @@ export default function Home() {
                 stop-color="#113c4a"
               >
                 <animate
-                  begin="2.7s"
-                  dur="1.4s"
+                  dur="0.3s"
                   attributeName="offset"
                   fill="freeze"
                   from="0"

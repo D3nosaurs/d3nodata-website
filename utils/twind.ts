@@ -33,42 +33,42 @@ export const config: Configuration = {
       "#logo path:nth-child(1)": {
         strokeDasharray: "952.628662109375px",
         strokeDashoffset: "952.628662109375px",
-        animation: "line-anim 2s ease forwards 0.3s",
+        animation: "line-anim 0.6s ease forwards 0.05s",
       },
       "#logo path:nth-child(2)": {
         strokeDasharray: "862.2592163085938px",
         strokeDashoffset: "862.2592163085938px",
-        animation: "line-anim 2s ease forwards 0.6s",
+        animation: "line-anim 0.6s ease forwards 0.1s",
       },
       "#logo path:nth-child(3)": {
         strokeDasharray: "1008.71826171875px",
         strokeDashoffset: "1008.71826171875px",
-        animation: "line-anim 2s ease forwards 0.9s",
+        animation: "line-anim 0.6s ease forwards 0.13s",
       },
       "#logo path:nth-child(4)": {
         strokeDasharray: "669.2959594726562px",
         strokeDashoffset: "669.2959594726562px",
-        animation: "line-anim 2s ease forwards 1.2s",
+        animation: "line-anim 0.6s ease forwards 0.15s",
       },
       "#logo path:nth-child(5)": {
         strokeDasharray: "952.629150390625px",
         strokeDashoffset: "952.629150390625px",
-        animation: "line-anim 2s ease forwards 1.5s",
+        animation: "line-anim 0.6s ease forwards 0.18s",
       },
       "#logo path:nth-child(6)": {
         strokeDasharray: "813.01953125px",
         strokeDashoffset: "813.01953125px",
-        animation: "line-anim 2s ease forwards 1.8s",
+        animation: "line-anim 0.6s ease forwards 0.21s",
       },
       "#logo path:nth-child(7)": {
         strokeDasharray: "573.1198120117188px",
         strokeDashoffset: "573.1198120117188px",
-        animation: "line-anim 2s ease forwards 2.1s",
+        animation: "line-anim 0.6s ease forwards 0.23s",
       },
       "#logo path:nth-child(8)": {
         strokeDasharray: "813.0161743164062px",
         strokeDashoffset: "813.0161743164062px",
-        animation: "line-anim 2s ease forwards 2.4s",
+        animation: "line-anim 0.6s ease forwards 0.28s",
       },
 
       // styling chart props documentation
@@ -81,11 +81,13 @@ export const config: Configuration = {
         borderStyle: "solid",
         borderRadius: "30px",
       },
+
       "td": {
         textAlign: "center",
         padding: "10px",
         fontSize: "0.8em",
       },
+
       "th": {
         padding: "15px",
         fontWeight: "normal",
@@ -101,16 +103,16 @@ export const config: Configuration = {
       },
 
       "#deno-logo": {
-        animation: "5.3s ease appear",
+        animation: "1s ease appear",
       },
 
       ".code-container": {
         overflow: "hidden",
-        animation: "6.3s ease appear",
+        animation: "1.2s ease appear",
       },
 
       "#bt-started": {
-        animation: "6.9s ease appear",
+        animation: "1.4s ease appear",
       },
 
       ".code-container .text": {

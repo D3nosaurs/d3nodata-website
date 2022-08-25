@@ -32,7 +32,7 @@ export default function Contributor() {
         <img
           src={`../contributor-images/${contributors[i]}.jpg`}
           width="130px"
-          class={tw`rounded-3xl shadow-2xl border-2 `}
+          class={tw`rounded-3xl shadow-2xl`}
         />
         <p class={tw`text-green-300`}>{contributors[i].toUpperCase()}</p>
         <div class={tw`flex justify-center gap-2 `}>
