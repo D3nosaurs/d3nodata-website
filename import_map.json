@@ -9,6 +9,8 @@
     "twind/": "https://esm.sh/twind@0.16.17/",
     "d3": "https://cdn.skypack.dev/d3",
     "ace-editor": "https://cdn.skypack.dev/@cedric05/preact-ace",
-    "react-toggle": "https://cdn.skypack.dev/react-toggle"
+    "react-toggle": "https://cdn.skypack.dev/react-toggle",
+    "gfm": "https://deno.land/x/gfm@0.1.22/mod.ts",
+    "type-writing": "https://cdn.skypack.dev/react-typewriting-effect"
   }
 }
