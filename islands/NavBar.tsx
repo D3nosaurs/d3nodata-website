@@ -106,7 +106,7 @@ export default function NavBar() {
                 </svg>
               </a>
               <a
-                href="https://deno.land/x/d3nodata/charts.ts"
+                href="https://medium.com/@nikolajsvv/d3no-data-d3-chart-component-library-for-deno-fresh-f8362c0a5ec8"
                 target="_blank"
               >
                 <svg
