@@ -27,14 +27,16 @@ export default function Contributor() {
     imageArray.push(
       <div
         class={tw
-          `flex shadow-xl flex-col items-center gap-2 p-3 rounded-lg bg-gradient-to-r from-[#8f45a9] via-[#504aa7] to-[#7a81eb]`}
+          `flex shadow-2xl hover:shadow-none flex-col items-center gap-2 p-3 rounded-lg bg-gradient-to-r from-[#8f45a9] via-[#504aa7] to-[#7a81eb] transition-shadow duration-500`}
       >
         <img
           src={`../contributor-images/${contributors[i]}.jpg`}
           width="130px"
           class={tw`rounded-3xl shadow-2xl`}
         />
-        <p class={tw`text-green-300`}>{contributors[i].toUpperCase()}</p>
+        <p class={tw`text-[#eeeeee]`}>
+          {contributors[i].charAt(0).toUpperCase() + contributors[i].slice(1)}
+        </p>
         <div class={tw`flex justify-center gap-2 `}>
           <a href={`${github[i]}`} target="_blank">
             <img src="./github-logo.svg" width="20px" />
