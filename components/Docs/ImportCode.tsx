@@ -15,7 +15,7 @@ export default function ImportCode(props: ImportCodeProps) {
       <span class="js-importcode">{props.chartType}</span>&ensp;
       <span class="js-keycode">from</span>&ensp;
       <span class="js-stringcode">
-        "https://deno.land/x/d3nodata@v.0.1/charts.ts"
+        "https://deno.land/x/d3nodata@v.0.1.1/charts.ts"
       </span>
     </p>
   );
