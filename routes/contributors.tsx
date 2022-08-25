@@ -58,7 +58,7 @@ export default function Contributor() {
         <div class={tw`flex gap-5 h-full justify-center w-full max-w-5xl`}>
           {imageArray}
         </div>
-        <a>
+        <a href="https://github.com/oslabs-beta/d3no-data/blob/main/CONTRIBUTING.md">
           <button
             class={tw
               `mt-10 p-3 shadow-2xl text-[#c2ffbb] rounded-xl bg-[#1f5357] hover:scale-110 transition-all duration-500`}
