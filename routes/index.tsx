@@ -233,7 +233,7 @@ export default function Home() {
 
           <TypeWriting />
           <span class="text import-text">
-            from {`"https://deno.land/x/d3nodata@v.0.0.1.3.11/charts.ts"`}
+            from {`"https://deno.land/x/d3nodata@v.0.0.1.3.12/charts.ts"`}
           </span>
         </div>
 
