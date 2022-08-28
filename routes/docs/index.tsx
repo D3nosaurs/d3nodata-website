@@ -7,10 +7,14 @@ import { tw } from "@twind";
 import NavBar from "../../islands/NavBar.tsx";
 import DocsSideBar from "../../components/Docs/Sidebar.tsx";
 import GetStarted from "../../components/Docs/GetStarted.tsx";
+import { Head } from "$fresh/runtime.ts";
 
 export default function ChartHomepage() {
   return (
     <>
+      <Head>
+        <title>Documentation</title>
+      </Head>
       <NavBar />
       <div class={tw`w-full flex items-center justify-center`}>
         <div class={tw`grid grid-cols-5 gap-2 h-full w-full max-w-5xl`}>

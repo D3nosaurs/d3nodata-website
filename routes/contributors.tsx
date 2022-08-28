@@ -3,6 +3,7 @@ import { Fragment, h } from "preact";
 import NavBar from "../islands/NavBar.tsx";
 import { tw } from "@twind";
 import Title from "../components/Docs/Title.tsx";
+import { Head } from "$fresh/runtime.ts";
 
 const contributors = ["david", "nikolajs", "evie", "jon", "quoc"];
 const github = [
@@ -26,8 +27,7 @@ export default function Contributor() {
   for (let i = 0; i < contributors.length; i++) {
     imageArray.push(
       <div
-        class={tw
-          `flex shadow-2xl hover:shadow-none flex-col items-center gap-2 p-3 rounded-lg bg-gradient-to-r from-[#8f45a9] via-[#504aa7] to-[#7a81eb] transition-shadow duration-500`}
+        class={tw`flex shadow-2xl hover:shadow-none flex-col items-center gap-2 p-3 rounded-lg bg-gradient-to-r from-[#8f45a9] via-[#504aa7] to-[#7a81eb] transition-shadow duration-500`}
       >
         <img
           src={`../contributor-images/${contributors[i]}.jpg`}
@@ -51,6 +51,9 @@ export default function Contributor() {
 
   return (
     <Fragment>
+      <Head>
+        <title>Contributors</title>
+      </Head>
       <NavBar></NavBar>
 
       <div class={tw`w-full flex flex-col items-center gap-5 mt-5`}>
@@ -60,8 +63,7 @@ export default function Contributor() {
         </div>
         <a href="https://github.com/oslabs-beta/d3no-data/blob/main/CONTRIBUTING.md">
           <button
-            class={tw
-              `mt-10 p-3 shadow-2xl text-[#c2ffbb] rounded-xl bg-[#1f5357] hover:scale-110 transition-all duration-500`}
+            class={tw`mt-10 p-3 shadow-2xl text-[#c2ffbb] rounded-xl bg-[#1f5357] hover:scale-110 transition-all duration-500`}
           >
             CONTRIBUTE
           </button>

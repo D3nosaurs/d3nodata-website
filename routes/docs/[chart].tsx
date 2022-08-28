@@ -9,8 +9,8 @@ import DocsBar from "../../components/Docs/DocsBar.tsx";
 import DocsDonutPie from "../../components/Docs/DocsDonutPie.tsx";
 import DocsLine from "../../components/Docs/DocsLine.tsx";
 import DocsScatterPlot from "../../components/Docs/DocsScatterPlot.tsx";
-import DocsChoropleth from "../../components/Docs/DocsChoropleth.tsx"
-
+import DocsChoropleth from "../../components/Docs/DocsChoropleth.tsx";
+import { Head } from "$fresh/runtime.ts";
 
 export default function DocsPage(props: PageProps) {
   const { chart } = props.params;
@@ -31,13 +31,18 @@ export default function DocsPage(props: PageProps) {
     content = <DocsScatterPlot />;
     selection = <DocsSideBar selectedChart="scatter" />;
   } else if (chart === "choropleth") {
-    content = <DocsChoropleth />
+    content = <DocsChoropleth />;
     selection = <DocsSideBar selectedChart="choropleth" />;
   }
 
   return (
     <>
       <NavBar />
+      <Head>
+        <title>
+          {chart[0].toUpperCase() + chart.slice(1)} Chart Documentation
+        </title>
+      </Head>
       <div class={tw`w-full flex items-center justify-center`}>
         <div class={tw`grid grid-cols-5 gap-2 h-full w-full max-w-5xl`}>
           <div
