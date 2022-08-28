@@ -1,15 +1,17 @@
 /** @jsx h */
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
-// import NavBar from "../islands/NavBar.tsx"; ????
 import TypeWriting from "../islands/TypewritingComp.tsx";
+import { Head } from "$fresh/runtime.ts";
 
 export default function Home() {
   return (
     <Fragment>
+      <Head>
+        <title>D3no Data</title>
+      </Head>
       <div
-        className={tw
-          `w-full h-full flex flex-col items-center justify-center gap-20 bg-[#42476d]`}
+        className={tw`w-full h-full flex flex-col items-center justify-center gap-20 bg-[#42476d]`}
       >
         {/* from figma */}
         <svg
@@ -226,8 +228,7 @@ export default function Home() {
 
         {/* div to show code of importing */}
         <div
-          className={tw
-            `text-[#2EE59D] font-mono code-container flex justify-center`}
+          className={tw`text-[#2EE59D] font-mono code-container flex justify-center`}
         >
           <span class="text first-text">import</span>&nbsp;
 
@@ -240,8 +241,7 @@ export default function Home() {
         <a href="./docs">
           <button
             id="bt-started"
-            className={tw
-              `text-[#2EE59D] shadow-xl font-light bg-[#113c4a] p-3 text-sm rounded-3xl hover:bg-[#43AA8B] hover:opacity-80 duration-1000 hover:shadow-none hover:translate-y-1`}
+            className={tw`text-[#2EE59D] shadow-xl font-light bg-[#113c4a] p-3 text-sm rounded-3xl hover:bg-[#43AA8B] hover:opacity-80 duration-1000 hover:shadow-none hover:translate-y-1`}
           >
             GET STARTED
           </button>
