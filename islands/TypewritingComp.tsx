@@ -7,7 +7,7 @@ import { useEffect, useState } from "preact/hooks";
 const charts = [
   "BarChart",
   "LineChart",
-  "ScatterplotChart",
+  // "ScatterplotChart",
   "PieChart",
   "DonutChart",
   "MapChart",
@@ -18,12 +18,13 @@ export default function TypeWriting() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    setCode(charts[count]);
     setTimeout(() => {
       setCount(() => {
-        return count < charts.length ? count + 1 : 0;
+        return charts.length > count + 1 ? count + 1 : 0;
       });
-      setCode(charts[count]);
-    }, 3200);
+    }, 3000);
+    
   }, [count]);
 
   return (
