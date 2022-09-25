@@ -13,7 +13,9 @@ const body = render(fileContent);
 
 export default function DocsBar() {
   return (
-    <div class={tw`flex flex-col gap-5`}>
+    <div 
+    class={tw`flex flex-col gap-5 pt-5 pl-5`}
+    >
       <Title text="Bar Chart Documentation" />
 
       <div
@@ -26,7 +28,7 @@ export default function DocsBar() {
       </div>
 
       <div
-        class={tw`flex self-center align-center`}
+        // class={tw`flex self-center align-center`}
         dangerouslySetInnerHTML={{ __html: body }}
       >
       </div>

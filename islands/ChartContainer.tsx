@@ -44,21 +44,23 @@ export default function ChartContainer() {
       bundle: barBundle,
     },
     {
-      name: "LINE CHART",
-      bundle: lineBundle,
+      name: "CHOROPLETH CHART",
+      bundle: chloroplethBundle,
     },
     {
-      name: "SCATTERPLOT CHART",
-      bundle: scatterBundle,
+      name: "LINE CHART",
+      bundle: lineBundle,
     },
     {
       name: "PIE & DONUT CHART",
       bundle: donutBundle,
     },
     {
-      name: "CHOROPLETH CHART",
-      bundle: chloroplethBundle,
+      name: "SCATTERPLOT CHART",
+      bundle: scatterBundle,
     },
+    
+    
   ];
 
   //creating sidebar of buttons

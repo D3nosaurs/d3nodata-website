@@ -44,13 +44,13 @@ export default function DocsPage(props: PageProps) {
         </title>
       </Head>
       <div class={tw`w-full flex items-center justify-center`}>
-        <div class={tw`grid grid-cols-5 gap-2 h-full w-full max-w-5xl`}>
+        <div class={tw`grid grid-cols-5 h-full w-full max-w-5xl`}>
           <div
             class={tw`col-span-1 w-[max-content] max-w-l h-full`}
           >
             {selection}
           </div>
-          <div class={tw`col-span-4 p-5 w-full h-full flex flex-col gap-10`}>
+          <div class={tw`col-span-4 px-5 w-full h-full max-w-5xl gap-10`}>
             {content}
           </div>
         </div>
