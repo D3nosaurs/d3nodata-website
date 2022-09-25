@@ -13,10 +13,11 @@ type DocSideProp = {
 const CHART_TYPES = [
   { link: "../docs", text: "GET STARTED" },
   { link: "../docs/bar", text: "BAR CHART" },
-  { link: "../docs/line", text: "LINE CHART" },
-  { link: "../docs/scatter", text: "SCATTERPLOT CHART" },
-  { link: "../docs/piedonut", text: "PIE & DONUT CHARTS" },
   { link: "../docs/choropleth", text: "CHOROPLETH CHART" },
+  { link: "../docs/line", text: "LINE CHART" },
+  { link: "../docs/piedonut", text: "PIE & DONUT CHARTS" },
+  { link: "../docs/scatter", text: "SCATTERPLOT CHART" },
+
 ];
 export default function DocsSideBar(props: DocSideProp): h.JSX.Element {
   const linkArray = [];

@@ -14,7 +14,7 @@ const body = render(fileContent);
 
 export default function DocsDonutPie() {
   return (
-    <div class={tw`flex flex-col gap-5`}>
+    <div class={tw`flex flex-col gap-5 pt-5 pl-5`}>
       <Title text="Donut & Pie Chart Documentation" />
       <div
         class={tw

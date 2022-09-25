@@ -18,24 +18,15 @@ for samples:
 
 export default function GetStarted() {
   return (
-    <div class={tw`flex flex-col gap-5`}>
+    <div class={tw`flex flex-col gap-5 `}>
       <Title text="Get Started" />
-      <p class={tw`text-[0.5em] text-[#ff1744]`}>
-        *Currently our product is in beta release so not every features will
-        work as intended
-      </p>
+
       <section class={tw`flex flex-col gap-3 text-[#524a79]`}>
-        <p>Let's get started on d3no data!</p>
-        <p>To start import our chart from deno.land</p>
-        <section>
-          <p>Every charts out of the box have the following features:</p>
-          <ul class={tw`ml-5`}>
-            <li>Multidata</li>
-            <li>Animation</li>
-            <li>Interactive</li>
-            <li>Customizable</li>
-          </ul>
-        </section>
+        <p>Welcome to D3no Data's documentation!</p>
+        <p>Every chart is customizable, as the goal is to make data visualization simpler in Fresh without sacrificing the power or customizability of D3. Where applicable, charts also support animation, interactivity, and multiple data sets.</p>
+        <p>To get started, navigate to the page of the chart you'd like to import in the sidebar. Use the code fragment at the top of that page in order to import it into any project using Deno & Preact.</p>
+        <p>Please note that D3no Data is still in development, so all charts may not be working fully as intended. If you notice any issues, please report them on GitHub (linked in the navigation bar).</p>
+        <p>Thanks for using our library!</p>
       </section>
     </div>
   );
