@@ -1,4 +1,5 @@
 /** @jsx h */
+/** @jsxFrag Fragment */
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import TypeWriting from "../islands/TypewritingComp.tsx";
@@ -6,7 +7,7 @@ import { Head } from "$fresh/runtime.ts";
 
 export default function Home() {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>D3no Data</title>
       </Head>
@@ -234,7 +235,7 @@ export default function Home() {
 
           <TypeWriting />
           <span class="text import-text">
-            from {`"https://deno.land/x/d3nodata@v.0.1/charts.ts"`}
+            from {`"https://deno.land/x/d3nodata@v.0.1.1/charts.ts"`}
           </span>
         </div>
 
@@ -247,6 +248,6 @@ export default function Home() {
           </button>
         </a>
       </div>
-    </Fragment>
+    </>
   );
 }
