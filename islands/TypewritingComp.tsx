@@ -6,11 +6,11 @@ import { useEffect, useState } from "preact/hooks";
 
 const charts = [
   "BarChart",
-  "LineChart",
+  "MapChart",
   // "ScatterplotChart",
   "PieChart",
+  "LineChart",
   "DonutChart",
-  "MapChart",
 ];
 
 export default function TypeWriting() {
