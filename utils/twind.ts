@@ -128,7 +128,7 @@ export const config: Configuration = {
         width: "100%",
         backgroundColor: "#42476d",
         borderLeft: "2px solid #2EE59D",
-        animation: "animate 3s .1s steps(11) infinite",
+        animation: "animate 3s steps(9) infinite",
       },
 
       ".js-keycode": {
