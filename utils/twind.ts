@@ -128,7 +128,7 @@ export const config: Configuration = {
         width: "100%",
         backgroundColor: "#42476d",
         borderLeft: "2px solid #2EE59D",
-        animation: "animate 4s steps(12) infinite",
+        animation: "animate 3s steps(9) infinite",
       },
 
       ".js-keycode": {
@@ -155,7 +155,7 @@ export const config: Configuration = {
       },
 
       "#chart-typing": {
-        positiion: "relative",
+        position: "absolute",
         "&::before, &::after": {
           content: "''",
           position: "absolute",
